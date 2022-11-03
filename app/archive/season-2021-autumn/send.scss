@@ -1,0 +1,123 @@
+// анимация
+@keyframes letterRotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  20% {
+    transform: rotateY(90deg);
+  }
+  80% {
+    transform: rotateY(90deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+@keyframes smileRotate {
+  from {
+    transform: rotateY(90deg);
+  }
+  20% {
+    transform: rotateY(90deg);
+  }
+  40% {
+    transform: rotateY(180deg);
+  }
+  60% {
+    transform: rotateY(180deg);
+  }
+  80% {
+    transform: rotateY(90deg);
+  }
+  to {
+    transform: rotateY(90deg);
+  }
+}
+#anim-smile {
+  position: absolute;
+  top: 2.7vmin;
+  right: 8.7vmin;
+  width: 11vmin;
+  transform: rotateY(90deg);
+  animation: smileRotate 2s 5s linear;
+  transition: transform 0.5s;
+}
+#anim-letter {
+  display: inline-block;
+  transform: rotateY(0deg);
+  animation: letterRotate 2s 5s linear;
+  transition: transform 0.5s;
+}
+
+//основные стили
+.section {
+  scroll-snap-align: start;
+  &__inner {
+    position: relative;
+  }
+  &__container {
+    padding: 9vmin;
+    min-height: 100vmax;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__desc {
+    // transform: translateY(50%);
+  }
+  &__title {
+    font-size: 16vmin;
+    margin-bottom: 3vmin;
+    margin-top: 2vmin;
+    z-index: 1;
+    font-weight: 500;
+  }
+  &__text {
+    font-size: 5vmin;
+    transition-delay: 0.2s;
+  }
+}
+.send {
+  &__wrapper {
+    position: relative;
+    &--interview {
+      background: linear-gradient(14deg, #caffad 0%, #8fe35d 65%, #70e169 100%);
+    }
+    &--menu {
+      color: #e6fdb5;
+    }
+  }
+  &__wrapper-img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &__title {
+    position: relative;
+    font-size: 14vmin;
+    // margin-top: 13vmin;
+    margin-bottom: 2vmin;
+    opacity: 0;
+    animation: animTop 0.5s forwards;
+  }
+  &__text {
+    text-transform: none;
+    margin-bottom: 16vmin;
+    opacity: 0;
+    animation: animTop 0.5s 0.2s forwards;
+  }
+}
+.footer-note {
+  position: absolute;
+  bottom: 16vmin;
+  opacity: 0;
+  animation: animTop 0.5s 0.4s forwards;
+}
+
+jdiv,
+#jivo-iframe-container {
+  display: none !important;
+}

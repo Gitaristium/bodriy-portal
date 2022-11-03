@@ -1,0 +1,427 @@
+$color: #fbff3a;
+
+@keyframes vesna {
+  0% {
+    transform: translateX(-300%);
+    // opacity: 0;
+  }
+  40% {
+    // opacity: 0;
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  65% {
+    // opacity: 1;
+  }
+  100% {
+    transform: translateX(300%);
+    // opacity: 0;
+  }
+}
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  // background: url(../../archive/season-2022-spring/img/bg-vector.png) top center / 100%;
+  user-select: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.container {
+  padding: 0 6vmin;
+}
+.anim-items.active {
+  transform: translateY(20vmin);
+  opacity: 0;
+}
+.section {
+  opacity: 0;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  &__bg-text {
+    position: absolute;
+    left: 16vmin;
+    width: 68vmin;
+    height: 14vmin;
+    transform: rotate(-56deg);
+
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 19vmin;
+      line-height: 14vmin;
+      text-transform: uppercase;
+      color: #fbff3a;
+    }
+    &.one {
+      top: 112vmin;
+      span {
+        animation: vesna 20s infinite linear;
+        animation-play-state: paused;
+        &:nth-child(2) {
+          animation-delay: -4s;
+        }
+        &:nth-child(3) {
+          animation-delay: -8s;
+        }
+        &:nth-child(4) {
+          animation-delay: -12s;
+        }
+        &:nth-child(5) {
+          animation-delay: -16s;
+        }
+      }
+    }
+    &.two {
+      top: 276vmin;
+      span {
+        animation: vesna 20s infinite reverse linear;
+        animation-play-state: paused;
+        &:nth-child(2) {
+          animation-delay: -4s;
+        }
+        &:nth-child(3) {
+          animation-delay: -8s;
+        }
+        &:nth-child(4) {
+          animation-delay: -12s;
+        }
+        &:nth-child(5) {
+          animation-delay: -16s;
+        }
+      }
+    }
+  }
+  &__bg-text-inner {
+    position: relative;
+  }
+  &__inner {
+    position: relative;
+    padding-top: 52vmin;
+  }
+  &-one {
+    padding-bottom: 116.5vmin;
+  }
+  &-two {
+    background: url(../../archive/season-2022-spring/img/bg-modal.png) bottom center / cover;
+    &__title {
+      font-size: 8vmin;
+      line-height: 1.35;
+      padding-bottom: 26vmin;
+      text-align: right;
+      // letter-spacing: 2px;
+      color: $color;
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: 100vmin;
+    &.two {
+      margin-top: -17vmin;
+    }
+    &.three {
+      margin-top: 5vmin;
+    }
+    &.four {
+      margin-top: 2vmin;
+    }
+  }
+  &__img {
+    display: block;
+    position: relative;
+    width: 88vmin;
+
+    &--1 {
+      left: -9vmin;
+    }
+    &--2 {
+      left: 16vmin;
+    }
+    &--3 {
+      left: -9vmin;
+    }
+    &--4 {
+      left: 11.5vmin;
+    }
+
+    &.anim-items {
+      transform: translate(-6%, 10%);
+      transition: transform 2s;
+      opacity: 1;
+    }
+  }
+  &__img-title {
+    position: absolute;
+    font-size: 4.3vmin;
+    font-weight: 600;
+    &--1 {
+      top: 40vmin;
+      left: 22vmin;
+    }
+    &--2 {
+      top: 41vmin;
+      left: 45vmin;
+    }
+    &--3 {
+      top: 40vmin;
+      left: 22vmin;
+    }
+    &--4 {
+      top: 41vmin;
+      left: 41vmin;
+    }
+    &.anim-items {
+      transition: 1s;
+    }
+  }
+  &__img-leaf {
+    position: absolute;
+
+    &--top {
+      width: 257vmin;
+      top: -125vmin;
+      left: -110vmin;
+      transform: rotate(10deg) translate(3%, -5%);
+      transition: transform 5s;
+    }
+    &--bottom {
+      width: 280vmin;
+      bottom: 73vmin;
+      left: -89vmin;
+      &.anim-items {
+        transform: translate(-4%, 7%);
+        transition: transform 5s;
+      }
+    }
+  }
+} //.section
+
+.footer-note {
+  padding-top: 31vmin;
+  padding-bottom: 10vmin;
+  padding-left: 8vmin;
+  font-weight: 600;
+  color: #000;
+  &.anim-items {
+    transform: translateY(30%);
+    &.active {
+      transform: translateY(0%);
+    }
+  }
+  span {
+    font-weight: 500;
+  }
+}
+.footer-btn {
+  color: #000;
+  background: $color;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff url(../../archive/season-2022-spring/img/bg-modal.png) bottom center / cover;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 99;
+  &__inner {
+    transform: translateY(100%);
+    transition: 0.3s;
+    position: relative;
+  }
+  &__img {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &__content {
+    position: relative;
+    width: 100%;
+    height: 100vmax;
+    padding: 9vmin 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__text {
+    color: $color;
+    font-size: 7.3vmin;
+    letter-spacing: 1px;
+    width: 100%;
+  }
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+    .modal__inner {
+      transform: translateY(0);
+    }
+  }
+  form {
+    width: 100%;
+    padding-top: 8vmin;
+    textarea {
+      width: 100%;
+      height: 45vmin;
+      resize: none;
+      background: transparent;
+      outline: none;
+      border-radius: 5px;
+      border: $color 2px solid;
+      color: #000;
+      padding: 2vmin 3vmin;
+      font-family: "Stolzl", sans-serif;
+      font-size: 3.5vmin;
+      font-weight: 400;
+      margin-bottom: 13vmin;
+      transition: 0.3s;
+      &:focus,
+      &:target,
+      &:active {
+        outline: none;
+        border: #00da3d 2px solid;
+      }
+    }
+  }
+} //modal
+.btn {
+  border: $color 2px solid;
+  color: #fff;
+}
+.btn--green {
+  background: #00da3d;
+  border: #00da3d 2px solid;
+  color: #000;
+}
+.btn-close {
+  position: absolute;
+  display: block;
+  width: 8.5vmin;
+  height: 8.5vmin;
+  transition: 0.3s;
+  transition-delay: 0.2s;
+  &__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  span {
+    display: block;
+    top: 3vmin;
+    width: 8vmin;
+    height: 2.2vmin;
+    background: $color;
+    transform: rotate(45deg);
+    position: absolute;
+    &:first-child {
+      transform: rotate(-45deg);
+    }
+  }
+} //.btn-close
+
+.modal-no {
+  &__btn {
+    bottom: 20vmin;
+    left: calc(50% - 4.25vmin);
+  }
+  .btn-close {
+    transform: translateY(300%);
+  }
+  &.active .btn-close {
+    transform: translateY(0%);
+  }
+}
+
+.modal-yes {
+  &__btn {
+    top: 9vmin;
+    right: 0;
+    // @media screen and (max-height: 500px) {
+    //   display: none;
+    // }
+  }
+  .btn-close {
+    transform: translateX(300%);
+  }
+  &.active .btn-close {
+    transform: translateX(0%);
+  }
+}
+
+//переопределение чата живосайта
+.wrap_196d {
+  z-index: 10 !important;
+}
+.preload {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100vmax;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5vmin;
+  font-weight: 400;
+  color: #52ae32;
+  transition: 0.1s;
+  pointer-events: none;
+  background-color: #fff;
+}
+.preload__img {
+  position: relative;
+  display: block;
+  -webkit-animation: rotateSmile 3s infinite linear;
+  animation: rotateSmile 3s infinite linear;
+  width: 12vmin;
+  height: 12vmin;
+}
+body.ready {
+  .anim-items.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .section {
+    opacity: 1;
+    transition: opacity 1s;
+
+    &__bg-text.one span,
+    &__bg-text.two span {
+      animation-play-state: running;
+    }
+    &__img-leaf--top {
+      transform: rotate(10deg) translate(0, 0);
+    }
+    &__img-leaf--bottom.anim-items.active {
+      transform: translate(0, 0);
+      transition: transform 15s;
+    }
+    &__img.anim-items.active {
+      transform: translate(0, 0);
+    }
+  }
+}
+
+jdiv,
+#jivo-iframe-container {
+  display: none !important;
+}

@@ -1,0 +1,231 @@
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+.section {
+  position: relative;
+  width: 100vmin;
+  padding: 5vmin;
+  padding: calc(5vmin + env(safe-area-inset-top)) 5vmin calc(5vmin + env(safe-area-inset-bottom));
+  overflow: hidden;
+
+  // .section__img
+  &__img {
+    position: relative;
+    display: block;
+
+    // .section__img-french
+    &-french {
+      width: 58vmin;
+
+      // .section__img-french--1
+      &--1 {
+        margin-top: -18vmin;
+        right: -7vmin;
+        margin-left: auto;
+        transform: translateX(-5%);
+        opacity: 0;
+      }
+
+      // .section__img-french--2
+      &--2 {
+        margin-top: -38vmin;
+        left: 1vmin;
+        margin-bottom: 11vmin;
+        transform: translateX(5%);
+        opacity: 0;
+      }
+    }
+
+    // .section__img-turk
+    &-turk {
+      width: 85vmin;
+
+      // .section__img-turk--1
+      &--1 {
+        margin-top: -30vmin;
+        right: -30vmin;
+        margin-left: auto;
+        transform: translateX(-5%);
+        opacity: 0;
+      }
+
+      // .section__img-turk--2
+      &--2 {
+        margin-top: -55vmin;
+        left: 2vmin;
+        opacity: 0;
+      }
+
+      // .section__img-turk--3
+      &--3 {
+        margin-top: -57vmin;
+        left: -31vmin;
+        transform: translateX(5%);
+        opacity: 0;
+      }
+    }
+    // .section__img-purover
+    &-purover {
+      width: 48vmin;
+
+      // .section__img-purover--1
+      &--1 {
+        margin-top: 10vmin;
+        right: 4vmin;
+        margin-left: auto;
+        transform: translateX(-5%);
+        opacity: 0;
+      }
+
+      // .section__img-purover--2
+      &--2 {
+        margin-top: -11vmin;
+        left: -5vmin;
+        margin-bottom: 11vmin;
+        transform: translateX(5%);
+        opacity: 0;
+      }
+    }
+
+    // .section__img-kemex
+    &-kemex {
+      width: 39vmin;
+
+      // .section__img-kemex--1
+      &--1 {
+        margin-top: -13vmin;
+        right: 3vmin;
+        margin-left: auto;
+        transform: translateX(-5%);
+        opacity: 0;
+      }
+
+      // .section__img-kemex--2
+      &--2 {
+        margin-top: -31vmin;
+        left: 6vmin;
+        margin-bottom: 11vmin;
+        transform: translateX(5%);
+        opacity: 0;
+      }
+    }
+  }
+
+  // .section__title
+  &__title {
+    font-size: 13.5vmin;
+    line-height: 14.2vmin;
+    font-weight: 500;
+
+    // .section__title.right
+    &.right {
+      text-align: right;
+      margin-top: -23vmin;
+      transform: translateX(-5%);
+      opacity: 0;
+    }
+
+    // .section__title.left
+    &.left {
+      margin-bottom: 4vmin;
+      transform: translateX(5%);
+      opacity: 0;
+    }
+  }
+
+  // .section__text
+  &__text {
+    text-transform: none;
+    font-size: 3.9vmin;
+    line-height: 5.7vmin;
+    font-weight: 400;
+    margin-bottom: 6vmin;
+  }
+
+  // .section__subtitle
+  &__subtitle {
+    padding-top: 5vmin;
+    margin-bottom: 5vmin;
+    font-size: 6.5vmin;
+    font-weight: 500;
+  }
+  // .section__text-list
+  &__text-list {
+    padding-left: 5vmin;
+  }
+  // .section__text-list-item
+  &__text-list-item {
+    list-style: decimal;
+    margin-bottom: 6vmin;
+    text-transform: none;
+    font-size: 3.9vmin;
+    line-height: 5.7vmin;
+    font-weight: 400;
+  }
+  // .section__praise
+  &__praise {
+    padding-top: 5vmin;
+    margin-bottom: 5vmin;
+    text-align: center;
+    font-size: 4.75vmin;
+    font-weight: 500;
+  }
+  // .section__smile
+  &__smile {
+    position: relative;
+    display: block;
+    width: 80vmin;
+    margin: -29vmin auto 0;
+    z-index: -1;
+  }
+}
+.portal-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #32ff2e;
+  width: 100vmin;
+  margin: 0 -5vmin -6vmin -5vmin;
+  margin: 0 -5vmin calc(-6vmin - env(safe-area-inset-bottom)) -5vmin;
+  padding: 3vmin;
+  color: #000;
+  text-transform: none;
+  font-size: 3.9vmin;
+  line-height: 5.7vmin;
+  font-weight: 400;
+  text-align: center;
+}
+.anim-items,
+.anim-items.active {
+  transform: translateY(10vmin);
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.8s;
+}
+body.ready {
+  .anim-items.active {
+    transform: translateY(0vw);
+    opacity: 1;
+  }
+  .section__title.left,
+  .section__title.right,
+  .section__img-french--1,
+  .section__img-french--2,
+  .section__img-turk--1,
+  .section__img-turk--2,
+  .section__img-turk--3,
+  .section__img-purover--1,
+  .section__img-purover--2,
+  .section__img-kemex--1,
+  .section__img-kemex--2 {
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform 10s linear, opacity 1s;
+  }
+}
+
+jdiv,
+#jivo-iframe-container {
+  display: none !important;
+}

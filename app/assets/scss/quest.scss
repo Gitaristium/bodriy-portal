@@ -1,0 +1,442 @@
+@keyframes imgOne {
+  from {
+    transform: translateX(65%) rotate(37deg);
+  }
+  to {
+    transform: translateX(0%) rotate(0deg);
+  }
+}
+
+.wrapper {
+  position: relative;
+  // background: url("../../assets/img/quest/1.\ ПРИВЕТСТВИЕ.png");
+  // background-size: cover;
+  // background-position: top center;
+}
+.section {
+  background: #7eff69;
+  overflow-x: hidden;
+  &__inner {
+    position: relative;
+  }
+  &__container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 9vmin;
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 68vmin;
+    transform-origin: 100% 100%;
+    transform: translateX(65%) rotate(37deg);
+    -webkit-animation: imgOne 1s forwards;
+    animation: imgOne 1s forwards;
+  }
+  &__title {
+    margin-bottom: 4vmin;
+    font-size: 10.7vmin;
+    span {
+      display: block;
+      &:nth-child(2) {
+        transition-delay: 0.1s;
+      }
+      &:nth-child(3) {
+        transition-delay: 0.2s;
+      }
+    }
+  }
+  &__text {
+    font-size: 5vmin;
+    line-height: 1.05;
+    margin-bottom: 11vmin;
+    transition-delay: 0.4s;
+    &.anim-items {
+      transform: translateY(50%);
+      &.active {
+        transform: translateY(0%);
+      }
+    }
+  }
+  .btn {
+    margin-bottom: 15vmin;
+    transition-delay: 0.6s;
+  }
+}
+
+//вопросы
+.modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  overflow-x: hidden;
+  transition: 0.2s;
+
+  &-quest {
+    background: #fff;
+  }
+  &-result {
+    background: #7eff69;
+  }
+  &.active {
+    pointer-events: all;
+    opacity: 1;
+  }
+  &__inner {
+    position: relative;
+  }
+  &__container {
+    position: relative;
+    width: 100%;
+    // min-height: 100vh;
+  }
+}
+.item {
+  position: absolute;
+  width: 100%;
+  transform: translateX(100%);
+  transition: 0.5s;
+  &__inner {
+    position: relative;
+    padding: 0 5vmin;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__top {
+  }
+  &__bottom {
+  }
+  &__img {
+    position: absolute;
+    width: 88vmin;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+    transform: translateX(-250%);
+    transition: 0.5s 0.2s;
+  }
+  &__desc {
+    position: relative;
+    padding-top: 37vmin;
+    margin-bottom: 12vmin;
+    display: flex;
+    // justify-content: center;
+    z-index: 1;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: 0.5s 0.2s;
+  }
+  &__num {
+    font-size: 26vmin;
+    font-weight: 400;
+    margin-right: 5vmin;
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+    line-height: 1.5;
+  }
+  &__quest-block {
+    text-transform: none;
+  }
+  &__input {
+    display: none;
+    &:checked + .item__label {
+      color: #52ae32;
+    }
+    &:checked + .item__label::before {
+      background-color: #52ae32;
+    }
+  }
+  &__label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 10vmin;
+    font-size: 4vmin;
+    padding-left: 15vmin;
+    transition: color 0.2s;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 5vmin;
+      height: 5vmin;
+      top: calc(50% - 2.5vmin);
+      background-color: #fff;
+      border: 0.8vmin solid #52ae32;
+      border-radius: 50%;
+      left: 7vmin;
+      transition: 0.2s;
+    }
+    &--1 {
+      transform: translateX(100%);
+      opacity: 0;
+      transition: transform 0.5s 0.4s;
+    }
+    &--2 {
+      transform: translateX(100%);
+      opacity: 0;
+      transition: transform 0.5s 0.6s;
+    }
+    &--3 {
+      transform: translateX(100%);
+      opacity: 0;
+      transition: transform 0.5s 0.8s;
+    }
+    &--4 {
+      transform: translateX(100%);
+      opacity: 0;
+      transition: transform 0.5s 1s;
+    }
+  }
+  .btn {
+    position: relative;
+    margin: 10vmin auto 24vmin;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: 0.5s;
+    pointer-events: none;
+    &.active {
+      opacity: 1;
+      transform: translateY(0%);
+      pointer-events: all;
+    }
+  }
+}
+.item.active {
+  transform: translateX(0%);
+  & .item {
+    &__img,
+    &__desc,
+    &__label,
+    &.btn {
+      transform: translateX(0%);
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+}
+.item.done {
+  transform: translateX(-100%);
+  & .item {
+    &__img {
+      transform: translateX(250%);
+      transition-delay: 0s;
+    }
+  }
+}
+
+//результаты
+.modal-result {
+}
+.result {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  height: 0;
+  &__inner {
+    padding: 10vmin 10vmin 0;
+  }
+  &__round {
+    position: relative;
+    display: block;
+    width: 65vmin;
+    height: 65vmin;
+    border-radius: 50%;
+    margin: -8vmin -7vmin 8vmin auto;
+    border: 1.3vmin solid #000;
+    transform: scale(0) translateY(0%) rotate(-180deg);
+    transition: 0.5s 0.2s;
+    &--tea {
+      position: absolute;
+      display: block;
+      object-fit: cover;
+      width: 24.7vmin;
+      height: 69vmin;
+      top: -3vmin;
+      left: -7.5vmin;
+    }
+    &--raf {
+      position: absolute;
+      display: block;
+      object-fit: cover;
+      width: 19.7vmin;
+      height: 51vmin;
+      top: 1vmin;
+      left: -9vmin;
+    }
+    &--cappuccino {
+      position: absolute;
+      display: block;
+      object-fit: cover;
+      width: 50.5vmin;
+      height: 73.3vmin;
+      top: -3vmin;
+      left: -8.5vmin;
+    }
+    &--americano {
+      position: absolute;
+      display: block;
+      object-fit: cover;
+      width: 49.5vmin;
+      height: 73.5vmin;
+      top: -3vmin;
+      left: -7.5vmin;
+    }
+    &--black {
+      position: absolute;
+      display: block;
+      object-fit: cover;
+      width: 58.3vmin;
+      height: 74vmin;
+      top: -3vmin;
+      left: -9.5vmin;
+    }
+  }
+  &__round-inner {
+    background: #fff;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: 0.5s 0.2s;
+    &--black {
+      background: #00ffa8;
+    }
+  }
+  &__round-img {
+    display: block;
+    top: 100vmin;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: absolute;
+    width: 55vmin;
+    transition: 1s 0.5s;
+    &--black {
+      transform: rotate(-30deg) scale(0.9);
+      top: 90vmin;
+      left: 62vmin;
+    }
+  }
+  &__title {
+    // font-size: 13.5vmin;
+    font-size: 12vmin;
+    font-weight: 500;
+    margin-bottom: 5vmin;
+    transform: translateY(200%);
+    opacity: 0;
+    transition: 0.5s 0.4s;
+  }
+  &__text {
+    text-transform: none;
+    font-size: 3.6vmin;
+    margin-bottom: 4.5vmin;
+    line-height: 1.2;
+    transform: translateY(200%);
+    opacity: 0;
+    transition: 0.5s 0.6s;
+    &--light {
+      font-weight: 400;
+    }
+  }
+}
+.share-block {
+  transform: translateY(200%);
+  opacity: 0;
+  transition: 0.5s 0.8s;
+  &__title {
+    font-size: 5.2vmin;
+    margin-top: 19vmin;
+    margin-bottom: 7vmin;
+  }
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20vmin;
+    transform: translateY(200%);
+    opacity: 0;
+    transition: 0.5s 1s;
+  }
+  &__link {
+    width: 23vmin;
+    height: 23vmin;
+    & .ya-share2__icon {
+      width: 23vmin !important;
+      height: 23vmin !important;
+      background-size: 80% !important;
+    }
+    &--insta {
+    }
+    &--facebook {
+    }
+    &--twitter {
+    }
+  }
+  &__img {
+    width: 100%;
+  }
+}
+.footer-note {
+  transform: translateY(200%);
+  margin-bottom: 10vmin;
+  opacity: 0;
+  transition: 0.5s 1.2s;
+}
+.footer-btn {
+  color: #7eff69;
+  transform: translateY(200%);
+  opacity: 0;
+  transition: 0.5s 1.4s;
+}
+.result.active {
+  pointer-events: all;
+  opacity: 1;
+  height: auto;
+  & .result {
+    &__round,
+    &__title,
+    &__text,
+    &__share-block,
+    &__btn {
+      transform: scale(1) translateY(0%) rotate(0deg);
+      opacity: 1;
+    }
+    &__round-img {
+      top: 10vmin;
+    }
+    &__round-img--black {
+      top: -10vmin;
+      left: 12vmin;
+    }
+  }
+  & .share-block {
+    &__links {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+    & .footer-note {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  & .footer-btn {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}

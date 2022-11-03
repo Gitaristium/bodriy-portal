@@ -1,0 +1,20 @@
+<svg width="800" height="710" viewBox="0 0 800 710" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_bd_60_4)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M60.303 65.7835C-20.101 146.187 -20.101 276.548 60.3029 356.952L399.999 696.648L400.001 696.649L739.697 356.953C820.101 276.549 820.101 146.188 739.697 65.7845C659.293 -14.6195 528.933 -14.6195 448.529 65.7844L400 114.313L351.471 65.7836C271.067 -14.6204 140.707 -14.6204 60.303 65.7835Z" fill="white" fill-opacity="0.4" shape-rendering="crispEdges"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M400 114.313L448.529 65.7844C528.933 -14.6195 659.293 -14.6195 739.697 65.7845C820.101 146.188 820.101 276.549 739.697 356.953L400.001 696.649L399.999 696.648L60.3029 356.952C-20.101 276.548 -20.101 146.187 60.303 65.7835C140.707 -14.6204 271.067 -14.6204 351.471 65.7836L400 114.313ZM400 695.235L738.99 356.246C819.003 276.232 819.003 146.505 738.99 66.4916C658.977 -13.5219 529.249 -13.5219 449.236 66.4915L400 115.727L350.764 66.4907C270.751 -13.5227 141.024 -13.5228 61.0101 66.4906C-19.0033 146.504 -19.0034 276.231 61.01 356.245L400 695.235Z" fill="#FFDFDF" fill-opacity="0.54" shape-rendering="crispEdges"/>
+</g>
+<defs>
+<filter id="filter0_bd_60_4" x="-28" y="-22.5194" width="856" height="747.169" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImage" stdDeviation="14"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_60_4"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="4.5"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.07 0"/>
+<feBlend mode="normal" in2="effect1_backgroundBlur_60_4" result="effect2_dropShadow_60_4"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_60_4" result="shape"/>
+</filter>
+</defs>
+</svg>

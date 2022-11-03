@@ -1,0 +1,177 @@
+@-webkit-keyframes letterRotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  20% {
+    transform: rotateY(90deg);
+  }
+  80% {
+    transform: rotateY(90deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+@keyframes letterRotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  20% {
+    transform: rotateY(90deg);
+  }
+  80% {
+    transform: rotateY(90deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+@-webkit-keyframes smileRotate {
+  from {
+    transform: rotateY(90deg);
+  }
+  20% {
+    transform: rotateY(90deg);
+  }
+  40% {
+    transform: rotateY(180deg);
+  }
+  60% {
+    transform: rotateY(180deg);
+  }
+  80% {
+    transform: rotateY(90deg);
+  }
+  to {
+    transform: rotateY(90deg);
+  }
+}
+@keyframes smileRotate {
+  from {
+    transform: rotateY(90deg);
+  }
+  20% {
+    transform: rotateY(90deg);
+  }
+  40% {
+    transform: rotateY(180deg);
+  }
+  60% {
+    transform: rotateY(180deg);
+  }
+  80% {
+    transform: rotateY(90deg);
+  }
+  to {
+    transform: rotateY(90deg);
+  }
+}
+#anim-smile {
+  position: absolute;
+  top: 2.7vw;
+  right: 8.7vw;
+  width: 11vw;
+  transform: rotateY(90deg);
+  -webkit-animation: smileRotate 2s 5s linear;
+          animation: smileRotate 2s 5s linear;
+  transition: 0.5s;
+}
+
+#anim-letter {
+  display: inline-block;
+  transform: rotateY(0deg);
+  -webkit-animation: letterRotate 2s 5s linear;
+          animation: letterRotate 2s 5s linear;
+  transition: 0.5s;
+}
+
+.section {
+  scroll-snap-align: start;
+}
+.section__inner {
+  position: relative;
+}
+.section__container {
+  padding: 9vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.section__title {
+  font-size: 16vw;
+  margin-bottom: 3vw;
+  margin-top: 2vw;
+  z-index: 1;
+  font-weight: 500;
+}
+.section__text {
+  font-size: 5vw;
+  transition-delay: 0.2s;
+}
+
+.send__wrapper {
+  position: relative;
+}
+.send__wrapper--interview {
+  background: linear-gradient(14deg, #caffad 0%, #8fe35d 65%, #70e169 100%);
+}
+.send__wrapper--menu {
+  background: #fff url(../../archive/season-2022-spring/img/bg-modal.png) bottom center/cover;
+}
+.send__wrapper-img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.send__title {
+  position: relative;
+  font-size: 14vw;
+  margin-bottom: 2vw;
+  opacity: 0;
+  -webkit-animation: animTop 0.5s forwards;
+          animation: animTop 0.5s forwards;
+}
+.send__text {
+  text-transform: none;
+  margin-bottom: 16vw;
+  opacity: 0;
+  -webkit-animation: animTop 0.5s 0.2s forwards;
+          animation: animTop 0.5s 0.2s forwards;
+}
+.send__star {
+  position: absolute;
+  top: -10vw;
+  left: -16vw;
+  width: 70vw;
+  -webkit-animation: rotate-l 120s linear infinite;
+          animation: rotate-l 120s linear infinite;
+}
+
+@-webkit-keyframes rotate-l {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotate-l {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.footer-note {
+  position: absolute;
+  bottom: 16vw;
+  opacity: 0;
+  -webkit-animation: animTop 0.5s 0.4s forwards;
+          animation: animTop 0.5s 0.4s forwards;
+}

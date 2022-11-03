@@ -1,0 +1,39 @@
+.wrapper {
+}
+.section {
+  padding-top: 23vmin;
+  &__inner {
+    position: relative;
+  }
+  &__container {
+    padding: 9vmin;
+  }
+  &__title {
+    font-size: 8.5vmin;
+    margin-bottom: 11.5vmin;
+    &--big {
+      margin: 20vmin 0;
+      font-size: 11.5vmin;
+      &.anim-items {
+        transform: translateY(50%);
+        &.active {
+          transform: translateY(0%);
+        }
+      }
+    }
+  }
+  &__text,
+  &__text--desc {
+    text-transform: none;
+    font-size: 5.2vmin;
+    line-height: 1.1;
+  }
+  &__img {
+    display: block;
+    width: 100%;
+    margin-top: 7vmin;
+  }
+}
+.footer-note {
+  margin-bottom: 9vmin;
+}

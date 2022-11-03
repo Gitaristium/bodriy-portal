@@ -1,0 +1,45 @@
+.section {
+  width: 100%;
+  min-height: 100vmax;
+  padding: 6vmin;
+  text-align: center;
+  background: #52ae32;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 1s;
+
+  // .section__title
+  &__title {
+    margin: 0;
+    font-size: 10vmin;
+    font-weight: 600;
+    margin: 6vmin;
+  }
+
+  // .section__subtitle
+  &__subtitle {
+    margin: 0;
+    font-size: 6vmin;
+    font-weight: 600;
+    margin: 6vmin;
+    text-decoration: underline;
+  }
+
+  // .section__link
+  &__link {
+    display: block;
+    color: #fff;
+    padding: 3vmin 0;
+    font-size: 4vmin;
+    font-weight: 400;
+  }
+}
+
+jdiv,
+#jivo-iframe-container {
+  display: none !important;
+}
+
+body.ready .section {
+  opacity: 1;
+}
