@@ -3,111 +3,111 @@
   $APPLICATION->SetTitle("Сезонное меню");
   ?>
   <meta name="theme-color" content="#1a1a1a">
-  <link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/rotate-screen.png">
-  <link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/interview/smile.png">
-  <link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/season/bg.webp">
-  <link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/season/bg-bottom.png">
-  <link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/season/bg-modal.jpg">
-  <link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/season/arrow.webp">
-  <link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/season/cacao.webp">
-  <link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/season/latte.webp">
-  <link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/season/raf.webp">
-  <link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/season/tea.webp">
-  <link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/season/slider-title.webp">
+  <link rel="preload" as="image" href="<?= SITE_DIR ?>asstets/img/rotate-screen.png">
+  <link rel="preload" as="image" href="<?= SITE_DIR ?>asstets/img/interview/smile.png">
+  <link rel="preload" as="image" href="<?= SITE_DIR ?>archive/season-2022-autumn/img/bg.webp">
+  <link rel="preload" as="image" href="<?= SITE_DIR ?>archive/season-2022-autumn/img/bg-bottom.png">
+  <link rel="preload" as="image" href="<?= SITE_DIR ?>archive/season-2022-autumn/img/bg-modal.jpg">
+  <link rel="preload" as="image" href="<?= SITE_DIR ?>archive/season-2022-autumn/img/arrow.webp">
+  <link rel="preload" as="image" href="<?= SITE_DIR ?>archive/season-2022-autumn/img/cacao.webp">
+  <link rel="preload" as="image" href="<?= SITE_DIR ?>archive/season-2022-autumn/img/latte.webp">
+  <link rel="preload" as="image" href="<?= SITE_DIR ?>archive/season-2022-autumn/img/raf.webp">
+  <link rel="preload" as="image" href="<?= SITE_DIR ?>archive/season-2022-autumn/img/tea.webp">
+  <link rel="preload" as="image" href="<?= SITE_DIR ?>archive/season-2022-autumn/img/slider-title.webp">
   <link rel="stylesheet" href="<?= SITE_DIR ?>assets/css/season-autumn-2022.css">
   <script type="text/javascript">
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
-        navigator.userAgent)) {} else {
-      location = "/";
-    }
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+    navigator.userAgent)) {} else {
+  location = "/";
+}
   </script>
   </head>
 
   <body>
     <div class="rotate-screen">
-      <img class="rotate__img" src="<?= SITE_DIR ?>assets/img/rotate-screen.png" alt="rotate-screen">
+      <img class="rotate__img" src="<?= SITE_DIR ?>asstets/img/rotate-screen.png" alt="rotate-screen">
       поверни телефон
     </div>
     <div class="wrapper">
       <div class="preload">
         <picture>
-          <source srcset="<?= SITE_DIR ?>assets/img/interview/smile.webp" type="image/webp">
-          <img class="preload__img" src="<?= SITE_DIR ?>assets/img/interview/smile.png" alt="smile">
+          <source srcset="<?= SITE_DIR ?>aasstets/img/interview/smile.webp" type="image/webp">
+          <img class="preload__img" src="<?= SITE_DIR ?>asstets/img/interview/smile.png" alt="smile">
         </picture>
         грузим меню
       </div>
 
       <section class="section section-one" id="section-one">
         <picture>
-          <source srcset="<?= SITE_DIR ?>assets/img/season/bg.webp" type="image/webp">
-          <img class="section-one__bg" src="<?= SITE_DIR ?>assets/img/season/bg.jpg">
+          <source srcset="<?= SITE_DIR ?>archive/season-2022-autumn/img/bg.webp" type="image/webp">
+          <img class="section-one__bg" src="<?= SITE_DIR ?>archive/season-2022-autumn/img/bg.jpg">
         </picture>
         <div class="slider-title">
           <div class="slider-title__item">
             <picture>
-              <source srcset="<?= SITE_DIR ?>assets/img/season/slider-title.webp" type="image/webp">
-              <img class="slider-title__item-img" src="<?= SITE_DIR ?>assets/img/season/slider-title.png">
+              <source srcset="<?= SITE_DIR ?>archive/season-2022-autumn/img/slider-title.webp" type="image/webp">
+              <img class="slider-title__item-img" src="<?= SITE_DIR ?>archive/season-2022-autumn/img/slider-title.png">
             </picture>
           </div>
           <div class="slider-title__item">
             <picture>
-              <source srcset="<?= SITE_DIR ?>assets/img/season/slider-title.webp" type="image/webp">
-              <img class="slider-title__item-img" src="<?= SITE_DIR ?>assets/img/season/slider-title.png">
+              <source srcset="<?= SITE_DIR ?>archive/season-2022-autumn/img/slider-title.webp" type="image/webp">
+              <img class="slider-title__item-img" src="<?= SITE_DIR ?>archive/season-2022-autumn/img/slider-title.png">
             </picture>
           </div>
         </div>
 
         <div class="arrows">
           <picture>
-            <source srcset="<?= SITE_DIR ?>assets/img/season/arrow.webp" type="image/webp">
-            <img class="arrows__img l three hide" src="<?= SITE_DIR ?>assets/img/season/arrow.png">
+            <source srcset="<?= SITE_DIR ?>archive/season-2022-autumn/img/arrow.webp" type="image/webp">
+            <img class="arrows__img l three hide" src="<?= SITE_DIR ?>archive/season-2022-autumn/img/arrow.png">
           </picture>
           <picture>
-            <source srcset="<?= SITE_DIR ?>assets/img/season/arrow.webp" type="image/webp">
-            <img class="arrows__img l two hide" src="<?= SITE_DIR ?>assets/img/season/arrow.png">
+            <source srcset="<?= SITE_DIR ?>archive/season-2022-autumn/img/arrow.webp" type="image/webp">
+            <img class="arrows__img l two hide" src="<?= SITE_DIR ?>archive/season-2022-autumn/img/arrow.png">
           </picture>
           <picture>
-            <source srcset="<?= SITE_DIR ?>assets/img/season/arrow.webp" type="image/webp">
-            <img class="arrows__img l one hide" src="<?= SITE_DIR ?>assets/img/season/arrow.png">
+            <source srcset="<?= SITE_DIR ?>archive/season-2022-autumn/img/arrow.webp" type="image/webp">
+            <img class="arrows__img l one hide" src="<?= SITE_DIR ?>archive/season-2022-autumn/img/arrow.png">
           </picture>
           <div class="arrows__text">свайпай</div>
           <picture>
-            <source srcset="<?= SITE_DIR ?>assets/img/season/arrow.webp" type="image/webp">
-            <img class="arrows__img r one start" src="<?= SITE_DIR ?>assets/img/season/arrow.png">
+            <source srcset="<?= SITE_DIR ?>archive/season-2022-autumn/img/arrow.webp" type="image/webp">
+            <img class="arrows__img r one start" src="<?= SITE_DIR ?>archive/season-2022-autumn/img/arrow.png">
           </picture>
           <picture>
-            <source srcset="<?= SITE_DIR ?>assets/img/season/arrow.webp" type="image/webp">
-            <img class="arrows__img r two start" src="<?= SITE_DIR ?>assets/img/season/arrow.png">
+            <source srcset="<?= SITE_DIR ?>archive/season-2022-autumn/img/arrow.webp" type="image/webp">
+            <img class="arrows__img r two start" src="<?= SITE_DIR ?>archive/season-2022-autumn/img/arrow.png">
           </picture>
           <picture>
-            <source srcset="<?= SITE_DIR ?>assets/img/season/arrow.webp" type="image/webp">
-            <img class="arrows__img r three start" src="<?= SITE_DIR ?>assets/img/season/arrow.png">
+            <source srcset="<?= SITE_DIR ?>archive/season-2022-autumn/img/arrow.webp" type="image/webp">
+            <img class="arrows__img r three start" src="<?= SITE_DIR ?>archive/season-2022-autumn/img/arrow.png">
           </picture>
         </div>
 
         <div class="slider-drink">
           <div class="slider-drink__item drink drink-1 show">
             <picture>
-              <source srcset="<?= SITE_DIR ?>assets/img/season/raf.webp" type="image/webp">
-              <img class="slider-drink__item-img" src="<?= SITE_DIR ?>assets/img/season/raf.png">
+              <source srcset="<?= SITE_DIR ?>archive/season-2022-autumn/img/raf.webp" type="image/webp">
+              <img class="slider-drink__item-img" src="<?= SITE_DIR ?>archive/season-2022-autumn/img/raf.png">
             </picture>
           </div>
           <div class="slider-drink__item drink drink-2">
             <picture>
-              <source srcset="<?= SITE_DIR ?>assets/img/season/cacao.webp" type="image/webp">
-              <img class="slider-drink__item-img" src="<?= SITE_DIR ?>assets/img/season/cacao.png">
+              <source srcset="<?= SITE_DIR ?>archive/season-2022-autumn/img/cacao.webp" type="image/webp">
+              <img class="slider-drink__item-img" src="<?= SITE_DIR ?>archive/season-2022-autumn/img/cacao.png">
             </picture>
           </div>
           <div class="slider-drink__item drink drink-3">
             <picture>
-              <source srcset="<?= SITE_DIR ?>assets/img/season/latte.webp" type="image/webp">
-              <img class="slider-drink__item-img" src="<?= SITE_DIR ?>assets/img/season/latte.png">
+              <source srcset="<?= SITE_DIR ?>archive/season-2022-autumn/img/latte.webp" type="image/webp">
+              <img class="slider-drink__item-img" src="<?= SITE_DIR ?>archive/season-2022-autumn/img/latte.png">
             </picture>
           </div>
           <div class="slider-drink__item drink drink-4">
             <picture>
-              <source srcset="<?= SITE_DIR ?>assets/img/season/tea.webp" type="image/webp">
-              <img class="slider-drink__item-img" src="<?= SITE_DIR ?>assets/img/season/tea.png">
+              <source srcset="<?= SITE_DIR ?>archive/season-2022-autumn/img/tea.webp" type="image/webp">
+              <img class="slider-drink__item-img" src="<?= SITE_DIR ?>archive/season-2022-autumn/img/tea.png">
             </picture>
           </div>
         </div>
@@ -135,16 +135,18 @@
 
       <section class="section section-two">
         <picture>
-          <!-- <source srcset="<?= SITE_DIR ?>assets/img/season/bg-bottom.webp" type="image/webp"> -->
-          <img class="section-two__bg" src="<?= SITE_DIR ?>assets/img/season/bg-bottom.png">
+          <!-- <source srcset="<?= SITE_DIR ?>archive/season-2022-autumn/img/bg-bottom.webp" type="image/webp"> -->
+          <img class="section-two__bg" src="<?= SITE_DIR ?>archive/season-2022-autumn/img/bg-bottom.png">
         </picture>
         <picture>
-          <source srcset="<?= SITE_DIR ?>assets/img/season/lines-left.webp" type="image/webp">
-          <img class="section-two__lines section-two__lines--left anim-items" src="<?= SITE_DIR ?>assets/img/season/lines-left.png">
+          <source srcset="<?= SITE_DIR ?>archive/season-2022-autumn/img/lines-left.webp" type="image/webp">
+          <img class="section-two__lines section-two__lines--left anim-items"
+            src="<?= SITE_DIR ?>archive/season-2022-autumn/img/lines-left.png">
         </picture>
         <picture>
-          <source srcset="<?= SITE_DIR ?>assets/img/season/lines-right.webp" type="image/webp">
-          <img class="section-two__lines section-two__lines--right anim-items" src="<?= SITE_DIR ?>assets/img/season/lines-right.png">
+          <source srcset="<?= SITE_DIR ?>archive/season-2022-autumn/img/lines-right.webp" type="image/webp">
+          <img class="section-two__lines section-two__lines--right anim-items"
+            src="<?= SITE_DIR ?>archive/season-2022-autumn/img/lines-right.png">
         </picture>
         <div class="section__inner">
           <div class="container">
@@ -220,6 +222,6 @@
   <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/jquery.js"></script>
   <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/js.cookie.js"></script>
   <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/touchswipe.js"></script>
-  <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/season-autumn-2022.js"></script>
+  <script type="text/javascript" src="<?= SITE_DIR ?>archive/season-2022-autumn/season-autumn-2022.js"></script>
 
   <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

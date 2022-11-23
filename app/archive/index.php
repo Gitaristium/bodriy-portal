@@ -34,17 +34,18 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
         <a class="section__link" href="http://fufuter.ru/bodroe-pismo/index_1.html">Рассылка #1</a>
         <a class="section__link" href="http://fufuter.ru/bodroe-pismo/index_2.html">Рассылка #2</a>
         <a class="section__link" href="http://fufuter.ru/bodroe-pismo/index_3.html">Рассылка #3</a>
-        <a class="section__link" href="/archive/season-2021-summer/season.php">Лето</a>
-        <a class="section__link" href="/archive/season-2021-autumn/season.php">Осень</a>
-        <a class="section__link" href="/archive/season-2021-winter/season.php">Зима</a>
-        <a class="section__link" href="/archive/newyear2022/2022.php">Новый год</a>
+        <a class="section__link" href="<?= SITE_DIR ?>archive/season-2021-summer/season.php">Лето</a>
+        <a class="section__link" href="<?= SITE_DIR ?>archive/season-2021-autumn/season.php">Осень</a>
+        <a class="section__link" href="<?= SITE_DIR ?>archive/season-2021-winter/season.php">Зима</a>
+        <a class="section__link" href="<?= SITE_DIR ?>archive/newyear2022/2022.php">Новый год</a>
         <h2 class="section__subtitle">2022</h2>
-        <a class="section__link" href="/archive/valentine/valentine.php">14 февраля</a>
-        <a class="section__link" href="/archive/feb23/feb23.php">23 февраля</a>
-        <a class="section__link" href="/archive/march8/march8.php">8 марта</a>
-        <a class="section__link" href="/archive/season-2022-spring/season.php">Весна</a>
-        <a class="section__link" href="/archive/season-2022-summer/season.php">Лето</a>
-        <a class="section__link" href="/archive/coffee-free/">Акция с кофе</a>
+        <a class="section__link" href="<?= SITE_DIR ?>archive/valentine/valentine.php">14 февраля</a>
+        <a class="section__link" href="<?= SITE_DIR ?>archive/feb23/feb23.php">23 февраля</a>
+        <a class="section__link" href="<?= SITE_DIR ?>archive/march8/march8.php">8 марта</a>
+        <a class="section__link" href="<?= SITE_DIR ?>archive/season-2022-spring/season.php">Весна</a>
+        <a class="section__link" href="<?= SITE_DIR ?>archive/season-2022-summer/season.php">Лето</a>
+        <a class="section__link" href="<?= SITE_DIR ?>archive/coffee-free/">Акция с кофе</a>
+        <a class="section__link" href="<?= SITE_DIR ?>archive/season-2022-autumn/season.php">Осень</a>
       </section>
     </div>
   </body>
