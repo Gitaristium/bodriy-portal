@@ -13,7 +13,7 @@
   ?>
   <link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/rotate-screen.png">
   <link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/interview/smile.webp">
-  <link rel="stylesheet" href="<?= SITE_DIR ?>assets/css/season-autumn-2022-send.css">
+  <link rel="stylesheet" href="<?= SITE_DIR ?>assets/css/season-2022-winter-send.css">
   </head>
 
   <body>
@@ -43,7 +43,7 @@
 
   <!-- <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/jquery.js"></script> -->
   <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/js.cookie.js"></script>
-  <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/season-autumn-2022-send.js"></script>
+  <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/season-2022-winter-send.js"></script>
 
 
   <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

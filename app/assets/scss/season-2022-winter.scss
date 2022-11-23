@@ -1,0 +1,365 @@
+$color: #edb981;
+$color2: #d7a976;
+$colorText: #1a1a1a;
+
+// html {
+//   background: #1a1a1a;
+// }
+span {
+  display: block;
+}
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  font-weight: 500;
+
+  // .wrapper__bg
+  // &__bg {
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   display: block;
+  //   width: 100%;
+  // }
+}
+
+.container {
+  padding: 0 6.5vmin;
+}
+.anim-items.active {
+  transform: translateY(20vmin);
+  opacity: 0;
+}
+.section {
+  opacity: 0;
+  position: relative;
+
+  // .section-one
+  &-one {
+    padding-top: 91vw;
+    padding-top: calc(91vw + env(safe-area-inset-top));
+
+    // .section-one__title
+    &__title {
+      font-weight: 500;
+      font-size: 10.5vw;
+      line-height: 11.5vw;
+      letter-spacing: -1px;
+      margin: 0;
+      padding-bottom: 21vw;
+
+      // .section-one__title span
+      span {
+        display: block;
+      }
+    }
+
+    // .section-one__title
+    &__text {
+      text-transform: none;
+      font-size: 3.8vw;
+      line-height: 5.7vw;
+      letter-spacing: -0.1px;
+      // padding-bottom: 45vw;
+      padding-bottom: 43vw;
+
+      // .section-one__title.right
+      &.right {
+        padding-bottom: 28vw;
+        margin-left: 10vw;
+      }
+    }
+  }
+
+  // .section-two
+  &-two {
+    // background: #1a1a1a;
+    padding-bottom: 83vw;
+
+    // .section-two__title
+    &__title {
+      font-size: 6vmin;
+      line-height: 1.2;
+      padding-bottom: 1.5vmin;
+      span {
+        display: block;
+        // color: $color;
+      }
+    }
+
+    // .section-two__desc
+    &__desc {
+      text-transform: none;
+      font-size: 3.1vw;
+    }
+
+    // .section-two__text
+    &__text {
+      text-transform: none;
+      margin-top: 2vw;
+      font-size: 3.8vw;
+      line-height: 5.5vw;
+      letter-spacing: 0px;
+      display: block;
+      position: relative;
+      padding-left: 17vw;
+    }
+
+    form {
+      width: 100%;
+      padding-top: 7vmin;
+      margin-bottom: 33vw;
+
+      textarea {
+        width: 100%;
+        height: 37vmin;
+        resize: none;
+        background: #fff;
+        outline: none;
+        border-radius: 10px;
+        border: $colorText 2px solid;
+        color: $colorText;
+        padding: 2vmin 3vmin;
+        font-family: "Stolzl", sans-serif;
+        font-size: 3.5vmin;
+        font-weight: 400;
+        margin-bottom: 5vmin;
+        transition: 0.3s;
+        &:focus,
+        &:target,
+        &:active {
+          outline: none;
+          border: $color 2px solid;
+        }
+      }
+    }
+  }
+} //.section
+
+.footer-note {
+  padding-top: 24vmin;
+  padding-bottom: 23vmin;
+  padding-left: 21vmin;
+  font-weight: 600;
+  color: #fff;
+  &.anim-items {
+    transform: translateY(30%);
+    &.active {
+      transform: translateY(0%);
+    }
+  }
+  span {
+    font-size: 3.5vmin;
+    font-weight: 400;
+    padding-left: 0;
+    &::before {
+      content: none;
+    }
+  }
+}
+.footer-btn {
+  color: #000;
+  background: $color2;
+  font-size: 4.5vw;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 99;
+  &__inner {
+    transform: translateY(100%);
+    transition: 0.3s;
+    position: relative;
+    // background: url(../../assets/img/season/bg-modal.jpg);
+    // background-position: center;
+    // background-size: cover;
+  }
+  &__img {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &__content {
+    position: relative;
+    width: 100%;
+    height: 100vmax;
+    padding: 9vmin 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__text {
+    color: $colorText;
+    mix-blend-mode: color-dodge;
+    font-size: 7.3vmin;
+    letter-spacing: 1px;
+    width: 100%;
+  }
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+    .modal__inner {
+      transform: translateY(0);
+    }
+  }
+  form {
+    width: 100%;
+    padding-top: 8vmin;
+
+    textarea {
+      width: 100%;
+      height: 45vmin;
+      resize: none;
+      background: transparent;
+      outline: none;
+      border-radius: 5px;
+      border: $colorText 2px solid;
+      color: $colorText;
+      mix-blend-mode: color-dodge;
+      padding: 2vmin 3vmin;
+      font-family: "Stolzl", sans-serif;
+      font-size: 3.5vmin;
+      font-weight: 400;
+      margin-bottom: 13vmin;
+      transition: 0.3s;
+      &:focus,
+      &:target,
+      &:active {
+        outline: none;
+        border: $color2 2px solid;
+      }
+    }
+  }
+} //modal
+.btn {
+  border: $color 2px solid;
+  color: $color;
+  font-size: 5vw;
+  padding: 3vw 7vw;
+  margin: 0 auto 32px;
+}
+.btn--green {
+  background: #00da3d;
+  border: #00da3d 2px solid;
+  color: #000;
+}
+.btn--season {
+  background: $color;
+  color: #000;
+}
+.btn-close {
+  position: absolute;
+  display: block;
+  width: 8.5vmin;
+  height: 8.5vmin;
+  transition: 0.3s;
+  transition-delay: 0.2s;
+  &__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  span {
+    display: block;
+    top: 3vmin;
+    width: 8vmin;
+    height: 2.2vmin;
+    background: $color;
+    transform: rotate(45deg);
+    position: absolute;
+    &:first-child {
+      transform: rotate(-45deg);
+    }
+  }
+} //.btn-close
+
+.modal-no {
+  &__btn {
+    bottom: 20vmin;
+    left: calc(50% - 4.25vmin);
+  }
+  .btn-close {
+    transform: translateY(300%);
+  }
+  &.active .btn-close {
+    transform: translateY(0%);
+  }
+}
+
+.modal-yes {
+  &__btn {
+    top: 9vmin;
+    right: 0;
+    // @media screen and (max-height: 500px) {
+    //   display: none;
+    // }
+  }
+  .btn-close {
+    transform: translateX(300%);
+  }
+  &.active .btn-close {
+    transform: translateX(0%);
+  }
+}
+
+//переопределение чата живосайта
+.wrap_196d {
+  z-index: 10 !important;
+}
+.preload {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100vmax;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5vmin;
+  font-weight: 400;
+  color: #52ae32;
+  transition: 0.1s;
+  pointer-events: none;
+  background-color: #fff;
+}
+.preload__img {
+  position: relative;
+  display: block;
+  -webkit-animation: rotateSmile 3s infinite linear;
+  animation: rotateSmile 3s infinite linear;
+  width: 12vmin;
+  height: 12vmin;
+}
+body.ready {
+  .anim-items.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .section {
+    opacity: 1;
+    transition: opacity 1s;
+  }
+}
+
+jdiv,
+#jivo-iframe-container {
+  display: none !important;
+}

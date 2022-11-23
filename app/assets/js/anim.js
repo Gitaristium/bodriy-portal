@@ -91,6 +91,7 @@ if (parallaxItems.length > 0) {
   }
 
 }
+
 //что-то из интеренета, но помогло
 if (animItems.length > 0 || parallaxItems.length > 0) {
   function offset(el) {

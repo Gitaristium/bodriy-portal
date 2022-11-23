@@ -5,7 +5,6 @@ const scss = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
-const imagemin = require('gulp-imagemin');
 const del = require('del');
 const ftp = require('vinyl-ftp');
 const gutil = require('gulp-util');
@@ -19,8 +18,8 @@ function html() {
     'app/**/*.php'
   ])
     .pipe(changed('dist'))
-    .pipe(dest('dist'))          //для разработки локально
-    .pipe(browserSync.stream())  //для разработки локально
+    .pipe(dest('dist'))
+    .pipe(browserSync.stream())
   // .pipe(dest('preFTP'))           //для разработки на хосте
 }
 
@@ -31,8 +30,8 @@ function fonts() {
     'app/assets/fonts/**/*.*'
   ])
     .pipe(changed('dist/assets/fonts'))
-    .pipe(dest('dist/assets/fonts'))  //для разработки локально
-    .pipe(browserSync.stream())       //для разработки локально
+    .pipe(dest('dist/assets/fonts'))
+    .pipe(browserSync.stream())
   // .pipe(dest('preFTP'))            //для разработки на хосте
 }
 
@@ -55,9 +54,8 @@ function styles() {
       overrideBrowserlist: ['last 10 version'],
       grid: true
     }))
-    .pipe(dest('dist/assets/css')) //для разработки локально
-    .pipe(browserSync.stream())      //для разработки локально
-  // .pipe(dest('preFTP/assets/css'))  //для разработки на хосте
+    .pipe(dest('dist/assets/css'))
+    .pipe(browserSync.stream())
 }
 
 // обработка стилей для архива
@@ -71,8 +69,8 @@ function styles2() {
       overrideBrowserlist: ['last 10 version'],
       grid: true
     }))
-    .pipe(dest('dist/archive')) //для разработки локально
-    .pipe(browserSync.stream())      //для разработки локально
+    .pipe(dest('dist/archive'))
+    .pipe(browserSync.stream())
 }
 
 // обработка скриптов
@@ -89,19 +87,19 @@ function scripts() {
     .pipe(changed('dist/assets/js'))
     // .pipe(concat('main.js'))
     // .pipe(uglify())
-    .pipe(dest('dist/assets/js'))  //для разработки локально
-    .pipe(browserSync.stream())    //для разработки локально
+    .pipe(dest('dist/assets/js'))
+    .pipe(browserSync.stream())
   // .pipe(dest('preFTP/assets/js'))  //для разработки на хосте
 }
 
 // обработка скриптов для архива
-function scripts2() {
+function scripts_to_archive() {
   return src([
     'app/archive/**/*.js'
   ])
     .pipe(changed('dist/archive'))
-    .pipe(dest('dist/archive'))  //для разработки локально
-    .pipe(browserSync.stream())    //для разработки локально
+    .pipe(dest('dist/archive'))
+    .pipe(browserSync.stream())
 }
 
 
@@ -109,28 +107,16 @@ function scripts2() {
 function images() {
   return src('app/assets/img/**/*')
     .pipe(changed('dist/assets/img'))
-    // .pipe(imagemin([
-    //   imagemin.gifsicle({ interlaced: true }),
-    //   imagemin.mozjpeg({ quality: 75, progressive: true }),
-    //   imagemin.optipng({ optimizationLevel: 5 }),
-    //   imagemin.svgo({
-    //     plugins: [
-    //       { removeViewBox: true },
-    //       { cleanupIDs: false }
-    //     ]
-    //   })
-    // ]))
-    .pipe(dest('dist/assets/img')) //для разработки локально
-    .pipe(browserSync.stream())    //для разработки локально
-  // .pipe(dest('preFTP/assets/img'))  //для разработки на хосте
+    .pipe(dest('dist/assets/img'))
+    .pipe(browserSync.stream())
 }
 
 // обработка картинок для архива
-function images2() {
+function images_to_archive() {
   return src('app/archive/**/*')
     .pipe(changed('dist/archive'))
-    .pipe(dest('dist/archive')) //для разработки локально
-    .pipe(browserSync.stream())    //для разработки локально
+    .pipe(dest('dist/archive'))
+    .pipe(browserSync.stream())
 }
 
 
@@ -144,50 +130,24 @@ function browsersync() {
   });
 }
 
-
-// выгрузка на сервер
-function deploy() {
-  var conn = ftp.create({
-    host: 'ftp.fufu676279.nichost.ru.',
-    user: 'fufu676279_ftp',
-    password: 'oVfqIYxzvv',
-    parallel: 10,
-    log: gutil.log
-  });
-
-  var globs = [
-    './dist/**/*.*',
-  ];
-  return src(globs, { base: './dist', buffer: false })
-    .pipe(conn.newer('/portal.fufuter.ru/docs'))
-    .pipe(conn.dest('/portal.fufuter.ru/docs'))
-}
-
-
-// очистка локального кеша после выгрузки на сервер
-function cleanPreFtp() {
-  console.log('MY_LOG: cleanPreFtp is running')
-  return del('preFTP/**/*.*');
-}
-
-
 // слежение за изменениями
 function watching() {
   watch(['app/**/*.html', 'app/**/*.php'], series(html));
   watch(['app/assets/scss/**/*.scss'], series(styles));
   watch(['app/archive/**/*.scss'], series(styles2));
   watch(['app/assets/js/**/*.js', '!app/js/main.min.js'], series(scripts));
-  watch(['app/archive/**/*.js', '!app/js/main.min.js'], series(scripts2));
+  watch(['app/archive/**/*.js', '!app/js/main.min.js'], series(scripts_to_archive));
   watch(['app/assets/img/**/*.*'], series(images));
-  watch(['app/archive/**/*.*'], series(images2));
+  watch(['app/archive/**/*.*'], series(images_to_archive));
   watch(['app/assets/fonts/**/*.*'], series(fonts));
-  // watch(['preFTP/**/*.*'], series(deploy, cleanPreFtp)); //для разработки на хосте
 }
 
+// очистка перед билдом
+function clean() {
+  console.log('MY_LOG: чистим директорию')
+  return del('dist/**/*.*');
+}
 
 // список функций для терминала
-exports.default = series(parallel(html, styles, styles2, scripts, scripts2, images, images2, fonts), parallel(browsersync, watching));  //для разработки локально
-// exports.default = series(parallel(html, styles, scripts, fonts), parallel(watching));  //для разработки локально
-// exports.default = series(parallel(html, styles, scripts, fonts), watching);  //для разработки на хосте
-exports.dist = series(html, styles, styles2, scripts, scripts2, images, images2, fonts);
-exports.deploy = series(deploy);
+exports.default = series(parallel(html, styles, styles2, scripts, scripts_to_archive, images, images_to_archive, fonts), parallel(browsersync, watching));
+exports.dist = series(clean, html, styles, styles2, scripts, scripts_to_archive, images, images_to_archive, fonts);

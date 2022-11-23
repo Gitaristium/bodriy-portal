@@ -35,7 +35,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
         path: ''
       });
       // alert('curentPage: ' + curentPage);
-      location = "/season.php";
+      location = "/season/index.php";
     } else {
       if (interview != 'y') { //приоритет 2 - опросник
         // alert('переходим на опросник');
@@ -94,7 +94,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
                 path: '/'
               });
               // alert('переходим на сезонку');
-              location = "/season.php";
+              location = "/season/index.php";
               break;
             } else {
 
