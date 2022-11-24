@@ -1,5 +1,5 @@
-$color: #edb981;
-$color2: #d7a976;
+$color: blue;
+$color2: yellow;
 $colorText: #1a1a1a;
 
 // html {
@@ -14,25 +14,18 @@ span {
   overflow: hidden;
   user-select: none;
   font-weight: 500;
-
-  // .wrapper__bg
-  // &__bg {
-  //   position: absolute;
-  //   top: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   left: 0;
-  //   display: block;
-  //   width: 100%;
-  // }
 }
 
 .container {
   padding: 0 6.5vmin;
 }
+.anim-items {
+  // transition: 0s;
+}
 .anim-items.active {
   transform: translateY(20vmin);
   opacity: 0;
+  // transition: 0s;
 }
 .section {
   opacity: 0;
@@ -65,12 +58,12 @@ span {
       line-height: 5.7vw;
       letter-spacing: -0.1px;
       // padding-bottom: 45vw;
-      padding-bottom: 43vw;
 
       // .section-one__title.right
       &.right {
         padding-bottom: 28vw;
-        margin-left: 10vw;
+        margin-left: auto;
+        width: fit-content;
       }
     }
   }
@@ -79,6 +72,12 @@ span {
   &-two {
     // background: #1a1a1a;
     padding-bottom: 83vw;
+
+    // .section-two__text-block
+    &__text-block {
+      position: relative;
+      z-index: 2;
+    }
 
     // .section-two__title
     &__title {
@@ -181,7 +180,7 @@ span {
     transform: translateY(100%);
     transition: 0.3s;
     position: relative;
-    // background: url(../../assets/img/season/bg-modal.jpg);
+    // background: url(../../assets/img/season/orange/bg-modal.jpg);
     // background-position: center;
     // background-size: cover;
   }
@@ -352,6 +351,7 @@ body.ready {
   .anim-items.active {
     transform: translateY(0);
     opacity: 1;
+    transition: opacity 0.5s, transform 0.5s;
   }
   .section {
     opacity: 1;

@@ -8,15 +8,411 @@ html {
   color: $colorText;
 }
 .wrapper {
-  background-image: url(../img/season/bg-orange.svg);
-  background-size: 100%;
-  background-position: 0% 0%;
+  // background-image: url(../img/season/orange/bg-orange.svg);
+  // background-size: 100%;
+  // background-position: 0% 0%;
+
+  // .wrapper__bg
+  &__bg {
+    position: absolute;
+    display: block;
+    width: auto;
+    height: auto;
+    top: 70vw;
+    animation: moveItemsSmall 5s infinite linear;
+    z-index: 2;
+    pointer-events: none;
+
+    &:nth-child(odd) {
+      animation-direction: reverse;
+    }
+    &:nth-child(3n + 2) {
+      animation-delay: 0.5s;
+    }
+
+    &--1 {
+      top: 154vw;
+      right: 11vw;
+      width: 23vw;
+    }
+    &--2 {
+      top: 166.5vw;
+      right: 49vw;
+      width: 2.3vw;
+    }
+    &--3 {
+      top: 183.2vw;
+      right: 50vw;
+      width: 2.3vw;
+    }
+    &--4 {
+      top: 181.5vw;
+      right: 38.5vw;
+      width: 3vw;
+    }
+    &--5 {
+      top: 174.5vw;
+      left: 22vw;
+      width: 13vw;
+    }
+    &--6 {
+      top: 198.5vw;
+      left: 8.5vw;
+      width: 3vw;
+    }
+    &--7 {
+      top: 225vw;
+      left: 24.5vw;
+      width: 8vw;
+    }
+    &--8 {
+      top: 243vw;
+      right: 22.5vw;
+      width: 10.6vw;
+    }
+    &--9 {
+      top: 223vw;
+      right: 38.5vw;
+      width: 7.6vw;
+    }
+    &--10 {
+      top: 198.6vw;
+      left: 35.5vw;
+      width: 4.3vw;
+    }
+    &--11 {
+      top: 216.6vw;
+      left: 14.5vw;
+      width: 3.7vw;
+    }
+    &--12 {
+      top: 178.6vw;
+      left: 9.3vw;
+      width: 7.7vw;
+    }
+    &--13 {
+      top: 241vw;
+      left: 41.3vw;
+      width: 4vw;
+    }
+    &--14 {
+      top: 238vw;
+      left: 17.3vw;
+      width: 4.5vw;
+    }
+    &--15 {
+      top: 253vw;
+      left: 33.3vw;
+      width: 3.3vw;
+    }
+    &--16 {
+      top: 261vw;
+      left: 34.3vw;
+      width: 12.3vw;
+    }
+    &--17 {
+      top: 282.4vw;
+      right: 47.3vw;
+      width: 5.1vw;
+    }
+    &--18 {
+      top: 291.4vw;
+      left: 44vw;
+      width: 4.1vw;
+    }
+    &--19 {
+      top: 299vw;
+      left: 14vw;
+      width: 3.9vw;
+    }
+    &--20 {
+      top: 297vw;
+      left: 32.1vw;
+      width: 3.5vw;
+    }
+    &--21 {
+      top: 310vw;
+      left: 43vw;
+      width: 4vw;
+    }
+    &--22 {
+      top: 310vw;
+      right: 28vw;
+      width: 22vw;
+    }
+    &--23 {
+      top: 325vw;
+      left: 18vw;
+      width: 9.5vw;
+    }
+    &--24 {
+      top: 358vw;
+      left: 37vw;
+      width: 4.9vw;
+    }
+    &--25 {
+      top: 308vw;
+      left: 32vw;
+      width: 3.9vw;
+    }
+    &--26 {
+      top: 247vw;
+      right: 40vw;
+      width: 4vw;
+    }
+    &--27 {
+      top: 345.5vw;
+      left: 42vw;
+      width: 6vw;
+    }
+    &--28 {
+      top: 370.2vw;
+      left: 48vw;
+      width: 4.7vw;
+    }
+    &--29 {
+      top: 361.2vw;
+      right: 28vw;
+      width: 5.4vw;
+    }
+    &--30 {
+      top: 344.2vw;
+      right: 37vw;
+      width: 5vw;
+    }
+    &--31 {
+      top: 294.7vw;
+      right: 32.3vw;
+      width: 2.3vw;
+    }
+    &--32 {
+      top: 271vw;
+      left: 13.3vw;
+      width: 3.3vw;
+    }
+    &--33 {
+      top: 386.5vw;
+      left: 14.3vw;
+      width: 10vw;
+    }
+    &--34 {
+      top: 372.5vw;
+      left: 26.3vw;
+      width: 3.3vw;
+    }
+    &--35 {
+      top: 388.5vw;
+      left: 33.3vw;
+      width: 6.3vw;
+    }
+    &--36 {
+      top: 203.5vw;
+      left: 43.3vw;
+      width: 4.3vw;
+    }
+    &--37 {
+      top: 410.5vw;
+      left: 29.3vw;
+      width: 17.3vw;
+    }
+    &--38 {
+      top: 413.5vw;
+      left: 14.3vw;
+      width: 4vw;
+    }
+    &--39 {
+      top: 403.5vw;
+      right: 38.3vw;
+      width: 3.1vw;
+    }
+    &--40 {
+      top: 454.5vw;
+      left: 13.3vw;
+      width: 6.1vw;
+    }
+    &--41 {
+      top: 465.5vw;
+      right: 29.3vw;
+      width: 2.9vw;
+    }
+    &--42 {
+      top: 505.5vw;
+      left: 39.3vw;
+      width: 8.3vw;
+    }
+    &--43 {
+      top: 484vw;
+      right: 17.3vw;
+      width: 11.5vw;
+    }
+    &--44 {
+      top: 556.5vw;
+      right: 34vw;
+      width: 9.5vw;
+    }
+    &--45 {
+      top: 484vw;
+      right: 35vw;
+      width: 16.5vw;
+    }
+    &--46 {
+      top: 533vw;
+      right: 15vw;
+      width: 9vw;
+    }
+    &--47 {
+      top: 588vw;
+      left: 17vw;
+      width: 7.5vw;
+    }
+    &--48 {
+      top: 611.5vw;
+      right: 41vw;
+      width: 10.3vw;
+    }
+    &--49 {
+      top: 635.5vw;
+      right: 30vw;
+      width: 10.8vw;
+    }
+    &--50 {
+      top: 626.5vw;
+      left: 18vw;
+      width: 12.8vw;
+    }
+    &--51 {
+      top: 549.5vw;
+      left: 17vw;
+      width: 3vw;
+    }
+    &--52 {
+      top: 599.5vw;
+      left: 34vw;
+      width: 3.2vw;
+    }
+    &--53 {
+      top: 534.8vw;
+      left: 27vw;
+      width: 3.2vw;
+    }
+    &--54 {
+      top: 640.4vw;
+      left: 47vw;
+      width: 3.4vw;
+    }
+    &--55 {
+      top: 596.5vw;
+      right: 32vw;
+      width: 3.9vw;
+    }
+    &--56 {
+      top: 576.5vw;
+      right: 24vw;
+      width: 3.9vw;
+    }
+    &--57 {
+      top: 618.5vw;
+      right: 23vw;
+      width: 2.5vw;
+    }
+    &--58 {
+      top: 468vw;
+      right: 10vw;
+      width: 2.5vw;
+    }
+    &--59 {
+      top: 496vw;
+      left: 21vw;
+      width: 2.5vw;
+    }
+    &--60 {
+      top: 519vw;
+      left: 13vw;
+      width: 3.5vw;
+    }
+  }
 }
 
 .section {
   &-one {
     // padding-top: 91vw;
     // padding-top: calc(91vw + env(safe-area-inset-top));
+
+    // .section-one__title
+    &__title {
+      & span.anim-items.active:nth-child(2) {
+        transition: opacity 0.5s 0.1s, transform 0.5s 0.1s;
+      }
+    }
+
+    // .section-one__text
+    &__text {
+      position: relative;
+      z-index: 3;
+      padding-bottom: 43vw;
+      &.onload {
+        & span.anim-items.active:nth-child(1) {
+          transition: opacity 0.5s 0.5s, transform 0.5s 0.5s;
+        }
+        & span.anim-items.active:nth-child(2) {
+          transition: opacity 0.5s 0.6s, transform 0.5s 0.6s;
+        }
+        & span.anim-items.active:nth-child(3) {
+          transition: opacity 0.5s 0.7s, transform 0.5s 0.7s;
+        }
+        & span.anim-items.active:nth-child(4) {
+          transition: opacity 0.5s 0.8s, transform 0.5s 0.8s;
+        }
+      }
+      // .section-one__text .underline
+      & .underline {
+        position: relative;
+        display: inline-block;
+
+        // .section-one__text .underline::after
+        &::after {
+          position: absolute;
+          content: "";
+          height: 130%;
+          background-repeat: no-repeat;
+          background-size: 100%;
+          background-position: center;
+          z-index: -1;
+        }
+
+        // .section-one__text .underline--1::after
+        &--1::after {
+          width: 21vw;
+          background-image: url(../img/season/orange/orange-uderline1.svg);
+          bottom: -4px;
+          left: -4px;
+        }
+
+        // .section-one__text .underline--2::after
+        &--2::after {
+          width: 32vw;
+          background-image: url(../img/season/orange/orange-uderline2.svg);
+          bottom: -4px;
+          right: -4px;
+        }
+
+        // .section-one__text .underline--3::after
+        &--3::after {
+          width: 22vw;
+          background-image: url(../img/season/orange/orange-uderline3.svg);
+          bottom: -4px;
+          right: 8px;
+        }
+
+        // .section-one__text .underline--4::after
+        &--4::after {
+          width: 15vw;
+          background-image: url(../img/season/orange/orange-uderline4.svg);
+          bottom: -6px;
+          right: -2px;
+        }
+      }
+    }
 
     // .section-one__orange
     &__orange {
@@ -29,14 +425,14 @@ html {
       &.left {
         top: 0vw;
         left: -17vw;
-        animation: rotateOrange 5s infinite linear;
+        animation: moveItemsBig 5s infinite linear;
       }
 
       // .section-one__orange.right
       &.right {
         top: 38vw;
         right: -22vw;
-        animation: rotateOrange 6s infinite linear reverse;
+        animation: moveItemsBig 6s infinite linear reverse;
       }
       // .section-one__orange.bottom
       &.bottom {
@@ -44,7 +440,7 @@ html {
         margin: 0 auto;
         width: 55vw;
         right: 4vw;
-        animation: rotateOrange 5s infinite linear;
+        animation: moveItemsBig 5s infinite linear;
       }
 
       // .section-one__orange--lines
@@ -61,26 +457,17 @@ html {
         }
       }
     }
-
-    // .section-one__title
-    // &__title {
-    // font-weight: 500;
-    // font-size: 10.5vw;
-    // line-height: 11.5vw;
-    // margin: 0;
-    // span {
-    // display: block;
-    // }
-    // }
   }
 
   // .section-two
   &-two {
     // .section-two__title
     &__title {
+      position: relative;
       // font-size: 7.1vmin;
       // line-height: 1.3;
       // padding-bottom: 21vmin;
+      z-index: 3;
       span {
         // display: block;
         color: $color;
@@ -89,16 +476,20 @@ html {
 
     // .section-two__desc
     &__desc {
+      position: relative;
       color: $color;
+      z-index: 3;
     }
 
     form {
       textarea {
+        position: relative;
         &:focus,
         &:target,
         &:active {
           outline: none;
           border: $color 2px solid;
+          z-index: 3;
         }
       }
     }
@@ -110,7 +501,7 @@ html {
   color: $colorText;
 }
 
-@keyframes rotateOrange {
+@keyframes moveItemsBig {
   0% {
     transform: translate(0%, 0%) rotate(0deg);
   }
@@ -140,6 +531,41 @@ html {
   }
   90% {
     transform: translate(1%, -1%);
+  }
+  100% {
+    transform: translate(0%, 0%) rotate(0deg);
+  }
+}
+@keyframes moveItemsSmall {
+  0% {
+    transform: translate(0%, 0%) rotate(0deg);
+  }
+  10% {
+    transform: translate(5%, 0%);
+  }
+  20% {
+    transform: translate(10%, 5%);
+  }
+  30% {
+    transform: translate(7.5%, 5%) rotate(1deg);
+  }
+  40% {
+    transform: translate(2.5%, 2.5%);
+  }
+  50% {
+    transform: translate(-5%, 0%);
+  }
+  60% {
+    transform: translate(-2.5%, 5%);
+  }
+  70% {
+    transform: translate(0%, 10%) rotate(1deg);
+  }
+  80% {
+    transform: translate(5%, 2.5%);
+  }
+  90% {
+    transform: translate(5%, -5%);
   }
   100% {
     transform: translate(0%, 0%) rotate(0deg);
