@@ -8,10 +8,7 @@ html {
   color: $colorText;
 }
 .wrapper {
-  // background-image: url(../img/season/orange/bg-orange.svg);
-  // background-size: 100%;
-  // background-position: 0% 0%;
-
+  background: none;
   // .wrapper__bg
   &__bg {
     position: absolute;
@@ -22,6 +19,7 @@ html {
     animation: moveItemsSmall 5s infinite linear;
     z-index: 2;
     pointer-events: none;
+    mix-blend-mode: multiply;
 
     &:nth-child(odd) {
       animation-direction: reverse;
@@ -332,11 +330,13 @@ html {
     }
   }
 }
-
+.clappers {
+  opacity: 0;
+}
 .section {
   &-one {
-    // padding-top: 91vw;
-    // padding-top: calc(91vw + env(safe-area-inset-top));
+    padding-top: 91vw;
+    padding-top: calc(91vw + env(safe-area-inset-top));
 
     // .section-one__title
     &__title {
@@ -417,33 +417,45 @@ html {
     // .section-one__orange
     &__orange {
       position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 90vw;
+      z-index: 1;
+      transform: scale(1.5) rotate(30deg);
+    }
+
+    // .section-one__orange-img
+    &__orange-img {
+      position: fixed;
       display: block;
       width: 67vw;
-      z-index: 1;
+      height: auto;
 
-      // .section-one__orange.left
+      // .section-one__orange-img.left
       &.left {
         top: 0vw;
         left: -17vw;
         animation: moveItemsBig 5s infinite linear;
       }
 
-      // .section-one__orange.right
+      // .section-one__orange-img.right
       &.right {
         top: 38vw;
         right: -22vw;
         animation: moveItemsBig 6s infinite linear reverse;
       }
-      // .section-one__orange.bottom
+      // .section-one__orange-img.bottom
       &.bottom {
         position: relative;
         margin: 0 auto;
         width: 55vw;
         right: 4vw;
+        top: 0;
         animation: moveItemsBig 5s infinite linear;
       }
 
-      // .section-one__orange--lines
+      // .section-one__orange-img--lines
       &--lines {
         animation-delay: 0.7s !important;
         &.bottom {
@@ -451,7 +463,7 @@ html {
         }
       }
 
-      // .section-one__orange--back
+      // .section-one__orange-img--back
       &--back {
         &.bottom {
         }
@@ -461,13 +473,16 @@ html {
 
   // .section-two
   &-two {
+    padding-bottom: 83vw;
+
     // .section-two__title
     &__title {
-      position: relative;
-      // font-size: 7.1vmin;
-      // line-height: 1.3;
-      // padding-bottom: 21vmin;
+      font-size: 6vmin;
+      line-height: 1.2;
+      padding-bottom: 1.5vmin;
       z-index: 3;
+      text-align: left;
+
       span {
         // display: block;
         color: $color;
@@ -495,87 +510,22 @@ html {
     }
   }
 }
+#round {
+  background: $color;
+}
+.modal-story {
+  background: $color;
+}
 .btn--orange {
   border: $color 2px solid;
   background: $color;
   color: $colorText;
 }
-
-@keyframes moveItemsBig {
-  0% {
-    transform: translate(0%, 0%) rotate(0deg);
-  }
-  10% {
-    transform: translate(1%, 0%);
-  }
-  20% {
-    transform: translate(2%, 1%);
-  }
-  30% {
-    transform: translate(1.5%, 1%) rotate(0.5deg);
-  }
-  40% {
-    transform: translate(0.5%, 0.5%);
-  }
-  50% {
-    transform: translate(-1%, 0%);
-  }
-  60% {
-    transform: translate(-0.5%, 1%);
-  }
-  70% {
-    transform: translate(0%, 2%) rotate(-0.5deg);
-  }
-  80% {
-    transform: translate(1%, 0.5%);
-  }
-  90% {
-    transform: translate(1%, -1%);
-  }
-  100% {
-    transform: translate(0%, 0%) rotate(0deg);
-  }
+body.ready .section-one__orange {
+  transform: scale(1) rotate(0deg);
+  transition: transform 1.5s 0.1s;
 }
-@keyframes moveItemsSmall {
-  0% {
-    transform: translate(0%, 0%) rotate(0deg);
-  }
-  10% {
-    transform: translate(5%, 0%);
-  }
-  20% {
-    transform: translate(10%, 5%);
-  }
-  30% {
-    transform: translate(7.5%, 5%) rotate(1deg);
-  }
-  40% {
-    transform: translate(2.5%, 2.5%);
-  }
-  50% {
-    transform: translate(-5%, 0%);
-  }
-  60% {
-    transform: translate(-2.5%, 5%);
-  }
-  70% {
-    transform: translate(0%, 10%) rotate(1deg);
-  }
-  80% {
-    transform: translate(5%, 2.5%);
-  }
-  90% {
-    transform: translate(5%, -5%);
-  }
-  100% {
-    transform: translate(0%, 0%) rotate(0deg);
-  }
-}
-@keyframes scaleOrange {
-  0% {
-    transform: scale3d(110%, 90%, 1);
-  }
-  100% {
-    transform: scale3d(90%, 110%, 1);
-  }
+body.ready .clappers {
+  opacity: 1;
+  transition: opacity 4s 0.5s;
 }

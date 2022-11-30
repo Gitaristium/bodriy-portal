@@ -1,4 +1,4 @@
-// window.history.replaceState(null, null, '/');
+window.history.replaceState(null, null, '/');
 // console.log(document.cookie);
 
 window.onload = function () {

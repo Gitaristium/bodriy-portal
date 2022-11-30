@@ -14,7 +14,7 @@
   <link rel="preload" as="image" href="<?= SITE_DIR ?>archive/season-2022-autumn/img/raf.webp">
   <link rel="preload" as="image" href="<?= SITE_DIR ?>archive/season-2022-autumn/img/tea.webp">
   <link rel="preload" as="image" href="<?= SITE_DIR ?>archive/season-2022-autumn/img/slider-title.webp">
-  <link rel="stylesheet" href="<?= SITE_DIR ?>assets/css/season-autumn-2022.css">
+  <link rel="stylesheet" href="<?= SITE_DIR ?>archive/season-2022-autumn/season-autumn-2022.css">
   <script type="text/javascript">
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
     navigator.userAgent)) {} else {
