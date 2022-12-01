@@ -162,7 +162,7 @@ body {
   &__item {
     border: 1px solid $color;
     border-radius: 6px;
-    padding: 1vw;
+    padding: 10px;
     min-width: 200px;
     max-width: 300px;
     width: 100%;
@@ -171,12 +171,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 2vw;
+    gap: 20px;
     box-shadow: 0px 0px 10px -7px $color;
     @media screen and (max-width: 767px) {
       max-width: 100%;
-      padding: 3vw;
-      gap: 4vw;
     }
 
     // .flex__item.deactive
@@ -214,7 +212,7 @@ body {
     color: $color;
     font-size: 15px;
     font-weight: 300;
-    padding: 0.5vw 1vw;
+    padding: 5px 10px;
     cursor: pointer;
     border-radius: 6px;
     transition: 0.1s;
