@@ -3,9 +3,9 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("Сезонное меню");
 ?>
 <meta name="theme-color" content="#ffffff">
-<link rel="preload" as="image" href="assets/img/rotate-screen.png">
-<link rel="preload" as="image" href="assets/img/interview/smile.png">
-<link rel="stylesheet" href="assets/css/season-2022-winter.css">
+<link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/rotate-screen.png">
+<link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/interview/smile.png">
+<link rel="stylesheet" href="<?= SITE_DIR ?>assets/css/season-2022-winter.css">
 <script type="text/javascript">
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
     navigator.userAgent)) {} else {
@@ -16,15 +16,15 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
 
 <body>
   <div class="rotate-screen">
-    <img class="rotate__img" src="assets/img/rotate-screen.png" alt="rotate-screen">
+    <img class="rotate__img" src="<?= SITE_DIR ?>assets/img/rotate-screen.png" alt="rotate-screen">
     поверни телефон
   </div><!-- .rotate-screen -->
 
   <div class="wrapper">
     <div class="preload">
       <picture>
-        <source srcset="assets/img/interview/smile.webp" type="image/webp">
-        <img class="preload__img" src="assets/img/interview/smile.png" alt="smile">
+        <source srcset="<?= SITE_DIR ?>assets/img/interview/smile.webp" type="image/webp">
+        <img class="preload__img" src="<?= SITE_DIR ?>assets/img/interview/smile.png" alt="smile">
       </picture>
       грузим меню
     </div><!-- .preload -->
@@ -841,10 +841,10 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
   </div><!-- .wrapper -->
 </body>
 
-<script type="text/javascript" src="assets/js/anim.js"></script>
-<script type="text/javascript" src="assets/js/jquery.js"></script>
-<script type="text/javascript" src="assets/js/js.cookie.js"></script>
-<!-- <script type="text/javascript" src="assets/js/touchswipe.js"></script> -->
-<script type="text/javascript" src="assets/js/season-2022-winter.js"></script>
+<script type="text/javascript" src="<?= SITE_DIR ?>assets/js/anim.js"></script>
+<script type="text/javascript" src="<?= SITE_DIR ?>assets/js/jquery.js"></script>
+<script type="text/javascript" src="<?= SITE_DIR ?>assets/js/js.cookie.js"></script>
+<!-- <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/touchswipe.js"></script> -->
+<script type="text/javascript" src="<?= SITE_DIR ?>assets/js/season-2022-winter.js"></script>
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

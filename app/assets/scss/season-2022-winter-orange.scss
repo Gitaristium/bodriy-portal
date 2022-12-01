@@ -423,6 +423,7 @@ html {
       height: 90vw;
       z-index: 1;
       transform: scale(1.5) rotate(30deg);
+      pointer-events: none;
     }
 
     // .section-one__orange-img
