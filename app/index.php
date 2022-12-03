@@ -13,7 +13,8 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
     season = Cookies.get('season'),
     loyalty = Cookies.get('loyalty'),
     quest = Cookies.get('quest'),
-    downloads = Cookies.get('downloads');
+    downloads = Cookies.get('downloads'),
+    magic = Cookies.get('magic');
 
   if (hash == '#qr') {
     hash = true;
@@ -31,79 +32,89 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
     // location = "/march8.php";
     if (season != 'y') { //приоритет 1 - сезонка
       // alert('переходим на сезонку');
-      Cookies.set('curentPage', 'season', {
-        path: ''
-      });
+      // Cookies.set('curentPage', 'season', {
+      //   path: ''
+      // });
       // alert('curentPage: ' + curentPage);
       location = "/season.php";
     } else {
-      if (interview != 'y') { //приоритет 2 - опросник
-        // alert('переходим на опросник');
-        location = "/interview.php";
+      if (magic != 'y') { //приоритет 2 - magic
+        // alert('переходим на magic');
+        location = "/magic.php";
       } else {
+        if (interview != 'y') { //приоритет 3 - опросник
+          // alert('переходим на опросник');
+          location = "/interview.php";
+        } else {
 
-        var randomPages = ["picture", "loyalty", "quest", "downloads"]; //засовывем остальные страницы в массив
+          // var randomPages = ["picture", "loyalty", "quest", "downloads"]; //засовывем остальные страницы в массив
+          var randomPages = ["season", "magic", "interview"]; //засовывем остальные страницы в массив
 
-        // console.log(randomPages);
+          // console.log(randomPages);
 
-        // alert('картинки и опросник просмотрены');
-        // alert('выбираем случайную страницу');
-        var rand = Math.floor(Math.random() * randomPages.length), //выбираем случанцю страницу
-          randomPage = Cookies.get(randomPages[rand]); //выдергиваем по ней куки
-        // alert('randomPage - ' + randomPages[rand] + ': ' + randomPage);
+          // alert('картинки и опросник просмотрены');
+          // alert('выбираем случайную страницу');
+          var rand = Math.floor(Math.random() * randomPages.length), //выбираем случанцю страницу
+            randomPage = Cookies.get(randomPages[rand]); //выдергиваем по ней куки
+          // alert('randomPage - ' + randomPages[rand] + ': ' + randomPage);
 
-        var pageView = false;
-        while (pageView == false) {
-          if (randomPage != 'y') {
-            // alert('переходим на:' + randomPages[rand]);
-            location = "/" + randomPages[rand] + ".php";
-            var pageView = true;
-            break;
-          } else {
-            // alert('проверяем все ли страницы просмотрены');
-            var res;
-            res = randomPages.every(function(item, index, array) { //проверяем все ли страницы просмотрены
-              randomPage = Cookies.get(item);
-              if (randomPage == 'y') {
-                return true;
-              }
-              return false;
-            });
-            if (res == true) { //если да
-
-              // alert('ВСЕ');
-              // alert('очищаем куки');
-              Cookies.set('interview', 'n', {
-                expires: 7,
-                path: '/'
-              });
-              Cookies.set('picture', 'n', {
-                expires: 7,
-                path: ''
-              });
-              Cookies.set('loyalty', 'n', {
-                expires: 7,
-                path: '/'
-              });
-              Cookies.set('quest', 'n', {
-                expires: 7,
-                path: '/'
-              });
-              Cookies.set('downloads', 'n', {
-                expires: 7,
-                path: '/'
-              });
-              // alert('переходим на сезонку');
-              location = "/season.php";
+          var pageView = false;
+          while (pageView == false) {
+            if (randomPage != 'y') {
+              // alert('переходим на:' + randomPages[rand]);
+              location = "/" + randomPages[rand] + ".php";
+              var pageView = true;
               break;
             } else {
+              // alert('проверяем все ли страницы просмотрены');
+              var res;
+              res = randomPages.every(function(item, index, array) { //проверяем все ли страницы просмотрены
+                randomPage = Cookies.get(item);
+                if (randomPage == 'y') {
+                  return true;
+                }
+                return false;
+              });
+              if (res == true) { //если да
 
-              // alert('еще не все');
+                // alert('ВСЕ');
+                // alert('очищаем куки');
+                Cookies.set('interview', 'n', {
+                  expires: 7,
+                  path: '/'
+                });
+                Cookies.set('picture', 'n', {
+                  expires: 7,
+                  path: ''
+                });
+                Cookies.set('loyalty', 'n', {
+                  expires: 7,
+                  path: '/'
+                });
+                Cookies.set('quest', 'n', {
+                  expires: 7,
+                  path: '/'
+                });
+                Cookies.set('downloads', 'n', {
+                  expires: 7,
+                  path: '/'
+                });
+                Cookies.set('magic', 'n', {
+                  expires: 7,
+                  path: '/'
+                });
+                // alert('переходим на сезонку');
+                location = "/season.php";
+                break;
+              } else {
 
-              rand = Math.floor(Math.random() * randomPages.length); //выбираем случайный объект
-              randomPage = Cookies.get(randomPages[rand]); //получаем куки этого объекта
+                // alert('еще не все');
 
-              // alert('выбрана новая страница: ' + randomPages[rand] + ': ' + randomPage);
+                rand = Math.floor(Math.random() * randomPages.length); //выбираем случайный объект
+                randomPage = Cookies.get(randomPages[rand]); //получаем куки этого объекта
+
+                // alert('выбрана новая страница: ' + randomPages[rand] + ': ' + randomPage);
+              }
             }
           }
         }

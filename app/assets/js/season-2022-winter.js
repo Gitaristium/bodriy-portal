@@ -159,7 +159,7 @@ $(document).ready(function () {
       },
       success: function (data) {                /* функция которая будет выполнена после успешного запроса.  */
         // console.log(data);                      /* В переменной data содержится ответ от index.php. */
-        $("#modal-story .modal-story__text.story").html(data)
+        $("#modal-story .modal-story__text.story").html(decodeURIComponent(data))
       }
     });
 
@@ -174,10 +174,13 @@ $(document).ready(function () {
         $("#modal-story").addClass('white');
       }, 7000);
 
-      console.log('====')
-      console.log($("#share-story textarea").val())
+      // console.log('====')
+      // console.log($("#share-story textarea").val())
       // отправляем историю на сервер
-      var story = $("#share-story textarea").val();
+      // var story = $("#share-story textarea").val();
+      var story = encodeURIComponent($("#share-story textarea").val()).replace(/[!'()*]/g, function (c) {
+        return '%' + c.charCodeAt(0).toString(16);
+      });
       $.ajax({
         url: '/season/info-post.php',             /* Куда отправить запрос */
         method: 'get',                            /* Метод запроса (post или get) */

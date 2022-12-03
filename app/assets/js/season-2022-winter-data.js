@@ -39,11 +39,11 @@ $(document).ready(function () {
           $('.tab--one .flex').append('\
             <div data-id="' + elem.ID + '" class="flex__item">\
               <div class="flex__item-text">\
-              ' + elem.DETAIL_TEXT + '\
+              ' + decodeURIComponent(elem.DETAIL_TEXT) + '\
               </div>\
               <div class="flex__item-buttons">\
-                <button data-id="' + elem.ID + '" class="flex__item-btn flex__item-btn--public">опубликовать</ >\
-                <button data-id="' + elem.ID + '" class="flex__item-btn flex__item-btn--delete">удалить</button>\
+                <button data-id="' + elem.ID + '" class="flex__item-btn flex__item-btn--public item-btn-public">опубликовать</button>\
+                <button data-id="' + elem.ID + '" class="flex__item-btn flex__item-btn--delete item-btn-delete">удалить</button>\
               </div>\
             </div>'
           );
@@ -84,11 +84,11 @@ $(document).ready(function () {
           $('.tab--two .flex').append('\
             <div data-id="' + elem.ID + '" class="flex__item">\
               <div class="flex__item-text">\
-              ' + elem.DETAIL_TEXT + '\
+              ' + decodeURIComponent(elem.DETAIL_TEXT) + '\
               </div>\
               <div class="flex__item-buttons">\
-                <button data-id="' + elem.ID + '" class="flex__item-btn flex__item-btn--unpublic">в архив</ >\
-                <button data-id="' + elem.ID + '" class="flex__item-btn flex__item-btn--delete">удалить</button>\
+                <button data-id="' + elem.ID + '" class="flex__item-btn flex__item-btn--unpublic item-btn-unpublic">в архив</button>\
+                <button data-id="' + elem.ID + '" class="flex__item-btn flex__item-btn--delete item-btn-delete">удалить</button>\
               </div>\
             </div>'
           );
@@ -121,45 +121,56 @@ $(document).ready(function () {
   });
 
   // кнопки удалить
-  $(document).on('click', '.flex__item-btn--delete', function (e) {
+  $(document).on('click', '.item-btn-delete', function (e) {
     e.preventDefault();
     var id = $(this).attr('data-id');
-    $.ajax({
-      url: '/season/data/delete.php',             /* Куда отправить запрос */
-      method: 'get',                            /* Метод запроса (post или get) */
-      dataType: 'json',                         /* Тип данных в ответе (xml, json, script, html). */
-      // data: { newWinNumber: arrayStringNumber, newPlayNumber: playNumber, newPlayerCity: playerCity, winner: 'lose' },               /* Данные передаваемые в массиве */
-      data: { id: id },               /* Данные передаваемые в массиве */
-      // error: function (data, exception) {
-      //   if (data.status === 0) {
-      //     alert('info-post.php - Not connect. Verify Network.');
-      //   } else if (data.status == 404) {
-      //     alert('info-post.php - Requested page not found (404).');
-      //   } else if (data.status == 500) {
-      //     alert('info-post.php - Internal Server Error (500).');
-      //   } else if (exception === 'parsererror') {
-      //     alert('info-post.php - Requested JSON parse failed.');
-      //   } else if (exception === 'timeout') {
-      //     alert('info-post.php - Time out error.');
-      //   } else if (exception === 'abort') {
-      //     alert('info-post.php - Ajax request aborted.');
-      //   } else {
-      //     alert('info-post.php - Uncaught Error. ' + data.responseText);
-      //   }
-      // },
-      success: function () {
-        // console.log('данные отправлены');
-      }
-    });
     var parent = $(this).parent().parent();
-    parent.addClass('deactive');
-    setTimeout(() => {
-      parent.remove();
-    }, 1000);
+    $('.modal-delete').addClass('active');
+
+    $(".modal-brn-delete").click(function (e) {
+      e.preventDefault();
+      $('.modal-delete').removeClass('active');
+      $.ajax({
+        url: '/season/data/delete.php',             /* Куда отправить запрос */
+        method: 'get',                            /* Метод запроса (post или get) */
+        dataType: 'json',                         /* Тип данных в ответе (xml, json, script, html). */
+        // data: { newWinNumber: arrayStringNumber, newPlayNumber: playNumber, newPlayerCity: playerCity, winner: 'lose' },               /* Данные передаваемые в массиве */
+        data: { id: id },               /* Данные передаваемые в массиве */
+        // error: function (data, exception) {
+        //   if (data.status === 0) {
+        //     alert('info-post.php - Not connect. Verify Network.');
+        //   } else if (data.status == 404) {
+        //     alert('info-post.php - Requested page not found (404).');
+        //   } else if (data.status == 500) {
+        //     alert('info-post.php - Internal Server Error (500).');
+        //   } else if (exception === 'parsererror') {
+        //     alert('info-post.php - Requested JSON parse failed.');
+        //   } else if (exception === 'timeout') {
+        //     alert('info-post.php - Time out error.');
+        //   } else if (exception === 'abort') {
+        //     alert('info-post.php - Ajax request aborted.');
+        //   } else {
+        //     alert('info-post.php - Uncaught Error. ' + data.responseText);
+        //   }
+        // },
+        success: function () {
+          // console.log('данные отправлены');
+        }
+      });
+      parent.addClass('deactive');
+      setTimeout(() => {
+        parent.remove();
+      }, 1000);
+    });
+    $(".modal-btn-unpublic").click(function (e) {
+      e.preventDefault();
+      $('.modal-delete').removeClass('active');
+    });
+
   });
 
   // кнопки опубликовать
-  $(document).on('click', '.flex__item-btn--public', function (e) {
+  $(document).on('click', '.item-btn-public', function (e) {
     e.preventDefault();
     var id = $(this).attr('data-id');
     $.ajax({
@@ -197,7 +208,7 @@ $(document).ready(function () {
   });
 
   // кнопки в архив
-  $(document).on('click', '.flex__item-btn--unpublic', function (e) {
+  $(document).on('click', '.item-btn-unpublic', function (e) {
     e.preventDefault();
     var id = $(this).attr('data-id');
     $.ajax({
