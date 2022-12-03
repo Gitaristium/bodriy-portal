@@ -130,6 +130,7 @@ function browsersync() {
   });
 }
 
+
 // слежение за изменениями
 function watching() {
   watch(['app/**/*.html', 'app/**/*.php'], series(html));
@@ -142,6 +143,8 @@ function watching() {
   watch(['app/assets/fonts/**/*.*'], series(fonts));
 }
 
+
+
 // очистка перед билдом
 function clean() {
   console.log('MY_LOG: чистим директорию')
@@ -151,3 +154,4 @@ function clean() {
 // список функций для терминала
 exports.default = series(parallel(html, styles, styles2, scripts, scripts_to_archive, images, images_to_archive, fonts), parallel(browsersync, watching));
 exports.dist = series(clean, html, styles, styles2, scripts, scripts_to_archive, images, images_to_archive, fonts);
+exports.clean = clean;

@@ -47,7 +47,7 @@ $(document).ready(function () {
     setTimeout(() => {
       if (navigator.share) {
         navigator.share({
-          // title: 'Я узнал, что меня ждет в 2023!',
+          title: 'Я узнал, что меня ждет в 2023!',
           text: 'Я узнал, что меня ждет в 2023! Переходи по ссылке и смотри своё предсказание',
           url: '/magic.php'
         }).then(() => {

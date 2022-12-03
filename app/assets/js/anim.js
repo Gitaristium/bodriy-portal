@@ -58,6 +58,13 @@ if (parallaxItems.length > 0) {
           parallaxItems[index].style.transform = "translateY(" + parallaxItemMove + "%)";
         }
       }
+      //в два раза быстрее
+      if (parallaxItems[index].classList.contains('parallax-items-v-fast')) {
+        if (parallaxItemMove >= minMove && parallaxItemMove <= maxMove) {
+          parallaxItemMove = parallaxItemMove * 2;
+          parallaxItems[index].style.transform = "translateY(" + parallaxItemMove + "%)";
+        }
+      }
       //параллакс горизонтальный левый
       if (parallaxItems[index].classList.contains('parallax-items-h-l')) {
         if (parallaxItemMove >= minMove && parallaxItemMove <= maxMove) {

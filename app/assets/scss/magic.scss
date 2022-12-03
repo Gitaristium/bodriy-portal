@@ -717,6 +717,18 @@ body {
     }
   }
 }
+.anim-stars {
+  // opacity: 1;
+  // transform: translate(0);
+  transition: opacity 1s, transform 0s;
+  & svg path {
+    stroke-dashoffset: 646 !important;
+    transition: stroke-dashoffset 1s;
+  }
+  &.active svg path {
+    stroke-dashoffset: 0 !important;
+  }
+}
 
 body.ready {
   // body.ready .stars
