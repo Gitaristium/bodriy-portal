@@ -352,9 +352,12 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
         <div class="section-two__field-text">
         </div>
       </div> <!-- .section-two__field -->
-      <button class="section-two__btn start anim-items anim-no-hide">всё узнать</button>
-      <button class="section-two__btn share">поделиться</button>
-      <a class="section-two__link" href="https://portal.bodryi-den.ru/season.php">посмотреть зимнее меню</a>
+      <button class="section-two__btn start anim-items anim-no-hide"
+        onclick="ym(83929834, 'reachGoal', 'see_to_future'); return true;">всё узнать</button>
+      <button class="section-two__btn share"
+        onclick="ym(83929834, 'reachGoal', 'share_future'); return true;">поделиться</button>
+      <a class="section-two__link" href="https://portal.bodryi-den.ru/season.php"
+        onclick="ym(83929834, 'reachGoal', 'to_season_from_magic'); return true;">посмотреть зимнее меню</a>
     </div><!-- .section.section-two -->
 
     <div class="modal2">

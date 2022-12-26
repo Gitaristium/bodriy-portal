@@ -61,7 +61,8 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
         </div>
       </div>
     </section>
-    <form id="form" class="form" action="interview-send.php" method="POST">
+    <form id="form" class="form" action="interview-send.php" method="POST"
+      onsubmit="ym(83929834, 'reachGoal', 'sent_feedback'); return true;">
       <input type="hidden" name="city" id="city" required>
       <input type="hidden" name="address" id="address" required>
       <div class="modal" id="modal">

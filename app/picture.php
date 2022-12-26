@@ -32,7 +32,8 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
       ?>
 
       <img id="img" src="#">
-      <a class="footer-btn result__btn" href="/interview.php">
+      <a class="footer-btn result__btn" href="/interview.php"
+        onclick="ym(83929834, 'reachGoal', 'to_interview_from_button'); return true;">
         оставить отзыв
       </a>
     </section>

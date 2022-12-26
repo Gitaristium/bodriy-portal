@@ -213,7 +213,8 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
         <!-- end .container -->
       </div>
       <!-- end .section__inner -->
-      <a class="section-two__link" href="https://portal.bodryi-den.ru/">перейти на бодрый портал</a>
+      <a class="section-two__link" href="https://portal.bodryi-den.ru/"
+        onclick="ym(83929834, 'reachGoal', 'to_season_from_orange-hurma'); return true;">перейти на бодрый портал</a>
     </section>
     <!-- end .section-two -->
 
@@ -244,6 +245,6 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
 <script type="text/javascript" src="/assets/js/jquery.js"></script>
 <script type="text/javascript" src="/assets/js/js.cookie.js"></script>
 <!-- <script type="text/javascript" src="/assets/js/touchswipe.js"></script> -->
-<script type="text/javascript" src="/assets/js/season-2022-winter.js"></script>
+<script type="text/javascript" src="/assets/js/season-2022-winter.js?ver=1.1"></script>
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

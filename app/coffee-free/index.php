@@ -243,7 +243,8 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
           Портал всегда открыт, обновляется<br>
           и доступен по QR-коду на стакане.<br>
         </div>
-        <a class="btn section-result__btn" href="https://portal.bodryi-den.ru">перейти на портал</a>
+        <a class="btn section-result__btn" href="https://portal.bodryi-den.ru"
+          onclick="ym(83929834, 'reachGoal', 'to_main_from_promo'); return true;">перейти на портал</a>
       </div>
     </section>
 
@@ -363,6 +364,6 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
 <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/jquery.js"></script>
 <!-- <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/touchswipe.js"></script> -->
 <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/js.cookie.js"></script>
-<script type="text/javascript" src="<?= SITE_DIR ?>assets/js/coffee-free.js"></script>
+<script type="text/javascript" src="<?= SITE_DIR ?>assets/js/coffee-free.js?ver=1.1"></script>
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

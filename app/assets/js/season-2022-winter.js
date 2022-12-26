@@ -209,6 +209,8 @@ $(document).ready(function () {
         }
       });
 
+      ym(83929834, 'reachGoal', 'new_year_story');
+
     });
   };
 });

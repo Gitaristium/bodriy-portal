@@ -127,6 +127,7 @@ $(document).ready(function () {
     $('.section-rules').addClass('active');
     $('body').addClass('pointer-events-nones');
     $('html, body').animate({ scrollTop: '0px' }, 0);
+    ym(83929834, 'reachGoal', 'read_rules');
   });
   $("#btn-rules-close").click(function (e) {
     e.preventDefault();
@@ -293,7 +294,7 @@ $(document).ready(function () {
 
       }
     });
-
+    ym(83929834, 'reachGoal', 'payed_promo');
 
   });
 });
