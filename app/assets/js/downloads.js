@@ -1,3 +1,25 @@
+var redirect = Cookies.get('redirect');
+if (redirect == 'y') {
+  ym(83929834, 'hit', '/downloads?utm_medium=qr', {
+    params: {
+      title: 'Скачивай',
+      //referer: '/downloads?utm_medium=qr'
+    }
+  });
+  Cookies.set('redirect', 'n', {
+    expires: 7,
+    path: '/'
+  });
+}
+else {
+  ym(83929834, 'hit', '/downloads', {
+    params: {
+      title: 'Скачивай',
+      //referer: '/downloads?utm_medium=qr'
+    }
+  });
+}
+
 window.history.replaceState(null, null, '/');
 Cookies.set('downloads', 'y', { expires: 7, path: '' });
 Cookies.set('curentPage', 'downloads', { path: '' });

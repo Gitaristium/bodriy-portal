@@ -597,6 +597,6 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
 <script type="text/javascript" src="/assets/js/jquery.js"></script>
 <script type="text/javascript" src="/assets/js/js.cookie.js"></script>
 <!-- <script type="text/javascript" src="/assets/js/touchswipe.js"></script> -->
-<script type="text/javascript" src="/assets/js/season-2022-winter.js?ver=1.1"></script>
+<script type="text/javascript" src="/assets/js/season-2022-winter.js?ver=1.3"></script>
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

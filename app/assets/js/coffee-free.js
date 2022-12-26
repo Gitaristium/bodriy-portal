@@ -1,9 +1,32 @@
+var redirect = Cookies.get('redirect');
+if (redirect == 'y') {
+  ym(83929834, 'hit', '/coffee-free?utm_medium=qr', {
+    params: {
+      title: 'Забери свой бесплатный кофе!',
+      referer: '/coffee-free?utm_medium=qr'
+    }
+  });
+  Cookies.set('redirect', 'n', {
+    expires: 7,
+    path: '/'
+  });
+}
+else {
+  ym(83929834, 'hit', '/coffee-free', {
+    params: {
+      title: 'Забери свой бесплатный кофе!',
+      //referer: '/coffee-free?utm_medium=qr'
+    }
+  });
+}
+
 window.onload = function () {
   window.scrollTo(0, 0);
   setTimeout(() => {
     window.scrollTo(0, 0);
     document.body.classList.add('ready');
   }, 1000);
+
 }
 
 $(document).ready(function () {

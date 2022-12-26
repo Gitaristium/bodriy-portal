@@ -1,10 +1,17 @@
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
-$APPLICATION->SetTitle("Бодрый портал");
+$APPLICATION->SetTitle("Бодрый портал - упс!");
 ?>
 <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/js.cookie.js"></script>
 <script type="text/javascript">
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
     navigator.userAgent)) {
+
+  ym(83929834, 'hit', '/?utm_medium=qr', {
+    params: {
+      title: 'Бодрый портал - перенаправление',
+      referer: '/?utm_medium=qr'
+    }
+  });
 
   var hash = window.location.search,
     curentPage = Cookies.get('curentPage'),
@@ -122,6 +129,27 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
     }
   }
 }
+var redirect = Cookies.get('redirect');
+if (redirect == 'y') {
+  ym(83929834, 'hit', '/?utm_medium=qr', {
+    params: {
+      title: 'Бодрый портал - заглушка',
+      referer: '/?utm_medium=qr'
+    }
+  });
+} else {
+  ym(83929834, 'hit', '/', {
+    params: {
+      title: 'Бодрый портал - заглушка',
+      // referer: '/?utm_medium=qr'
+    }
+  });
+}
+Cookies.set('redirect', 'n', {
+  expires: 7,
+  path: '/'
+});
+
 // console.log(document.cookie);
 </script>
 <link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/qr-code.png">

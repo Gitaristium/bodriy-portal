@@ -128,7 +128,7 @@ while (pictureView == false) {
 }
 </script>
 
-<script type="text/javascript" src="<?= SITE_DIR ?>assets/js/picture.js"></script>
+<script type="text/javascript" src="<?= SITE_DIR ?>assets/js/picture.js?ver=1.3"></script>
 
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
