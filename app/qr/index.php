@@ -3,7 +3,7 @@ $APPLICATION->SetTitle("Бодрый портал");
 ?>
 <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/js.cookie.js"></script>
 <script type="text/javascript">
-location = "/#qr";
+  location = "/?utm_medium=qr";
 </script>
 </head>
 

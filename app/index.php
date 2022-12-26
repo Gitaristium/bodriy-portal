@@ -6,7 +6,7 @@ $APPLICATION->SetTitle("Бодрый портал");
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
     navigator.userAgent)) {
 
-  var hash = window.location.hash,
+  var hash = window.location.search,
     curentPage = Cookies.get('curentPage'),
     picture = Cookies.get('picture'),
     interview = Cookies.get('interview'),
@@ -16,7 +16,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
     downloads = Cookies.get('downloads'),
     magic = Cookies.get('magic');
 
-  if (hash == '#qr') {
+  if (hash.includes('utm_medium=qr')) {
     hash = true;
   } else {
     if (curentPage != null && curentPage != '' && curentPage != 'undefinded') {

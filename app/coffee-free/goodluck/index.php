@@ -7,7 +7,7 @@ $APPLICATION->SetTitle("Забери кофе бесплатно");
 Cookies.set('qr', 'y', {
   path: '/coffee-free'
 });
-location = "/coffee-free";
+location = "/coffee-free?utm_medium=qr";
 </script>
 </head>
 
