@@ -1,4 +1,3 @@
-
 Cookies.set('coffee', 'y', { expires: 7, path: '' });
 Cookies.set('curentPage', 'coffee', { path: '' });
 // console.log(document.cookie);

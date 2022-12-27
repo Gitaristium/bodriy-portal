@@ -1,5 +1,3 @@
-
-
 $(document).ready(function () {
   $(".line").addClass('start');
 

@@ -19,18 +19,12 @@ $APPLICATION->SetTitle("Забери кофе бесплатно");
 <link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/coffee-free/ura-black.webp">
 <link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/coffee-free/ohno.webp">
 
-<link rel="stylesheet" href="<?= SITE_DIR ?>assets/css/coffee-free.css">
+<link rel="stylesheet" href="<?= SITE_DIR ?>assets/css/coffee-free.css?ver=1.6">
 <script type="text/javascript">
-  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
-      navigator.userAgent)) {} else {
-    var
-      search = window.location.search,
-      hash = '';
-    if (window.location.hash) {
-      hash = "#" + window.location.hash;
-    }
-    location = "/" + search;
-  }
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+    navigator.userAgent)) {} else {
+  location = window.location.origin + '/' + window.location.search;
+}
 </script>
 
 </head>
@@ -133,15 +127,18 @@ $APPLICATION->SetTitle("Забери кофе бесплатно");
           </picture>
           <picture>
             <source srcset="<?= SITE_DIR ?>assets/img/coffee-free/ura.webp" type="image/webp">
-            <img class="play-button__img--win-ura play-button__img--win-ura-1" src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
+            <img class="play-button__img--win-ura play-button__img--win-ura-1"
+              src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
           </picture>
           <picture>
             <source srcset="<?= SITE_DIR ?>assets/img/coffee-free/ura.webp" type="image/webp">
-            <img class="play-button__img--win-ura play-button__img--win-ura-2" src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
+            <img class="play-button__img--win-ura play-button__img--win-ura-2"
+              src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
           </picture>
           <picture>
             <source srcset="<?= SITE_DIR ?>assets/img/coffee-free/ura.webp" type="image/webp">
-            <img class="play-button__img--win-ura play-button__img--win-ura-3" src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
+            <img class="play-button__img--win-ura play-button__img--win-ura-3"
+              src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
           </picture>
 
         </button>
@@ -163,15 +160,18 @@ $APPLICATION->SetTitle("Забери кофе бесплатно");
           </picture>
           <picture>
             <source srcset="<?= SITE_DIR ?>assets/img/coffee-free/ura.webp" type="image/webp">
-            <img class="play-button__img--win-ura play-button__img--win-ura-1" src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
+            <img class="play-button__img--win-ura play-button__img--win-ura-1"
+              src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
           </picture>
           <picture>
             <source srcset="<?= SITE_DIR ?>assets/img/coffee-free/ura.webp" type="image/webp">
-            <img class="play-button__img--win-ura play-button__img--win-ura-2" src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
+            <img class="play-button__img--win-ura play-button__img--win-ura-2"
+              src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
           </picture>
           <picture>
             <source srcset="<?= SITE_DIR ?>assets/img/coffee-free/ura.webp" type="image/webp">
-            <img class="play-button__img--win-ura play-button__img--win-ura-3" src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
+            <img class="play-button__img--win-ura play-button__img--win-ura-3"
+              src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
           </picture>
 
         </button>
@@ -193,15 +193,18 @@ $APPLICATION->SetTitle("Забери кофе бесплатно");
           </picture>
           <picture>
             <source srcset="<?= SITE_DIR ?>assets/img/coffee-free/ura.webp" type="image/webp">
-            <img class="play-button__img--win-ura play-button__img--win-ura-1" src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
+            <img class="play-button__img--win-ura play-button__img--win-ura-1"
+              src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
           </picture>
           <picture>
             <source srcset="<?= SITE_DIR ?>assets/img/coffee-free/ura.webp" type="image/webp">
-            <img class="play-button__img--win-ura play-button__img--win-ura-2" src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
+            <img class="play-button__img--win-ura play-button__img--win-ura-2"
+              src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
           </picture>
           <picture>
             <source srcset="<?= SITE_DIR ?>assets/img/coffee-free/ura.webp" type="image/webp">
-            <img class="play-button__img--win-ura play-button__img--win-ura-3" src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
+            <img class="play-button__img--win-ura play-button__img--win-ura-3"
+              src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
           </picture>
 
         </button>
@@ -222,7 +225,8 @@ $APPLICATION->SetTitle("Забери кофе бесплатно");
       <div class="picture-block">
         <picture>
           <source srcset="<?= SITE_DIR ?>assets/img/coffee-free/smile-xx.webp" type="image/webp">
-          <img class="section-result__img section-result__img--lose" src="<?= SITE_DIR ?>assets/img/coffee-free/smile-xx.png">
+          <img class="section-result__img section-result__img--lose"
+            src="<?= SITE_DIR ?>assets/img/coffee-free/smile-xx.png">
         </picture>
       </div>
       <div class="section-result__text">
@@ -239,7 +243,8 @@ $APPLICATION->SetTitle("Забери кофе бесплатно");
           Портал всегда открыт, обновляется<br>
           и доступен по QR-коду на стакане.<br>
         </div>
-        <a class="btn section-result__btn" href="https://portal.bodryi-den.ru" onclick="ym(83929834, 'reachGoal', 'to_main_from_promo'); return true;">перейти на портал</a>
+        <a class="btn section-result__btn" href="https://portal.bodryi-den.ru"
+          onclick="ym(83929834, 'reachGoal', 'to_main_from_promo'); return true;">перейти на портал</a>
       </div>
     </section>
 
@@ -251,15 +256,18 @@ $APPLICATION->SetTitle("Забери кофе бесплатно");
         </picture>
         <picture>
           <source srcset="<?= SITE_DIR ?>assets/img/coffee-free/ura-black.webp" type="image/webp">
-          <img class="section-result__img--win-ura section-result__img--win-ura-1" src="<?= SITE_DIR ?>assets/img/coffee-free/ura-black.png">
+          <img class="section-result__img--win-ura section-result__img--win-ura-1"
+            src="<?= SITE_DIR ?>assets/img/coffee-free/ura-black.png">
         </picture>
         <picture>
           <source srcset="<?= SITE_DIR ?>assets/img/coffee-free/ura-black.webp" type="image/webp">
-          <img class="section-result__img--win-ura section-result__img--win-ura-2" src="<?= SITE_DIR ?>assets/img/coffee-free/ura-black.png">
+          <img class="section-result__img--win-ura section-result__img--win-ura-2"
+            src="<?= SITE_DIR ?>assets/img/coffee-free/ura-black.png">
         </picture>
         <picture>
           <source srcset="<?= SITE_DIR ?>assets/img/coffee-free/ura-black.webp" type="image/webp">
-          <img class="section-result__img--win-ura section-result__img--win-ura-3" src="<?= SITE_DIR ?>assets/img/coffee-free/ura-black.png">
+          <img class="section-result__img--win-ura section-result__img--win-ura-3"
+            src="<?= SITE_DIR ?>assets/img/coffee-free/ura-black.png">
         </picture>
       </div>
       <div class="section-result__text">
@@ -356,6 +364,6 @@ $APPLICATION->SetTitle("Забери кофе бесплатно");
 <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/jquery.js"></script>
 <!-- <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/touchswipe.js"></script> -->
 <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/js.cookie.js"></script>
-<script type="text/javascript" src="<?= SITE_DIR ?>assets/js/coffee-free.js?ver=1.5"></script>
+<script type="text/javascript" src="<?= SITE_DIR ?>assets/js/coffee-free.js?ver=1.6"></script>
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

@@ -16,10 +16,10 @@
   <link rel="preload" as="image" href="<?= SITE_DIR ?>archive/season-2022-autumn/img/slider-title.webp">
   <link rel="stylesheet" href="<?= SITE_DIR ?>archive/season-2022-autumn/season-autumn-2022.css">
   <script type="text/javascript">
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
-    navigator.userAgent)) {} else {
-  location = "/";
-}
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+        navigator.userAgent)) {} else {
+      location = window.location.origin + '/';
+    }
   </script>
   </head>
 
@@ -140,13 +140,11 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
         </picture>
         <picture>
           <source srcset="<?= SITE_DIR ?>archive/season-2022-autumn/img/lines-left.webp" type="image/webp">
-          <img class="section-two__lines section-two__lines--left anim-items"
-            src="<?= SITE_DIR ?>archive/season-2022-autumn/img/lines-left.png">
+          <img class="section-two__lines section-two__lines--left anim-items" src="<?= SITE_DIR ?>archive/season-2022-autumn/img/lines-left.png">
         </picture>
         <picture>
           <source srcset="<?= SITE_DIR ?>archive/season-2022-autumn/img/lines-right.webp" type="image/webp">
-          <img class="section-two__lines section-two__lines--right anim-items"
-            src="<?= SITE_DIR ?>archive/season-2022-autumn/img/lines-right.png">
+          <img class="section-two__lines section-two__lines--right anim-items" src="<?= SITE_DIR ?>archive/season-2022-autumn/img/lines-right.png">
         </picture>
         <div class="section__inner">
           <div class="container">

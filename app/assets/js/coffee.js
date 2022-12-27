@@ -1,7 +1,7 @@
-ym(83929834, 'hit', '/coffee?utm_medium=qr', {
+ym(83929834, 'hit', '/coffee?utm_medium=qrcode&utm_referrer=' + encodeURIComponent(document.referrer), {
   params: {
     title: 'Свари свой бодрый кофе',
-    //referer: '/coffee?utm_medium=qr'
+    //referer: '/coffee?utm_medium=qrcode&utm_referrer=' + encodeURIComponent(document.referrer)
   }
 });
 

@@ -7,10 +7,10 @@
   <link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/interview/smile.png">
   <link rel="stylesheet" href="<?= SITE_DIR ?>assets/css/archive.css">
   <script type="text/javascript">
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
-    navigator.userAgent)) {} else {
-  location = "/";
-}
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+        navigator.userAgent)) {} else {
+      location = window.location.origin + '/';
+    }
   </script>
   </head>
 

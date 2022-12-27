@@ -11,10 +11,10 @@ $APPLICATION->SetTitle("Тебе валентинка!");
 <link rel="preload" as="image" href="<?= SITE_DIR ?>archive/valentine/img/modal1.jpg">
 <link rel="stylesheet" href="<?= SITE_DIR ?>archive/valentine/valentine.css">
 <script type="text/javascript">
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
-    navigator.userAgent)) {} else {
-  location = "/";
-}
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+      navigator.userAgent)) {} else {
+    location = window.location.origin + '/';
+  }
 </script>
 </head>
 

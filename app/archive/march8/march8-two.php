@@ -24,10 +24,10 @@ $APPLICATION->SetTitle("С ПРАЗДНИКОМ!");
 <link rel="stylesheet" href="<?= SITE_DIR ?>assets/css/slick.css">
 <link rel="stylesheet" href="<?= SITE_DIR ?>archive/march8/march8.css">
 <script type="text/javascript">
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
-    navigator.userAgent)) {} else {
-  location = "/";
-}
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+      navigator.userAgent)) {} else {
+    location = window.location.origin + '/';
+  }
 </script>
 </head>
 
@@ -47,18 +47,12 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
       грузим открытки
     </div>
     <picture>
-      <source
-        srcset="<?= SITE_DIR ?>archive/march8/img/logo-white@2x.png 2x, <?= SITE_DIR ?>archive/march8/img/logo-white.png 1x"
-        type="image/png">
-      <img class="logo-top" src="<?= SITE_DIR ?>archive/march8/img/logo-white.png"
-        srcset="<?= SITE_DIR ?>archive/march8/img/logo-white@2x.png 2x">
+      <source srcset="<?= SITE_DIR ?>archive/march8/img/logo-white@2x.png 2x, <?= SITE_DIR ?>archive/march8/img/logo-white.png 1x" type="image/png">
+      <img class="logo-top" src="<?= SITE_DIR ?>archive/march8/img/logo-white.png" srcset="<?= SITE_DIR ?>archive/march8/img/logo-white@2x.png 2x">
     </picture>
     <picture>
-      <source
-        srcset="<?= SITE_DIR ?>archive/march8/img/logo-white@2x.png 2x, <?= SITE_DIR ?>archive/march8/img/logo-white.png 1x"
-        type="image/png">
-      <img class="logo-bottom" src="<?= SITE_DIR ?>archive/march8/img/logo-white.png"
-        srcset="<?= SITE_DIR ?>archive/march8/img/logo-white@2x.png 2x">
+      <source srcset="<?= SITE_DIR ?>archive/march8/img/logo-white@2x.png 2x, <?= SITE_DIR ?>archive/march8/img/logo-white.png 1x" type="image/png">
+      <img class="logo-bottom" src="<?= SITE_DIR ?>archive/march8/img/logo-white.png" srcset="<?= SITE_DIR ?>archive/march8/img/logo-white@2x.png 2x">
     </picture>
 
 

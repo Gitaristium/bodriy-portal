@@ -14,7 +14,7 @@ $APPLICATION->SetTitle("Сезонное меню");
 <script type="text/javascript">
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
       navigator.userAgent)) {} else {
-    location = "/";
+    location = window.location.origin + '/';
   }
 </script>
 </head>

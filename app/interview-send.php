@@ -28,7 +28,15 @@ if (CModule::IncludeModule("main")) {
 }
 ?>
 <link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/interview/smile.webp">
-<link rel="stylesheet" href="<?= SITE_DIR ?>assets/css/send.css">
+<link rel="stylesheet" href="<?= SITE_DIR ?>assets/css/send.css?ver=1.6">
+<script type="text/javascript">
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+    navigator.userAgent)) {
+  window.history.replaceState(null, null, window.location.origin + '/' + window.location.search);
+} else {
+  location = window.location.origin + '/' + window.location.search;
+}
+</script>
 </head>
 
 <body>

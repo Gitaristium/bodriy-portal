@@ -1,32 +1,3 @@
-var redirect = Cookies.get('redirect');
-if (redirect == 'y') {
-  ym(83929834, 'hit', '/magic?utm_medium=qr', {
-    params: {
-      title: 'Новогодняя магия',
-      //referer: '/magic?utm_medium=qr'
-    }
-  });
-  Cookies.set('redirect', 'n', {
-    expires: 7,
-    path: '/'
-  });
-}
-else {
-  ym(83929834, 'hit', '/magic', {
-    params: {
-      title: 'Новогодняя магия',
-      //referer: '/magic?utm_medium=qr'
-    }
-  });
-}
-
-var
-  search = window.location.search,
-  hash = '';
-if (window.location.hash) {
-  hash = "#" + window.location.hash;
-}
-window.history.replaceState(null, null, '/' + search);
 Cookies.set('magic', 'y', { expires: 7, path: '' });
 Cookies.set('curentPage', 'magic', { path: '' });
 // console.log(document.cookie);

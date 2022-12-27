@@ -21,10 +21,10 @@ $APPLICATION->SetTitle("Забери кофе бесплатно");
 
 <link rel="stylesheet" href="<?= SITE_DIR ?>archive/coffee-free/coffee-free.css">
 <script type="text/javascript">
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
-    navigator.userAgent)) {} else {
-  location = "/";
-}
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+      navigator.userAgent)) {} else {
+    location = window.location.origin + '/';
+  }
 </script>
 
 </head>
@@ -127,18 +127,15 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
           </picture>
           <picture>
             <source srcset="<?= SITE_DIR ?>archive/coffee-free/img/ura.webp" type="image/webp">
-            <img class="play-button__img--win-ura play-button__img--win-ura-1"
-              src="<?= SITE_DIR ?>archive/coffee-free/img/ura.png">
+            <img class="play-button__img--win-ura play-button__img--win-ura-1" src="<?= SITE_DIR ?>archive/coffee-free/img/ura.png">
           </picture>
           <picture>
             <source srcset="<?= SITE_DIR ?>archive/coffee-free/img/ura.webp" type="image/webp">
-            <img class="play-button__img--win-ura play-button__img--win-ura-2"
-              src="<?= SITE_DIR ?>archive/coffee-free/img/ura.png">
+            <img class="play-button__img--win-ura play-button__img--win-ura-2" src="<?= SITE_DIR ?>archive/coffee-free/img/ura.png">
           </picture>
           <picture>
             <source srcset="<?= SITE_DIR ?>archive/coffee-free/img/ura.webp" type="image/webp">
-            <img class="play-button__img--win-ura play-button__img--win-ura-3"
-              src="<?= SITE_DIR ?>archive/coffee-free/img/ura.png">
+            <img class="play-button__img--win-ura play-button__img--win-ura-3" src="<?= SITE_DIR ?>archive/coffee-free/img/ura.png">
           </picture>
 
         </button>
@@ -160,18 +157,15 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
           </picture>
           <picture>
             <source srcset="<?= SITE_DIR ?>archive/coffee-free/img/ura.webp" type="image/webp">
-            <img class="play-button__img--win-ura play-button__img--win-ura-1"
-              src="<?= SITE_DIR ?>archive/coffee-free/img/ura.png">
+            <img class="play-button__img--win-ura play-button__img--win-ura-1" src="<?= SITE_DIR ?>archive/coffee-free/img/ura.png">
           </picture>
           <picture>
             <source srcset="<?= SITE_DIR ?>archive/coffee-free/img/ura.webp" type="image/webp">
-            <img class="play-button__img--win-ura play-button__img--win-ura-2"
-              src="<?= SITE_DIR ?>archive/coffee-free/img/ura.png">
+            <img class="play-button__img--win-ura play-button__img--win-ura-2" src="<?= SITE_DIR ?>archive/coffee-free/img/ura.png">
           </picture>
           <picture>
             <source srcset="<?= SITE_DIR ?>archive/coffee-free/img/ura.webp" type="image/webp">
-            <img class="play-button__img--win-ura play-button__img--win-ura-3"
-              src="<?= SITE_DIR ?>archive/coffee-free/img/ura.png">
+            <img class="play-button__img--win-ura play-button__img--win-ura-3" src="<?= SITE_DIR ?>archive/coffee-free/img/ura.png">
           </picture>
 
         </button>
@@ -193,18 +187,15 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
           </picture>
           <picture>
             <source srcset="<?= SITE_DIR ?>archive/coffee-free/img/ura.webp" type="image/webp">
-            <img class="play-button__img--win-ura play-button__img--win-ura-1"
-              src="<?= SITE_DIR ?>archive/coffee-free/img/ura.png">
+            <img class="play-button__img--win-ura play-button__img--win-ura-1" src="<?= SITE_DIR ?>archive/coffee-free/img/ura.png">
           </picture>
           <picture>
             <source srcset="<?= SITE_DIR ?>archive/coffee-free/img/ura.webp" type="image/webp">
-            <img class="play-button__img--win-ura play-button__img--win-ura-2"
-              src="<?= SITE_DIR ?>archive/coffee-free/img/ura.png">
+            <img class="play-button__img--win-ura play-button__img--win-ura-2" src="<?= SITE_DIR ?>archive/coffee-free/img/ura.png">
           </picture>
           <picture>
             <source srcset="<?= SITE_DIR ?>archive/coffee-free/img/ura.webp" type="image/webp">
-            <img class="play-button__img--win-ura play-button__img--win-ura-3"
-              src="<?= SITE_DIR ?>archive/coffee-free/img/ura.png">
+            <img class="play-button__img--win-ura play-button__img--win-ura-3" src="<?= SITE_DIR ?>archive/coffee-free/img/ura.png">
           </picture>
 
         </button>
@@ -225,8 +216,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
       <div class="picture-block">
         <picture>
           <source srcset="<?= SITE_DIR ?>archive/coffee-free/img/smile-xx.webp" type="image/webp">
-          <img class="section-result__img section-result__img--lose"
-            src="<?= SITE_DIR ?>archive/coffee-free/img/smile-xx.png">
+          <img class="section-result__img section-result__img--lose" src="<?= SITE_DIR ?>archive/coffee-free/img/smile-xx.png">
         </picture>
       </div>
       <div class="section-result__text">
@@ -251,23 +241,19 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
       <div class="picture-block">
         <picture>
           <source srcset="<?= SITE_DIR ?>archive/coffee-free/img/cup.webp" type="image/webp">
-          <img class="section-result__img section-result__img--win"
-            src="<?= SITE_DIR ?>archive/coffee-free/img/cup.png">
+          <img class="section-result__img section-result__img--win" src="<?= SITE_DIR ?>archive/coffee-free/img/cup.png">
         </picture>
         <picture>
           <source srcset="<?= SITE_DIR ?>archive/coffee-free/img/ura-black.webp" type="image/webp">
-          <img class="section-result__img--win-ura section-result__img--win-ura-1"
-            src="<?= SITE_DIR ?>archive/coffee-free/img/ura-black.png">
+          <img class="section-result__img--win-ura section-result__img--win-ura-1" src="<?= SITE_DIR ?>archive/coffee-free/img/ura-black.png">
         </picture>
         <picture>
           <source srcset="<?= SITE_DIR ?>archive/coffee-free/img/ura-black.webp" type="image/webp">
-          <img class="section-result__img--win-ura section-result__img--win-ura-2"
-            src="<?= SITE_DIR ?>archive/coffee-free/img/ura-black.png">
+          <img class="section-result__img--win-ura section-result__img--win-ura-2" src="<?= SITE_DIR ?>archive/coffee-free/img/ura-black.png">
         </picture>
         <picture>
           <source srcset="<?= SITE_DIR ?>archive/coffee-free/img/ura-black.webp" type="image/webp">
-          <img class="section-result__img--win-ura section-result__img--win-ura-3"
-            src="<?= SITE_DIR ?>archive/coffee-free/img/ura-black.png">
+          <img class="section-result__img--win-ura section-result__img--win-ura-3" src="<?= SITE_DIR ?>archive/coffee-free/img/ura-black.png">
         </picture>
       </div>
       <div class="section-result__text">
@@ -365,9 +351,9 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
 <!-- <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/touchswipe.js"></script> -->
 <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/js.cookie.js"></script>
 <script type="text/javascript">
-Cookies.set('qr', 'y', {
-  path: '/archive/coffee-free'
-});
+  Cookies.set('qr', 'y', {
+    path: '/archive/coffee-free'
+  });
 </script>
 <script type="text/javascript" src="<?= SITE_DIR ?>archive/coffee-free/coffee-free.js"></script>
 

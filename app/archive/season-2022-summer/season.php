@@ -25,10 +25,10 @@
   <link rel="preload" as="image" href="<?= SITE_DIR ?>archive/season-2022-summer/img/match-text.webp">
   <link rel="stylesheet" href="<?= SITE_DIR ?>archive/season-2022-summer/season-summer-2022.css">
   <script type="text/javascript">
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
-    navigator.userAgent)) {} else {
-  location = "/";
-}
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+        navigator.userAgent)) {} else {
+      location = window.location.origin + '/';
+    }
   </script>
   </head>
 
@@ -62,62 +62,52 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
             <span class="anim-items">лето</span>
             <picture>
               <source srcset="<?= SITE_DIR ?>archive/season-2022-summer/img/smile.svg" type="image/svg+xml">
-              <img class="section-one__title-img anim-items"
-                src="<?= SITE_DIR ?>archive/season-2022-summer/img/smile.png">
+              <img class="section-one__title-img anim-items" src="<?= SITE_DIR ?>archive/season-2022-summer/img/smile.png">
             </picture>
           </div>
 
           <div class="section__item section__item--water left">
             <picture>
               <source srcset="<?= SITE_DIR ?>archive/season-2022-summer/img/water-top.webp" type="image/webp">
-              <img class="section__img section__img--top"
-                src="<?= SITE_DIR ?>archive/season-2022-summer/img/water-top.png">
+              <img class="section__img section__img--top" src="<?= SITE_DIR ?>archive/season-2022-summer/img/water-top.png">
             </picture>
             <picture>
               <source srcset="<?= SITE_DIR ?>archive/season-2022-summer/img/water-text.webp" type="image/webp">
-              <img class="section__img section__img--text anim-items"
-                src="<?= SITE_DIR ?>archive/season-2022-summer/img/water-text.png">
+              <img class="section__img section__img--text anim-items" src="<?= SITE_DIR ?>archive/season-2022-summer/img/water-text.png">
             </picture>
             <picture>
               <source srcset="<?= SITE_DIR ?>archive/season-2022-summer/img/water-bottom.webp" type="image/webp">
-              <img class="section__img section__img--bottom"
-                src="<?= SITE_DIR ?>archive/season-2022-summer/img/water-bottom.png">
+              <img class="section__img section__img--bottom" src="<?= SITE_DIR ?>archive/season-2022-summer/img/water-bottom.png">
             </picture>
           </div>
 
           <div class="section__item section__item--granate right">
             <picture>
               <source srcset="<?= SITE_DIR ?>archive/season-2022-summer/img/granate-top.webp" type="image/webp">
-              <img class="section__img section__img--top"
-                src="<?= SITE_DIR ?>archive/season-2022-summer/img/granate-top.png">
+              <img class="section__img section__img--top" src="<?= SITE_DIR ?>archive/season-2022-summer/img/granate-top.png">
             </picture>
             <picture>
               <source srcset="<?= SITE_DIR ?>archive/season-2022-summer/img/granate-text.webp" type="image/webp">
-              <img class="section__img section__img--text anim-items"
-                src="<?= SITE_DIR ?>archive/season-2022-summer/img/granate-text.png">
+              <img class="section__img section__img--text anim-items" src="<?= SITE_DIR ?>archive/season-2022-summer/img/granate-text.png">
             </picture>
             <picture>
               <source srcset="<?= SITE_DIR ?>archive/season-2022-summer/img/granate-bottom.webp" type="image/webp">
-              <img class="section__img section__img--bottom"
-                src="<?= SITE_DIR ?>archive/season-2022-summer/img/granate-bottom.png">
+              <img class="section__img section__img--bottom" src="<?= SITE_DIR ?>archive/season-2022-summer/img/granate-bottom.png">
             </picture>
           </div>
 
           <div class="section__item section__item--orange left">
             <picture>
               <source srcset="<?= SITE_DIR ?>archive/season-2022-summer/img/orange-top.webp" type="image/webp">
-              <img class="section__img section__img--top"
-                src="<?= SITE_DIR ?>archive/season-2022-summer/img/orange-top.png">
+              <img class="section__img section__img--top" src="<?= SITE_DIR ?>archive/season-2022-summer/img/orange-top.png">
             </picture>
             <picture>
               <source srcset="<?= SITE_DIR ?>archive/season-2022-summer/img/orange-text.webp" type="image/webp">
-              <img class="section__img section__img--text anim-items"
-                src="<?= SITE_DIR ?>archive/season-2022-summer/img/orange-text.png">
+              <img class="section__img section__img--text anim-items" src="<?= SITE_DIR ?>archive/season-2022-summer/img/orange-text.png">
             </picture>
             <picture>
               <source srcset="<?= SITE_DIR ?>archive/season-2022-summer/img/orange-bottom.webp" type="image/webp">
-              <img class="section__img section__img--bottom"
-                src="<?= SITE_DIR ?>archive/season-2022-summer/img/orange-bottom.png">
+              <img class="section__img section__img--bottom" src="<?= SITE_DIR ?>archive/season-2022-summer/img/orange-bottom.png">
             </picture>
           </div>
 
@@ -125,54 +115,45 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
           <div class="section__item section__item--raspberry right">
             <picture>
               <source srcset="<?= SITE_DIR ?>archive/season-2022-summer/img/raspberry-top.webp" type="image/webp">
-              <img class="section__img section__img--top"
-                src="<?= SITE_DIR ?>archive/season-2022-summer/img/raspberry-top.png">
+              <img class="section__img section__img--top" src="<?= SITE_DIR ?>archive/season-2022-summer/img/raspberry-top.png">
             </picture>
             <picture>
               <source srcset="<?= SITE_DIR ?>archive/season-2022-summer/img/raspberry-text.webp" type="image/webp">
-              <img class="section__img section__img--text anim-items"
-                src="<?= SITE_DIR ?>archive/season-2022-summer/img/raspberry-text.png">
+              <img class="section__img section__img--text anim-items" src="<?= SITE_DIR ?>archive/season-2022-summer/img/raspberry-text.png">
             </picture>
             <picture>
               <source srcset="<?= SITE_DIR ?>archive/season-2022-summer/img/raspberry-bottom.webp" type="image/webp">
-              <img class="section__img section__img--bottom"
-                src="<?= SITE_DIR ?>archive/season-2022-summer/img/raspberry-bottom.png">
+              <img class="section__img section__img--bottom" src="<?= SITE_DIR ?>archive/season-2022-summer/img/raspberry-bottom.png">
             </picture>
           </div>
 
           <div class="section__item section__item--lavender left">
             <picture>
               <source srcset="<?= SITE_DIR ?>archive/season-2022-summer/img/lavender-top.webp" type="image/webp">
-              <img class="section__img section__img--top"
-                src="<?= SITE_DIR ?>archive/season-2022-summer/img/lavender-top.png">
+              <img class="section__img section__img--top" src="<?= SITE_DIR ?>archive/season-2022-summer/img/lavender-top.png">
             </picture>
             <picture>
               <source srcset="<?= SITE_DIR ?>archive/season-2022-summer/img/lavender-text.webp" type="image/webp">
-              <img class="section__img section__img--text anim-items"
-                src="<?= SITE_DIR ?>archive/season-2022-summer/img/lavender-text.png">
+              <img class="section__img section__img--text anim-items" src="<?= SITE_DIR ?>archive/season-2022-summer/img/lavender-text.png">
             </picture>
             <picture>
               <source srcset="<?= SITE_DIR ?>archive/season-2022-summer/img/lavender-bottom.webp" type="image/webp">
-              <img class="section__img section__img--bottom"
-                src="<?= SITE_DIR ?>archive/season-2022-summer/img/lavender-bottom.png">
+              <img class="section__img section__img--bottom" src="<?= SITE_DIR ?>archive/season-2022-summer/img/lavender-bottom.png">
             </picture>
           </div>
 
           <div class="section__item section__item--match right">
             <picture>
               <source srcset="<?= SITE_DIR ?>archive/season-2022-summer/img/match-top.webp" type="image/webp">
-              <img class="section__img section__img--top"
-                src="<?= SITE_DIR ?>archive/season-2022-summer/img/match-top.png">
+              <img class="section__img section__img--top" src="<?= SITE_DIR ?>archive/season-2022-summer/img/match-top.png">
             </picture>
             <picture>
               <source srcset="<?= SITE_DIR ?>archive/season-2022-summer/img/match-text.webp" type="image/webp">
-              <img class="section__img section__img--text anim-items"
-                src="<?= SITE_DIR ?>archive/season-2022-summer/img/match-text.png">
+              <img class="section__img section__img--text anim-items" src="<?= SITE_DIR ?>archive/season-2022-summer/img/match-text.png">
             </picture>
             <picture>
               <source srcset="<?= SITE_DIR ?>archive/season-2022-summer/img/match-bottom.webp" type="image/webp">
-              <img class="section__img section__img--bottom"
-                src="<?= SITE_DIR ?>archive/season-2022-summer/img/match-bottom.png">
+              <img class="section__img section__img--bottom" src="<?= SITE_DIR ?>archive/season-2022-summer/img/match-bottom.png">
             </picture>
           </div>
 

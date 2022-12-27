@@ -1,10 +1,3 @@
-var
-  search = window.location.search,
-  hash = '';
-if (window.location.hash) {
-  hash = "#" + window.location.hash;
-}
-window.history.replaceState(null, null, '/' + search);
 Cookies.set('downloads', 'y', { expires: 7, path: '' });
 Cookies.set('curentPage', 'downloads', { path: '' });
 // console.log(document.cookie);

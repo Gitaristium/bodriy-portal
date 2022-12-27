@@ -4,7 +4,7 @@ $APPLICATION->SetTitle("Статистика по акции с кофе");
 ?>
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="expires" content="0">
-<link rel="stylesheet" href="../../assets/css/coffee-free-data.css">
+<link rel="stylesheet" href="../../assets/css/coffee-free-data.css?ver=1.6">
 
 </head>
 
@@ -159,7 +159,7 @@ $APPLICATION->SetTitle("Статистика по акции с кофе");
 <script type="text/javascript" src="../../assets/js/jquery.js"></script>
 <!-- <script type="text/javascript" src="../../assets/js/touchswipe.js"></script> -->
 <!-- <script type="text/javascript" src="../../assets/js/js.cookie.js"></script> -->
-<script type="text/javascript" src="../../assets/js/coffee-free-data.js"></script>
+<script type="text/javascript" src="../../assets/js/coffee-free-data.js?ver=1.6"></script>
 
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

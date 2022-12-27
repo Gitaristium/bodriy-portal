@@ -5,17 +5,13 @@ $APPLICATION->SetTitle("Новогодняя магия");
 <meta name="theme-color" content="#141414">
 <link rel="preload" as="image" href="assets/img/rotate-screen.png">
 <link rel="preload" as="image" href="assets/img/interview/smile.png">
-<link rel="stylesheet" href="assets/css/magic.css?ver=1.5">
+<link rel="stylesheet" href="assets/css/magic.css?ver=1.6">
 <script type="text/javascript">
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
-      navigator.userAgent)) {} else {
-    var
-      search = window.location.search,
-      hash = '';
-    if (window.location.hash) {
-      hash = "#" + window.location.hash;
-    }
-    location = "/" + search;
+      navigator.userAgent)) {
+    window.history.replaceState(null, null, window.location.origin + '/' + window.location.search);
+  } else {
+    location = window.location.origin + '/' + window.location.search;
   }
 </script>
 </head>
@@ -264,10 +260,10 @@ $APPLICATION->SetTitle("Новогодняя магия");
   </div><!-- .wrapper -->
 </body><!-- body -->
 
-<script type="text/javascript" src="assets/js/anim.js?ver=1.5"></script>
+<script type="text/javascript" src="assets/js/anim.js?ver=1.6"></script>
 <script type="text/javascript" src="assets/js/jquery.js"></script>
 <script type="text/javascript" src="assets/js/js.cookie.js"></script>
 <!-- <script type="text/javascript" src="assets/js/touchswipe.js"></script> -->
-<script type="text/javascript" src="assets/js/magic.js?ver=1.5"></script>
+<script type="text/javascript" src="assets/js/magic.js?ver=1.6"></script>
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

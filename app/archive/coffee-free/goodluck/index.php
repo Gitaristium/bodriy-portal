@@ -4,10 +4,10 @@ $APPLICATION->SetTitle("Забери кофе бесплатно");
 <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/jquery.js"></script>
 <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/js.cookie.js"></script>
 <script type="text/javascript">
-Cookies.set('qr', 'y', {
-  path: '/coffee-free'
-});
-location = "/coffee-free";
+  Cookies.set('qr', 'y', {
+    path: '/coffee-free'
+  });
+  location = window.location.origin + "/coffee-free";
 </script>
 </head>
 

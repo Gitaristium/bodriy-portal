@@ -7,10 +7,10 @@ $APPLICATION->SetTitle("Сезонное меню");
 <link rel="preload" as="image" href="<?= SITE_DIR ?>archive/season-2021-summer/img/berry-espresso-tonic.webp">
 <link rel="stylesheet" href="<?= SITE_DIR ?>archive/season-2021-summer/season.css">
 <script type="text/javascript">
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
-    navigator.userAgent)) {} else {
-  location = "/";
-}
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+      navigator.userAgent)) {} else {
+    location = window.location.origin + '/';
+  }
 </script>
 </head>
 
@@ -31,59 +31,45 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
       <div class="section__inner">
         <div class="container">
           <div class="section-one__big-text section-one__big-text--first parallax-items parallax-items-v">за-</div>
-          <div class="section-one__text section-one__text-1 section-one__text--left"><span
-              class="parallax-items parallax-items-v">мятный<br>айс-латте</span>
+          <div class="section-one__text section-one__text-1 section-one__text--left"><span class="parallax-items parallax-items-v">мятный<br>айс-латте</span>
             <picture>
               <source srcset="<?= SITE_DIR ?>archive/season-2021-summer/img/ice-coffee.webp" type="image/webp">
-              <img class="section-one__img section-one__img-1"
-                src="<?= SITE_DIR ?>archive/season-2021-summer/img/ice-coffee.png" alt="мятный айс-латте">
+              <img class="section-one__img section-one__img-1" src="<?= SITE_DIR ?>archive/season-2021-summer/img/ice-coffee.png" alt="мятный айс-латте">
             </picture>
           </div>
           <div class="section-one__text section-one__text-2 section-one__text--right">
             <span class="parallax-items parallax-items-v">ягодный<br>эспрессо-<br>тоник</span>
             <picture>
-              <source srcset="<?= SITE_DIR ?>archive/season-2021-summer/img/berry-espresso-tonic.webp"
-                type="image/webp">
-              <img class="section-one__img section-one__img-2"
-                src="<?= SITE_DIR ?>archive/season-2021-summer/img/berry-espresso-tonic.png"
-                alt="ягодный эспрессо-тоник">
+              <source srcset="<?= SITE_DIR ?>archive/season-2021-summer/img/berry-espresso-tonic.webp" type="image/webp">
+              <img class="section-one__img section-one__img-2" src="<?= SITE_DIR ?>archive/season-2021-summer/img/berry-espresso-tonic.png" alt="ягодный эспрессо-тоник">
             </picture>
           </div>
-          <div class="section-one__text section-one__text-3 section-one__text--left"><span
-              class="parallax-items parallax-items-v">ягодный<br>лимонад</span>
+          <div class="section-one__text section-one__text-3 section-one__text--left"><span class="parallax-items parallax-items-v">ягодный<br>лимонад</span>
             <picture>
               <source srcset="<?= SITE_DIR ?>archive/season-2021-summer/img/berry-lemonade.webp" type="image/webp">
-              <img class="section-one__img section-one__img-3"
-                src="<?= SITE_DIR ?>archive/season-2021-summer/img/berry-lemonade.png" alt="ягодный лимонад">
+              <img class="section-one__img section-one__img-3" src="<?= SITE_DIR ?>archive/season-2021-summer/img/berry-lemonade.png" alt="ягодный лимонад">
             </picture>
           </div>
           <div class="section-one__big-text parallax-items parallax-items-v">бод-</div>
-          <div class="section-one__text section-one__text-4 section-one__text--right"><span
-              class="parallax-items parallax-items-v">цитрусовый<br>лимонад</span>
+          <div class="section-one__text section-one__text-4 section-one__text--right"><span class="parallax-items parallax-items-v">цитрусовый<br>лимонад</span>
             <picture>
               <source srcset="<?= SITE_DIR ?>archive/season-2021-summer/img/citrus-lemonade.webp" type="image/webp">
-              <img class="section-one__img section-one__img-4"
-                src="<?= SITE_DIR ?>archive/season-2021-summer/img/citrus-lemonade.png" alt="цитрусовый лимонад">
+              <img class="section-one__img section-one__img-4" src="<?= SITE_DIR ?>archive/season-2021-summer/img/citrus-lemonade.png" alt="цитрусовый лимонад">
             </picture>
           </div>
           <div class="section-one__big-text section-one__big-text--wide parallax-items parallax-items-v">рись</div>
           <div class="section-one__text section-one__text-5 section-one__text--right">
             <span class="parallax-items parallax-items-v">фраппе<br>«солёная<br>карамель»</span>
             <picture>
-              <source srcset="<?= SITE_DIR ?>archive/season-2021-summer/img/frappe-salted-caramel.webp"
-                type="image/webp">
-              <img class="section-one__img section-one__img-5"
-                src="<?= SITE_DIR ?>archive/season-2021-summer/img/frappe-salted-caramel.png"
-                alt="фраппе солёная карамель">
+              <source srcset="<?= SITE_DIR ?>archive/season-2021-summer/img/frappe-salted-caramel.webp" type="image/webp">
+              <img class="section-one__img section-one__img-5" src="<?= SITE_DIR ?>archive/season-2021-summer/img/frappe-salted-caramel.png" alt="фраппе солёная карамель">
             </picture>
           </div>
-          <div class="section-one__text section-one__text-6 section-one__text--left"><span
-              class="parallax-items parallax-items-v">фраппе<br>«арахис<br>и
+          <div class="section-one__text section-one__text-6 section-one__text--left"><span class="parallax-items parallax-items-v">фраппе<br>«арахис<br>и
               печенье»</span>
             <picture>
               <source srcset="<?= SITE_DIR ?>archive/season-2021-summer/img/frappe-peanuts.webp" type="image/webp">
-              <img class="section-one__img section-one__img-6"
-                src="<?= SITE_DIR ?>archive/season-2021-summer/img/frappe-peanuts.png" alt="фраппе арахис и печенье">
+              <img class="section-one__img section-one__img-6" src="<?= SITE_DIR ?>archive/season-2021-summer/img/frappe-peanuts.png" alt="фраппе арахис и печенье">
             </picture>
           </div>
         </div>
@@ -99,29 +85,25 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
         <div class="section-two__text section-two__text-1 section-two__text--left"><span>нутелла<br>шейк</span>
           <picture>
             <source srcset="<?= SITE_DIR ?>archive/season-2021-summer/img/nutella-shake.webp" type="image/webp">
-            <img class="section-two__img section-two__img-1 parallax-items parallax-items-h-l"
-              src="<?= SITE_DIR ?>archive/season-2021-summer/img/nutella-shake.png" alt="нутелла шейк">
+            <img class="section-two__img section-two__img-1 parallax-items parallax-items-h-l" src="<?= SITE_DIR ?>archive/season-2021-summer/img/nutella-shake.png" alt="нутелла шейк">
           </picture>
         </div>
         <div class="section-two__text section-two__text-2 section-two__text--right"><span>красный<br>бархат</span>
           <picture>
             <source srcset="<?= SITE_DIR ?>archive/season-2021-summer/img/red-velvet.webp" type="image/webp">
-            <img class="section-two__img section-two__img-2 parallax-items parallax-items-h-r"
-              src="<?= SITE_DIR ?>archive/season-2021-summer/img/red-velvet.png" alt="красный бархат">
+            <img class="section-two__img section-two__img-2 parallax-items parallax-items-h-r" src="<?= SITE_DIR ?>archive/season-2021-summer/img/red-velvet.png" alt="красный бархат">
           </picture>
         </div>
         <div class="section-two__text section-two__text-3 section-two__text--left"><span>апельсиновый<br>шейк</span>
           <picture>
             <source srcset="<?= SITE_DIR ?>archive/season-2021-summer/img/orange-shake.webp" type="image/webp">
-            <img class="section-two__img section-two__img-3 parallax-items parallax-items-h-l"
-              src="<?= SITE_DIR ?>archive/season-2021-summer/img/orange-shake.png" alt="апельсиновый шейк">
+            <img class="section-two__img section-two__img-3 parallax-items parallax-items-h-l" src="<?= SITE_DIR ?>archive/season-2021-summer/img/orange-shake.png" alt="апельсиновый шейк">
           </picture>
         </div>
         <div class="section-two__text section-two__text-4 section-two__text--right"><span>классический<br>шейк</span>
           <picture>
             <source srcset="<?= SITE_DIR ?>archive/season-2021-summer/img/classic-shake.webp" type="image/webp">
-            <img class="section-two__img section-two__img-4 parallax-items parallax-items-h-r"
-              src="<?= SITE_DIR ?>archive/season-2021-summer/img/classic-shake.png" alt="классический шейк">
+            <img class="section-two__img section-two__img-4 parallax-items parallax-items-h-r" src="<?= SITE_DIR ?>archive/season-2021-summer/img/classic-shake.png" alt="классический шейк">
           </picture>
         </div>
       </div>

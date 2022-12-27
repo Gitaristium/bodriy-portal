@@ -16,10 +16,10 @@
  <link rel="preload" as="image" href="<?= SITE_DIR ?>archive/feb23/img/socks.webp">
  <link rel="stylesheet" href="<?= SITE_DIR ?>archive/feb23/feb23.css">
  <script type="text/javascript">
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
-    navigator.userAgent)) {} else {
-  location = "/";
-}
+   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+       navigator.userAgent)) {} else {
+     location = window.location.origin + '/';
+   }
  </script>
  </head>
 
@@ -37,15 +37,11 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
        грузим открытку
      </div>
      <picture>
-       <source
-         srcset="<?= SITE_DIR ?>archive/feb23/img/logo-black@2x.png 2x, <?= SITE_DIR ?>archive/feb23/img/logo-black.png 1x"
-         type="image/png">
+       <source srcset="<?= SITE_DIR ?>archive/feb23/img/logo-black@2x.png 2x, <?= SITE_DIR ?>archive/feb23/img/logo-black.png 1x" type="image/png">
        <img class="logo-black" src="<?= SITE_DIR ?>archive/feb23/img/logo-black.png">
      </picture>
      <picture>
-       <source
-         srcset="<?= SITE_DIR ?>archive/feb23/img/logo-white@2x.png 2x, <?= SITE_DIR ?>archive/feb23/img/logo-white.png 1x"" type="
-         image/png">
+       <source srcset="<?= SITE_DIR ?>archive/feb23/img/logo-white@2x.png 2x, <?= SITE_DIR ?>archive/feb23/img/logo-white.png 1x"" type=" image/png">
        <img class="logo-white" src="<?= SITE_DIR ?>archive/feb23/img/logo-white.png">
      </picture>
 

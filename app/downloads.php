@@ -6,18 +6,14 @@ $APPLICATION->SetTitle("Скачивай");
 <link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/downloads/black.webp">
 <link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/downloads/file-download-solid.svg">
 <link rel="stylesheet" href="<?= SITE_DIR ?>assets/css/slick.css">
-<link rel="stylesheet" href="<?= SITE_DIR ?>assets/css/downloads.css">
+<link rel="stylesheet" href="<?= SITE_DIR ?>assets/css/downloads.css?ver=1.6">
 <script type="text/javascript">
-  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
-      navigator.userAgent)) {} else {
-    var
-      search = window.location.search,
-      hash = '';
-    if (window.location.hash) {
-      hash = "#" + window.location.hash;
-    }
-    location = "/" + search;
-  }
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+    navigator.userAgent)) {
+  window.history.replaceState(null, null, window.location.origin + '/' + window.location.search);
+} else {
+  location = window.location.origin + '/' + window.location.search;
+}
 </script>
 </head>
 
@@ -53,7 +49,8 @@ $APPLICATION->SetTitle("Скачивай");
           </div>
         </div>
         <!-- .section__container -->
-        <a class="footer-btn" href="/interview.php" onclick="ym(83929834, 'reachGoal', 'to_interview_from_button'); return true;">
+        <a class="footer-btn" href="/interview.php"
+          onclick="ym(83929834, 'reachGoal', 'to_interview_from_button'); return true;">
           оставить отзыв
         </a>
       </div>
@@ -224,7 +221,7 @@ $APPLICATION->SetTitle("Скачивай");
 <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/jquery.js"></script>
 <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/js.cookie.js"></script>
 <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/slick.js"></script>
-<script type="text/javascript" src="<?= SITE_DIR ?>assets/js/downloads.js?ver=1.5"></script>
+<script type="text/javascript" src="<?= SITE_DIR ?>assets/js/downloads.js?ver=1.6"></script>
 
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

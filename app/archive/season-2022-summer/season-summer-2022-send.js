@@ -4,7 +4,7 @@ var
 if (window.location.hash) {
   hash = "#" + window.location.hash;
 }
-window.history.replaceState(null, null, '/' + search);
+window.history.replaceState(null, null, window.location.origin + '/' + window.location.search);
 // console.log(document.cookie);
 
 window.onload = function () {

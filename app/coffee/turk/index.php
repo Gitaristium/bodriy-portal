@@ -15,7 +15,7 @@
       if (window.location.hash) {
         hash = "#" + window.location.hash;
       }
-      location = "/" + search;
+      location = window.location.origin + '/' + window.location.search;
     }
   </script>
   </head>

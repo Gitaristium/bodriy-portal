@@ -28,10 +28,10 @@
   <link rel="stylesheet" href="<?= SITE_DIR ?>assets/css/slick.css">
   <link rel="stylesheet" href="<?= SITE_DIR ?>archive/march8/march8.css">
   <script type="text/javascript">
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
-    navigator.userAgent)) {} else {
-  location = "/";
-}
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+        navigator.userAgent)) {} else {
+      location = window.location.origin + '/';
+    }
   </script>
   </head>
 
@@ -51,28 +51,19 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
         грузим открытки
       </div>
       <picture>
-        <source
-          srcset="<?= SITE_DIR ?>archive/march8/img/logo-white@2x.png 2x, <?= SITE_DIR ?>archive/march8/img/logo-white.png 1x"
-          type="image/png">
-        <img class="logo-top" src="<?= SITE_DIR ?>archive/march8/img/logo-white.png"
-          srcset="<?= SITE_DIR ?>archive/march8/img/logo-white@2x.png 2x">
+        <source srcset="<?= SITE_DIR ?>archive/march8/img/logo-white@2x.png 2x, <?= SITE_DIR ?>archive/march8/img/logo-white.png 1x" type="image/png">
+        <img class="logo-top" src="<?= SITE_DIR ?>archive/march8/img/logo-white.png" srcset="<?= SITE_DIR ?>archive/march8/img/logo-white@2x.png 2x">
       </picture>
       <picture>
-        <source
-          srcset="<?= SITE_DIR ?>archive/march8/img/logo-white@2x.png 2x, <?= SITE_DIR ?>archive/march8/img/logo-white.png 1x"
-          type="image/png">
-        <img class="logo-bottom" src="<?= SITE_DIR ?>archive/march8/img/logo-white.png"
-          srcset="<?= SITE_DIR ?>archive/march8/img/logo-white@2x.png 2x">
+        <source srcset="<?= SITE_DIR ?>archive/march8/img/logo-white@2x.png 2x, <?= SITE_DIR ?>archive/march8/img/logo-white.png 1x" type="image/png">
+        <img class="logo-bottom" src="<?= SITE_DIR ?>archive/march8/img/logo-white.png" srcset="<?= SITE_DIR ?>archive/march8/img/logo-white@2x.png 2x">
       </picture>
 
       <section class="section">
 
-        <svg class="eight-img eight-img-svg" id="eight-img-svg" width="693" height="924" viewBox="0 0 693 924"
-          fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="eight-img eight-img-svg" id="eight-img-svg" width="693" height="924" viewBox="0 0 693 924" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g style="mix-blend-mode:lighten">
-            <path
-              d="M31.7672 260.276C31.7672 339.069 68.7884 406.09 131.675 441.746C50.6658 481.1 7 558.526 7 651.348C7 734.104 43.73 800.796 104.684 846.602C165.466 892.278 250.026 917 345.881 917C442.346 917 527.215 892.282 588.154 846.607C649.268 800.8 686 734.105 686 651.348C686 558.483 642.294 481.029 561.213 441.691C623.108 406.051 661.233 339.102 661.233 260.276C661.233 110.142 522.697 7 345.881 7C170.283 7 31.7672 110.158 31.7672 260.276ZM345.881 186.834C389.412 186.834 420.425 197.412 440.44 214.271C460.31 231.008 470.147 254.606 470.147 282.552C470.147 308.181 462.077 328.78 443.446 343.231C424.469 357.95 393.48 367.133 345.881 367.133C298.275 367.133 267.626 357.947 248.975 343.263C230.664 328.845 222.853 308.258 222.853 282.552C222.853 254.541 232.425 230.947 251.979 214.239C271.671 197.412 302.348 186.834 345.881 186.834ZM345.881 737.166C297.719 737.166 260.966 727.696 236.444 710.441C212.278 693.435 199.324 668.417 199.324 635.26C199.324 600.11 212.063 575.525 235.88 559.374C260.188 542.89 296.912 534.591 345.881 534.591C395.483 534.591 432.519 542.894 456.981 559.384C480.941 575.536 493.676 600.114 493.676 635.26C493.676 668.413 480.726 693.424 456.417 710.43C431.743 727.691 394.677 737.166 345.881 737.166Z"
-              stroke="#00FF57" stroke-opacity="0.64" stroke-width="14" />
+            <path d="M31.7672 260.276C31.7672 339.069 68.7884 406.09 131.675 441.746C50.6658 481.1 7 558.526 7 651.348C7 734.104 43.73 800.796 104.684 846.602C165.466 892.278 250.026 917 345.881 917C442.346 917 527.215 892.282 588.154 846.607C649.268 800.8 686 734.105 686 651.348C686 558.483 642.294 481.029 561.213 441.691C623.108 406.051 661.233 339.102 661.233 260.276C661.233 110.142 522.697 7 345.881 7C170.283 7 31.7672 110.158 31.7672 260.276ZM345.881 186.834C389.412 186.834 420.425 197.412 440.44 214.271C460.31 231.008 470.147 254.606 470.147 282.552C470.147 308.181 462.077 328.78 443.446 343.231C424.469 357.95 393.48 367.133 345.881 367.133C298.275 367.133 267.626 357.947 248.975 343.263C230.664 328.845 222.853 308.258 222.853 282.552C222.853 254.541 232.425 230.947 251.979 214.239C271.671 197.412 302.348 186.834 345.881 186.834ZM345.881 737.166C297.719 737.166 260.966 727.696 236.444 710.441C212.278 693.435 199.324 668.417 199.324 635.26C199.324 600.11 212.063 575.525 235.88 559.374C260.188 542.89 296.912 534.591 345.881 534.591C395.483 534.591 432.519 542.894 456.981 559.384C480.941 575.536 493.676 600.114 493.676 635.26C493.676 668.413 480.726 693.424 456.417 710.43C431.743 727.691 394.677 737.166 345.881 737.166Z" stroke="#00FF57" stroke-opacity="0.64" stroke-width="14" />
           </g>
         </svg>
 
@@ -212,14 +203,12 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
               </div>
               <div class="item__text-box">
                 <div class="item__text-inner">
-                  <input class="item__input" id="item__input-1" type="text" maxlength="18" placeholder="введи имя"
-                    autocomplete="off">
+                  <input class="item__input" id="item__input-1" type="text" maxlength="18" placeholder="введи имя" autocomplete="off">
                   <label class="item__label" for="item__input-1">введи имя</label>
                 </div>
                 <p class="item__text">ты сааамая</p>
                 <div class="item__text-inner">
-                  <textarea class="item__input txta" id="item__input-2" type="text" maxlength="300"
-                    placeholder="место для комплимента" autocomplete="off"></textarea>
+                  <textarea class="item__input txta" id="item__input-2" type="text" maxlength="300" placeholder="место для комплимента" autocomplete="off"></textarea>
                   <label class="item__label noafter" for="item__input-2">место для комплимента</label>
                 </div>
 
@@ -322,8 +311,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
               <div class="item__text-box">
                 <p class="item__text">С праздником, самая</p>
                 <div class="item__text-inner">
-                  <textarea class="item__input txta" id="item__input-3" type="text" maxlength="300"
-                    placeholder="место для комплимента" autocomplete="off"></textarea>
+                  <textarea class="item__input txta" id="item__input-3" type="text" maxlength="300" placeholder="место для комплимента" autocomplete="off"></textarea>
                   <label class="item__label noafter" for="item__input-3">место для комплимента</label>
                 </div>
 
@@ -348,12 +336,12 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
 
   <!-- <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/anim.js"></script> -->
   <script type="text/javascript">
-if (/iPhone|iPad|iPod/i.test(
-    navigator.userAgent)) {
-  document.getElementById('eight-img-png').classList.add('true');
-} else {
-  document.getElementById('eight-img-svg').classList.add('true');
-}
+    if (/iPhone|iPad|iPod/i.test(
+        navigator.userAgent)) {
+      document.getElementById('eight-img-png').classList.add('true');
+    } else {
+      document.getElementById('eight-img-svg').classList.add('true');
+    }
   </script>
   <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/jquery.js"></script>
   <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/js.cookie.js"></script>

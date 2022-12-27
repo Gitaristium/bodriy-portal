@@ -4,22 +4,14 @@ $APPLICATION->SetTitle("Бодрый кофе");
 ?>
 <link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/rotate-screen.png">
 <link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/interview/smile.png">
-<link rel="stylesheet" href="<?= SITE_DIR ?>assets/css/coffee.css">
+<link rel="stylesheet" href="<?= SITE_DIR ?>assets/css/coffee.css?ver=1.6">
 <script type="text/javascript">
-  var
-    search = window.location.search,
-    hash = '';
-  if (window.location.hash) {
-    hash = "#" + window.location.hash;
-  }
-
-  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
-      navigator.userAgent)) {
-
-    location = "/coffee/" + search;
-  } else {
-    location = "/" + search;
-  }
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+    navigator.userAgent)) {
+  location = window.location.origin + "/coffee/" + window.location.search;
+} else {
+  location = window.location.origin + '/' + window.location.search;
+}
 </script>
 </head>
 
