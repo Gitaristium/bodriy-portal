@@ -1,4 +1,4 @@
-// window.history.replaceState(null, null, '/');
+
 // Cookies.set('valentine', 'y', { expires: 7, path: '' });
 // Cookies.set('curentPage', 'valentine', { path: '' });
 

@@ -1,25 +1,3 @@
-var redirect = Cookies.get('redirect');
-if (redirect == 'y') {
-  ym(83929834, 'hit', '/coffee-free?utm_medium=qr', {
-    params: {
-      title: 'Забери свой бесплатный кофе!',
-      referer: '/coffee-free?utm_medium=qr'
-    }
-  });
-  Cookies.set('redirect', 'n', {
-    expires: 7,
-    path: '/'
-  });
-}
-else {
-  ym(83929834, 'hit', '/coffee-free', {
-    params: {
-      title: 'Забери свой бесплатный кофе!',
-      //referer: '/coffee-free?utm_medium=qr'
-    }
-  });
-}
-
 window.onload = function () {
   window.scrollTo(0, 0);
   setTimeout(() => {
@@ -85,13 +63,6 @@ $(document).ready(function () {
       // console.log('1: ' + playerCity);
     }
   });
-
-
-
-
-
-
-
 
   // console.log(document.cookie);
   var qr = Cookies.get('qr');

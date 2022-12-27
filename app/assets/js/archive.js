@@ -1,4 +1,4 @@
-// window.history.replaceState(null, null, '/');
+
 Cookies.set('archive', 'y', { expires: 7, path: '' });
 Cookies.set('curentPage', 'archive', { path: '' });
 // console.log(document.cookie);

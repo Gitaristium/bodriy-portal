@@ -13,10 +13,16 @@ $APPLICATION->SetTitle("Свари свой бодрый кофе");
 <link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/coffee/purover_b.webp">
 <link rel="stylesheet" href="<?= SITE_DIR ?>assets/css/coffee.css">
 <script type="text/javascript">
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
-    navigator.userAgent)) {} else {
-  location = "/";
-}
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+      navigator.userAgent)) {} else {
+    var
+      search = window.location.search,
+      hash = '';
+    if (window.location.hash) {
+      hash = "#" + window.location.hash;
+    }
+    location = "/" + search;
+  }
 </script>
 </head>
 
@@ -134,6 +140,6 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
 <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/jquery.js"></script>
 <!-- <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/touchswipe.js"></script> -->
 <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/js.cookie.js"></script>
-<script type="text/javascript" src="<?= SITE_DIR ?>assets/js/coffee.js?ver=1.3"></script>
+<script type="text/javascript" src="<?= SITE_DIR ?>assets/js/coffee.js?ver=1.5"></script>
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

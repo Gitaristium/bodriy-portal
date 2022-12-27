@@ -1,26 +1,10 @@
-var redirect = Cookies.get('redirect');
-if (redirect == 'y') {
-  ym(83929834, 'hit', '/quest?utm_medium=qr', {
-    params: {
-      title: 'Бодрый тест',
-      //referer: '/quest?utm_medium=qr'
-    }
-  });
-  Cookies.set('redirect', 'n', {
-    expires: 7,
-    path: '/'
-  });
+var
+  search = window.location.search,
+  hash = '';
+if (window.location.hash) {
+  hash = "#" + window.location.hash;
 }
-else {
-  ym(83929834, 'hit', '/quest', {
-    params: {
-      title: 'Бодрый тест',
-      //referer: '/quest?utm_medium=qr'
-    }
-  });
-}
-
-window.history.replaceState(null, null, '/');
+window.history.replaceState(null, null, '/' + search);
 Cookies.set('quest', 'y', { expires: 7, path: '' });
 Cookies.set('curentPage', 'quest', { path: '' });
 // console.log(document.cookie);

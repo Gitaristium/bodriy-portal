@@ -1,4 +1,4 @@
-// // window.history.replaceState(null, null, '/');
+// 
 // Cookies.set('season', 'y', { expires: 7, path: '' });
 // Cookies.set('curentPage', 'season', { path: '' });
 // console.log(document.cookie);

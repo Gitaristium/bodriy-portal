@@ -7,10 +7,16 @@
   <link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/coffee/turk.webp">
   <link rel="stylesheet" href="<?= SITE_DIR ?>assets/css/coffee-recipe.css">
   <script type="text/javascript">
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
-    navigator.userAgent)) {} else {
-  location = "/";
-}
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+        navigator.userAgent)) {} else {
+      var
+        search = window.location.search,
+        hash = '';
+      if (window.location.hash) {
+        hash = "#" + window.location.hash;
+      }
+      location = "/" + search;
+    }
   </script>
   </head>
 
@@ -31,18 +37,15 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
       <section class="section">
         <picture>
           <source srcset="<?= SITE_DIR ?>assets/img/coffee/turk.webp" type="image/webp">
-          <img class="section__img section__img-turk section__img-turk--1"
-            src="<?= SITE_DIR ?>assets/img/coffee/turk.png">
+          <img class="section__img section__img-turk section__img-turk--1" src="<?= SITE_DIR ?>assets/img/coffee/turk.png">
         </picture>
         <picture>
           <source srcset="<?= SITE_DIR ?>assets/img/coffee/turk.webp" type="image/webp">
-          <img class="section__img section__img-turk section__img-turk--2"
-            src="<?= SITE_DIR ?>assets/img/coffee/turk.png">
+          <img class="section__img section__img-turk section__img-turk--2" src="<?= SITE_DIR ?>assets/img/coffee/turk.png">
         </picture>
         <picture>
           <source srcset="<?= SITE_DIR ?>assets/img/coffee/turk.webp" type="image/webp">
-          <img class="section__img section__img-turk section__img-turk--3"
-            src="<?= SITE_DIR ?>assets/img/coffee/turk.png">
+          <img class="section__img section__img-turk section__img-turk--3" src="<?= SITE_DIR ?>assets/img/coffee/turk.png">
         </picture>
 
         <h1>
@@ -98,8 +101,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
           <img class="section__smile anim-items" src="<?= SITE_DIR ?>assets/img/coffee/smile.png">
         </picture>
 
-        <a class="portal-link" href="https://portal.bodryi-den.ru/"
-          onclick="ym(83929834, 'reachGoal', 'to_main_from_coffee'); return true;">тут ты можешь оставить отзыв<br>и
+        <a class="portal-link" href="https://portal.bodryi-den.ru/" onclick="ym(83929834, 'reachGoal', 'to_main_from_coffee'); return true;">тут ты можешь оставить отзыв<br>и
           много чего еще
           :)</a>
 

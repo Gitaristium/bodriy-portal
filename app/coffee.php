@@ -6,12 +6,20 @@ $APPLICATION->SetTitle("Бодрый кофе");
 <link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/interview/smile.png">
 <link rel="stylesheet" href="<?= SITE_DIR ?>assets/css/coffee.css">
 <script type="text/javascript">
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
-    navigator.userAgent)) {
-  location = "/coffee/";
-} else {
-  location = "/";
-}
+  var
+    search = window.location.search,
+    hash = '';
+  if (window.location.hash) {
+    hash = "#" + window.location.hash;
+  }
+
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+      navigator.userAgent)) {
+
+    location = "/coffee/" + search;
+  } else {
+    location = "/" + search;
+  }
 </script>
 </head>
 

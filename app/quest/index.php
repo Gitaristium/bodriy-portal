@@ -3,7 +3,13 @@ $APPLICATION->SetTitle("Бодрый тест");
 ?>
 <script type="text/javascript" src="../assets/js/js.cookie.js"></script>
 <script type="text/javascript">
-location = "/quest.php";
+  var
+    search = window.location.search,
+    hash = '';
+  if (window.location.hash) {
+    hash = "#" + window.location.hash;
+  }
+  location = "/quest.php" + search;
 </script>
 </head>
 

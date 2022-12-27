@@ -1,26 +1,11 @@
 if (window.location.pathname == '/season.php') {
-  var redirect = Cookies.get('redirect');
-  if (redirect == 'y') {
-    ym(83929834, 'hit', '/season?utm_medium=qr', {
-      params: {
-        title: 'Сезонное меню',
-        //referer: '/season?utm_medium=qr'
-      }
-    });
-    Cookies.set('redirect', 'n', {
-      expires: 7,
-      path: '/'
-    });
+  var
+    search = window.location.search,
+    hash = '';
+  if (window.location.hash) {
+    hash = "#" + window.location.hash;
   }
-  else {
-    ym(83929834, 'hit', '/season', {
-      params: {
-        title: 'Сезонное меню',
-        //referer: '/season?utm_medium=qr'
-      }
-    });
-  }
-  window.history.replaceState(null, null, '/');
+  window.history.replaceState(null, null, '/' + search);
 }
 Cookies.set('season', 'y', { expires: 7, path: '' });
 Cookies.set('curentPage', 'season', { path: '' });

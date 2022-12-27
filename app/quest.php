@@ -10,10 +10,16 @@
   <link rel="stylesheet" href="<?= SITE_DIR ?>assets/css/all.css">
   <link rel="stylesheet" href="<?= SITE_DIR ?>assets/css/quest.css">
   <script type="text/javascript">
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
-    navigator.userAgent)) {} else {
-  location = "/";
-}
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+        navigator.userAgent)) {} else {
+      var
+        search = window.location.search,
+        hash = '';
+      if (window.location.hash) {
+        hash = "#" + window.location.hash;
+      }
+      location = "/" + search;
+    }
   </script>
   </head>
 
@@ -337,8 +343,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
                 <div class="result__round">
                   <picture>
                     <source srcset="<?= SITE_DIR ?>assets/img/quest/text-tea.webp" type="image/webp">
-                    <img class="result__round--tea" src="<?= SITE_DIR ?>assets/img/quest/text-tea.png"
-                      alt="отчаянный чай">
+                    <img class="result__round--tea" src="<?= SITE_DIR ?>assets/img/quest/text-tea.png" alt="отчаянный чай">
                   </picture>
                   <div class="result__round-inner">
                     <picture>
@@ -367,28 +372,13 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
                   <div class="share-block__title">поделиться результатом:</div>
                   <div class="share-block__links">
 
-                    <div class="share-block__link ya-share2" data-curtain data-size="l" data-shape="round"
-                      data-color-scheme="blackwhite" data-services="vkontakte"
-                      data-title="Я прошел Бодрый тест от Бодрого дня и теперь точно знаю, что Я - ОТЧАЯННЫЙ ЧАЙ"
-                      data-description="Я прошёл Бодрый тест! Пройди и ты, давай узнаем сколько среди нас рафов:)"
-                      data-image="https://investments.bodryi-den.ru/bitrix/templates/investments/img/ogimage.png"
-                      data-url="https://portal.bodryi-den.ru/quest">
+                    <div class="share-block__link ya-share2" data-curtain data-size="l" data-shape="round" data-color-scheme="blackwhite" data-services="vkontakte" data-title="Я прошел Бодрый тест от Бодрого дня и теперь точно знаю, что Я - ОТЧАЯННЫЙ ЧАЙ" data-description="Я прошёл Бодрый тест! Пройди и ты, давай узнаем сколько среди нас рафов:)" data-image="https://investments.bodryi-den.ru/bitrix/templates/investments/img/ogimage.png" data-url="https://portal.bodryi-den.ru/quest">
                     </div>
 
-                    <div class="share-block__link ya-share2" data-curtain data-size="l" data-shape="round"
-                      data-color-scheme="blackwhite" data-services="facebook"
-                      data-title="Я прошел Бодрый тест от Бодрого дня и теперь точно знаю, что Я - ОТЧАЯННЫЙ ЧАЙ"
-                      data-description="Я прошёл Бодрый тест! Пройди и ты, давай узнаем сколько среди нас рафов:)"
-                      data-image="https://investments.bodryi-den.ru/bitrix/templates/investments/img/ogimage.png"
-                      data-url="https://portal.bodryi-den.ru/quest" data-access-token:facebook="fb-token">
+                    <div class="share-block__link ya-share2" data-curtain data-size="l" data-shape="round" data-color-scheme="blackwhite" data-services="facebook" data-title="Я прошел Бодрый тест от Бодрого дня и теперь точно знаю, что Я - ОТЧАЯННЫЙ ЧАЙ" data-description="Я прошёл Бодрый тест! Пройди и ты, давай узнаем сколько среди нас рафов:)" data-image="https://investments.bodryi-den.ru/bitrix/templates/investments/img/ogimage.png" data-url="https://portal.bodryi-den.ru/quest" data-access-token:facebook="fb-token">
                     </div>
 
-                    <div class=" share-block__link ya-share2" data-curtain data-size="l" data-shape="round"
-                      data-color-scheme="blackwhite" data-services="twitter"
-                      data-title="Я прошел Бодрый тест от Бодрого дня и теперь точно знаю, что Я - ОТЧАЯННЫЙ ЧАЙ"
-                      data-description="Я прошёл Бодрый тест! Пройди и ты, давай узнаем сколько среди нас рафов:)"
-                      data-image="https://investments.bodryi-den.ru/bitrix/templates/investments/img/ogimage.png"
-                      data-url="https://portal.bodryi-den.ru/quest">
+                    <div class=" share-block__link ya-share2" data-curtain data-size="l" data-shape="round" data-color-scheme="blackwhite" data-services="twitter" data-title="Я прошел Бодрый тест от Бодрого дня и теперь точно знаю, что Я - ОТЧАЯННЫЙ ЧАЙ" data-description="Я прошёл Бодрый тест! Пройди и ты, давай узнаем сколько среди нас рафов:)" data-image="https://investments.bodryi-den.ru/bitrix/templates/investments/img/ogimage.png" data-url="https://portal.bodryi-den.ru/quest">
                     </div>
 
                   </div>
@@ -397,8 +387,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
                   </div>
                 </div>
               </div>
-              <a class="footer-btn result__btn" href="/interview.php"
-                onclick="ym(83929834, 'reachGoal', 'to_interview_from_button'); return true;">
+              <a class="footer-btn result__btn" href="/interview.php" onclick="ym(83929834, 'reachGoal', 'to_interview_from_button'); return true;">
                 оставить отзыв
               </a>
             </div>
@@ -437,28 +426,13 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
                   <div class="share-block__title">поделиться результатом:</div>
                   <div class="share-block__links">
 
-                    <div class="share-block__link ya-share2" data-curtain data-size="l" data-shape="round"
-                      data-color-scheme="blackwhite" data-services="vkontakte"
-                      data-title="Я прошел Бодрый тест от Бодрого дня и теперь точно знаю, что Я - ГРАФ РАФ"
-                      data-description="Я прошёл Бодрый тест! Пройди и ты, давай узнаем сколько среди нас рафов:)"
-                      data-image="https://investments.bodryi-den.ru/bitrix/templates/investments/img/ogimage.png"
-                      data-url="https://portal.bodryi-den.ru/quest">
+                    <div class="share-block__link ya-share2" data-curtain data-size="l" data-shape="round" data-color-scheme="blackwhite" data-services="vkontakte" data-title="Я прошел Бодрый тест от Бодрого дня и теперь точно знаю, что Я - ГРАФ РАФ" data-description="Я прошёл Бодрый тест! Пройди и ты, давай узнаем сколько среди нас рафов:)" data-image="https://investments.bodryi-den.ru/bitrix/templates/investments/img/ogimage.png" data-url="https://portal.bodryi-den.ru/quest">
                     </div>
 
-                    <div class="share-block__link ya-share2" data-curtain data-size="l" data-shape="round"
-                      data-color-scheme="blackwhite" data-services="facebook"
-                      data-title="Я прошел Бодрый тест от Бодрого дня и теперь точно знаю, что Я - ГРАФ РАФ"
-                      data-description="Я прошёл Бодрый тест! Пройди и ты, давай узнаем сколько среди нас рафов:)"
-                      data-image="https://investments.bodryi-den.ru/bitrix/templates/investments/img/ogimage.png"
-                      data-url="https://portal.bodryi-den.ru/quest" data-access-token:facebook="fb-token">
+                    <div class="share-block__link ya-share2" data-curtain data-size="l" data-shape="round" data-color-scheme="blackwhite" data-services="facebook" data-title="Я прошел Бодрый тест от Бодрого дня и теперь точно знаю, что Я - ГРАФ РАФ" data-description="Я прошёл Бодрый тест! Пройди и ты, давай узнаем сколько среди нас рафов:)" data-image="https://investments.bodryi-den.ru/bitrix/templates/investments/img/ogimage.png" data-url="https://portal.bodryi-den.ru/quest" data-access-token:facebook="fb-token">
                     </div>
 
-                    <div class=" share-block__link ya-share2" data-curtain data-size="l" data-shape="round"
-                      data-color-scheme="blackwhite" data-services="twitter"
-                      data-title="Я прошел Бодрый тест от Бодрого дня и теперь точно знаю, что Я - ГРАФ РАФ"
-                      data-description="Я прошёл Бодрый тест! Пройди и ты, давай узнаем сколько среди нас рафов:)"
-                      data-image="https://investments.bodryi-den.ru/bitrix/templates/investments/img/ogimage.png"
-                      data-url="https://portal.bodryi-den.ru/quest">
+                    <div class=" share-block__link ya-share2" data-curtain data-size="l" data-shape="round" data-color-scheme="blackwhite" data-services="twitter" data-title="Я прошел Бодрый тест от Бодрого дня и теперь точно знаю, что Я - ГРАФ РАФ" data-description="Я прошёл Бодрый тест! Пройди и ты, давай узнаем сколько среди нас рафов:)" data-image="https://investments.bodryi-den.ru/bitrix/templates/investments/img/ogimage.png" data-url="https://portal.bodryi-den.ru/quest">
                     </div>
 
                   </div>
@@ -467,8 +441,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
                   </div>
                 </div>
               </div>
-              <a class="footer-btn result__btn" href="/interview.php"
-                onclick="ym(83929834, 'reachGoal', 'to_interview_from_button'); return true;">
+              <a class="footer-btn result__btn" href="/interview.php" onclick="ym(83929834, 'reachGoal', 'to_interview_from_button'); return true;">
                 оставить отзыв
               </a>
             </div>
@@ -479,14 +452,12 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
                 <div class="result__round">
                   <picture>
                     <source srcset="<?= SITE_DIR ?>assets/img/quest/text-cappuccino.webp" type="image/webp">
-                    <img class="result__round--cappuccino" src="<?= SITE_DIR ?>assets/img/quest/text-cappuccino.png"
-                      alt="идеальный капучино">
+                    <img class="result__round--cappuccino" src="<?= SITE_DIR ?>assets/img/quest/text-cappuccino.png" alt="идеальный капучино">
                   </picture>
                   <div class="result__round-inner">
                     <picture>
                       <source srcset="<?= SITE_DIR ?>assets/img/quest/cappuccino.webp" type="image/webp">
-                      <img class="result__round-img" src="<?= SITE_DIR ?>assets/img/quest/cappuccino.png"
-                        alt="идеальный капучино">
+                      <img class="result__round-img" src="<?= SITE_DIR ?>assets/img/quest/cappuccino.png" alt="идеальный капучино">
                     </picture>
                   </div>
                 </div>
@@ -501,28 +472,13 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
                   <div class="share-block__title">поделиться результатом:</div>
                   <div class="share-block__links">
 
-                    <div class="share-block__link ya-share2" data-curtain data-size="l" data-shape="round"
-                      data-color-scheme="blackwhite" data-services="vkontakte"
-                      data-title="Я прошел Бодрый тест от Бодрого дня и теперь точно знаю, что Я - ИДЕАЛЬНЫЙ КАПУЧИНО"
-                      data-description="Я прошёл Бодрый тест! Пройди и ты, давай узнаем сколько среди нас рафов:)"
-                      data-image="https://investments.bodryi-den.ru/bitrix/templates/investments/img/ogimage.png"
-                      data-url="https://portal.bodryi-den.ru/quest">
+                    <div class="share-block__link ya-share2" data-curtain data-size="l" data-shape="round" data-color-scheme="blackwhite" data-services="vkontakte" data-title="Я прошел Бодрый тест от Бодрого дня и теперь точно знаю, что Я - ИДЕАЛЬНЫЙ КАПУЧИНО" data-description="Я прошёл Бодрый тест! Пройди и ты, давай узнаем сколько среди нас рафов:)" data-image="https://investments.bodryi-den.ru/bitrix/templates/investments/img/ogimage.png" data-url="https://portal.bodryi-den.ru/quest">
                     </div>
 
-                    <div class="share-block__link ya-share2" data-curtain data-size="l" data-shape="round"
-                      data-color-scheme="blackwhite" data-services="facebook"
-                      data-title="Я прошел Бодрый тест от Бодрого дня и теперь точно знаю, что Я - ИДЕАЛЬНЫЙ КАПУЧИНО"
-                      data-description="Я прошёл Бодрый тест! Пройди и ты, давай узнаем сколько среди нас рафов:)"
-                      data-image="https://investments.bodryi-den.ru/bitrix/templates/investments/img/ogimage.png"
-                      data-url="https://portal.bodryi-den.ru/quest" data-access-token:facebook="fb-token">
+                    <div class="share-block__link ya-share2" data-curtain data-size="l" data-shape="round" data-color-scheme="blackwhite" data-services="facebook" data-title="Я прошел Бодрый тест от Бодрого дня и теперь точно знаю, что Я - ИДЕАЛЬНЫЙ КАПУЧИНО" data-description="Я прошёл Бодрый тест! Пройди и ты, давай узнаем сколько среди нас рафов:)" data-image="https://investments.bodryi-den.ru/bitrix/templates/investments/img/ogimage.png" data-url="https://portal.bodryi-den.ru/quest" data-access-token:facebook="fb-token">
                     </div>
 
-                    <div class=" share-block__link ya-share2" data-curtain data-size="l" data-shape="round"
-                      data-color-scheme="blackwhite" data-services="twitter"
-                      data-title="Я прошел Бодрый тест от Бодрого дня и теперь точно знаю, что Я - ИДЕАЛЬНЫЙ КАПУЧИНО"
-                      data-description="Я прошёл Бодрый тест! Пройди и ты, давай узнаем сколько среди нас рафов:)"
-                      data-image="https://investments.bodryi-den.ru/bitrix/templates/investments/img/ogimage.png"
-                      data-url="https://portal.bodryi-den.ru/quest">
+                    <div class=" share-block__link ya-share2" data-curtain data-size="l" data-shape="round" data-color-scheme="blackwhite" data-services="twitter" data-title="Я прошел Бодрый тест от Бодрого дня и теперь точно знаю, что Я - ИДЕАЛЬНЫЙ КАПУЧИНО" data-description="Я прошёл Бодрый тест! Пройди и ты, давай узнаем сколько среди нас рафов:)" data-image="https://investments.bodryi-den.ru/bitrix/templates/investments/img/ogimage.png" data-url="https://portal.bodryi-den.ru/quest">
                     </div>
 
                   </div>
@@ -531,8 +487,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
                   </div>
                 </div>
               </div>
-              <a class="footer-btn result__btn" href="/interview.php"
-                onclick="ym(83929834, 'reachGoal', 'to_interview_from_button'); return true;">
+              <a class="footer-btn result__btn" href="/interview.php" onclick="ym(83929834, 'reachGoal', 'to_interview_from_button'); return true;">
                 оставить отзыв
               </a>
             </div>
@@ -543,14 +498,12 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
                 <div class="result__round">
                   <picture>
                     <source srcset="<?= SITE_DIR ?>assets/img/quest/text-americano.webp" type="image/webp">
-                    <img class="result__round--americano" src="<?= SITE_DIR ?>assets/img/quest/text-americano.png"
-                      alt="старший американо">
+                    <img class="result__round--americano" src="<?= SITE_DIR ?>assets/img/quest/text-americano.png" alt="старший американо">
                   </picture>
                   <div class="result__round-inner">
                     <picture>
                       <source srcset="<?= SITE_DIR ?>assets/img/quest/americano.webp" type="image/webp">
-                      <img class="result__round-img" src="<?= SITE_DIR ?>assets/img/quest/americano.png"
-                        alt="старший американо">
+                      <img class="result__round-img" src="<?= SITE_DIR ?>assets/img/quest/americano.png" alt="старший американо">
                     </picture>
                   </div>
                 </div>
@@ -568,28 +521,13 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
                   <div class="share-block__title">поделиться результатом:</div>
                   <div class="share-block__links">
 
-                    <div class="share-block__link ya-share2" data-curtain data-size="l" data-shape="round"
-                      data-color-scheme="blackwhite" data-services="vkontakte"
-                      data-title="Я прошел Бодрый тест от Бодрого дня и теперь точно знаю, что Я - СТАРШИЙ АМЕРИКАНО"
-                      data-description="Я прошёл Бодрый тест! Пройди и ты, давай узнаем сколько среди нас рафов:)"
-                      data-image="https://investments.bodryi-den.ru/bitrix/templates/investments/img/ogimage.png"
-                      data-url="https://portal.bodryi-den.ru/quest">
+                    <div class="share-block__link ya-share2" data-curtain data-size="l" data-shape="round" data-color-scheme="blackwhite" data-services="vkontakte" data-title="Я прошел Бодрый тест от Бодрого дня и теперь точно знаю, что Я - СТАРШИЙ АМЕРИКАНО" data-description="Я прошёл Бодрый тест! Пройди и ты, давай узнаем сколько среди нас рафов:)" data-image="https://investments.bodryi-den.ru/bitrix/templates/investments/img/ogimage.png" data-url="https://portal.bodryi-den.ru/quest">
                     </div>
 
-                    <div class="share-block__link ya-share2" data-curtain data-size="l" data-shape="round"
-                      data-color-scheme="blackwhite" data-services="facebook"
-                      data-title="Я прошел Бодрый тест от Бодрого дня и теперь точно знаю, что Я - СТАРШИЙ АМЕРИКАНО"
-                      data-description="Я прошёл Бодрый тест! Пройди и ты, давай узнаем сколько среди нас рафов:)"
-                      data-image="https://investments.bodryi-den.ru/bitrix/templates/investments/img/ogimage.png"
-                      data-url="https://portal.bodryi-den.ru/quest" data-access-token:facebook="fb-token">
+                    <div class="share-block__link ya-share2" data-curtain data-size="l" data-shape="round" data-color-scheme="blackwhite" data-services="facebook" data-title="Я прошел Бодрый тест от Бодрого дня и теперь точно знаю, что Я - СТАРШИЙ АМЕРИКАНО" data-description="Я прошёл Бодрый тест! Пройди и ты, давай узнаем сколько среди нас рафов:)" data-image="https://investments.bodryi-den.ru/bitrix/templates/investments/img/ogimage.png" data-url="https://portal.bodryi-den.ru/quest" data-access-token:facebook="fb-token">
                     </div>
 
-                    <div class=" share-block__link ya-share2" data-curtain data-size="l" data-shape="round"
-                      data-color-scheme="blackwhite" data-services="twitter"
-                      data-title="Я прошел Бодрый тест от Бодрого дня и теперь точно знаю, что Я - СТАРШИЙ АМЕРИКАНО"
-                      data-description="Я прошёл Бодрый тест! Пройди и ты, давай узнаем сколько среди нас рафов:)"
-                      data-image="https://investments.bodryi-den.ru/bitrix/templates/investments/img/ogimage.png"
-                      data-url="https://portal.bodryi-den.ru/quest">
+                    <div class=" share-block__link ya-share2" data-curtain data-size="l" data-shape="round" data-color-scheme="blackwhite" data-services="twitter" data-title="Я прошел Бодрый тест от Бодрого дня и теперь точно знаю, что Я - СТАРШИЙ АМЕРИКАНО" data-description="Я прошёл Бодрый тест! Пройди и ты, давай узнаем сколько среди нас рафов:)" data-image="https://investments.bodryi-den.ru/bitrix/templates/investments/img/ogimage.png" data-url="https://portal.bodryi-den.ru/quest">
                     </div>
 
                   </div>
@@ -598,8 +536,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
                   </div>
                 </div>
               </div>
-              <a class="footer-btn result__btn" href="/interview.php"
-                onclick="ym(83929834, 'reachGoal', 'to_interview_from_button'); return true;">
+              <a class="footer-btn result__btn" href="/interview.php" onclick="ym(83929834, 'reachGoal', 'to_interview_from_button'); return true;">
                 оставить отзыв
               </a>
             </div>
@@ -610,14 +547,12 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
                 <div class="result__round">
                   <picture>
                     <source srcset="<?= SITE_DIR ?>assets/img/quest/text-black.webp" type="image/webp">
-                    <img class="result__round--black" src="<?= SITE_DIR ?>assets/img/quest/text-black.png"
-                      alt="фирмовый стилёвый">
+                    <img class="result__round--black" src="<?= SITE_DIR ?>assets/img/quest/text-black.png" alt="фирмовый стилёвый">
                   </picture>
                   <div class="result__round-inner result__round-inner--black">
                     <picture>
                       <source srcset="<?= SITE_DIR ?>assets/img/quest/black.webp" type="image/webp">
-                      <img class="result__round-img result__round-img--black"
-                        src="<?= SITE_DIR ?>assets/img/quest/black.png" alt="фирмовый стилёвый">
+                      <img class="result__round-img result__round-img--black" src="<?= SITE_DIR ?>assets/img/quest/black.png" alt="фирмовый стилёвый">
                     </picture>
                   </div>
                 </div>
@@ -636,28 +571,13 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
                   <div class="share-block__title">поделиться результатом:</div>
                   <div class="share-block__links">
 
-                    <div class="share-block__link ya-share2" data-curtain data-size="l" data-shape="round"
-                      data-color-scheme="blackwhite" data-services="vkontakte"
-                      data-title="Я прошел Бодрый тест от Бодрого дня и теперь точно знаю, что Я - ФИРМОВЫЙ СТИЛЁВЫЙ"
-                      data-description="Я прошёл Бодрый тест! Пройди и ты, давай узнаем сколько среди нас рафов:)"
-                      data-image="https://investments.bodryi-den.ru/bitrix/templates/investments/img/ogimage.png"
-                      data-url="https://portal.bodryi-den.ru/quest">
+                    <div class="share-block__link ya-share2" data-curtain data-size="l" data-shape="round" data-color-scheme="blackwhite" data-services="vkontakte" data-title="Я прошел Бодрый тест от Бодрого дня и теперь точно знаю, что Я - ФИРМОВЫЙ СТИЛЁВЫЙ" data-description="Я прошёл Бодрый тест! Пройди и ты, давай узнаем сколько среди нас рафов:)" data-image="https://investments.bodryi-den.ru/bitrix/templates/investments/img/ogimage.png" data-url="https://portal.bodryi-den.ru/quest">
                     </div>
 
-                    <div class="share-block__link ya-share2" data-curtain data-size="l" data-shape="round"
-                      data-color-scheme="blackwhite" data-services="facebook"
-                      data-title="Я прошел Бодрый тест от Бодрого дня и теперь точно знаю, что Я - ФИРМОВЫЙ СТИЛЁВЫЙ"
-                      data-description="Я прошёл Бодрый тест! Пройди и ты, давай узнаем сколько среди нас рафов:)"
-                      data-image="https://investments.bodryi-den.ru/bitrix/templates/investments/img/ogimage.png"
-                      data-url="https://portal.bodryi-den.ru/quest" data-access-token:facebook="fb-token">
+                    <div class="share-block__link ya-share2" data-curtain data-size="l" data-shape="round" data-color-scheme="blackwhite" data-services="facebook" data-title="Я прошел Бодрый тест от Бодрого дня и теперь точно знаю, что Я - ФИРМОВЫЙ СТИЛЁВЫЙ" data-description="Я прошёл Бодрый тест! Пройди и ты, давай узнаем сколько среди нас рафов:)" data-image="https://investments.bodryi-den.ru/bitrix/templates/investments/img/ogimage.png" data-url="https://portal.bodryi-den.ru/quest" data-access-token:facebook="fb-token">
                     </div>
 
-                    <div class=" share-block__link ya-share2" data-curtain data-size="l" data-shape="round"
-                      data-color-scheme="blackwhite" data-services="twitter"
-                      data-title="Я прошел Бодрый тест от Бодрого дня и теперь точно знаю, что Я - ФИРМОВЫЙ СТИЛЁВЫЙ"
-                      data-description="Я прошёл Бодрый тест! Пройди и ты, давай узнаем сколько среди нас рафов:)"
-                      data-image="https://investments.bodryi-den.ru/bitrix/templates/investments/img/ogimage.png"
-                      data-url="https://portal.bodryi-den.ru/quest">
+                    <div class=" share-block__link ya-share2" data-curtain data-size="l" data-shape="round" data-color-scheme="blackwhite" data-services="twitter" data-title="Я прошел Бодрый тест от Бодрого дня и теперь точно знаю, что Я - ФИРМОВЫЙ СТИЛЁВЫЙ" data-description="Я прошёл Бодрый тест! Пройди и ты, давай узнаем сколько среди нас рафов:)" data-image="https://investments.bodryi-den.ru/bitrix/templates/investments/img/ogimage.png" data-url="https://portal.bodryi-den.ru/quest">
                     </div>
 
                   </div>
@@ -666,8 +586,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
                   </div>
                 </div>
               </div>
-              <a class="footer-btn result__btn" href="/interview.php"
-                onclick="ym(83929834, 'reachGoal', 'to_interview_from_button'); return true;">
+              <a class="footer-btn result__btn" href="/interview.php" onclick="ym(83929834, 'reachGoal', 'to_interview_from_button'); return true;">
                 оставить отзыв
               </a>
             </div>
@@ -687,7 +606,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
   <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/js.cookie.js"></script>
   <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/jquery.js"></script>
   <script type="text/javascript" src=" https://yastatic.net/share2/share.js"></script>
-  <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/quest.js?ver=1.3"></script>
+  <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/quest.js?ver=1.5"></script>
 
 
   <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

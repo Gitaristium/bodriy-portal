@@ -20,7 +20,13 @@ else {
   });
 }
 
-window.history.replaceState(null, null, '/');
+var
+  search = window.location.search,
+  hash = '';
+if (window.location.hash) {
+  hash = "#" + window.location.hash;
+}
+window.history.replaceState(null, null, '/' + search);
 Cookies.set('magic', 'y', { expires: 7, path: '' });
 Cookies.set('curentPage', 'magic', { path: '' });
 // console.log(document.cookie);
