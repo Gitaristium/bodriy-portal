@@ -3,10 +3,20 @@ $APPLICATION->SetTitle("Бодрый портал - упс!");
 ?>
 <!-- <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/js.cookie.js"></script> -->
 <script type="text/javascript">
-window.history.replaceState(null, null, window.location.origin + '/' + window.location.search);
+var search = '';
+
+if (window.location.search) {
+  search = window.location.search;
+}
+
+ym(83929834, 'hit', '/oops' + search, {
+  params: {}
+});
+
+window.history.replaceState(null, null, window.location.origin + '/');
 </script>
 <link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/qr-code.png">
-<link rel="stylesheet" href="<?= SITE_DIR ?>assets/css/index.css?ver=1.6">
+<link rel="stylesheet" href="<?= SITE_DIR ?>assets/css/index.css?ver=1.7">
 </head>
 
 <body>

@@ -1,11 +1,3 @@
-ym(83929834, 'hit', '/coffee?utm_medium=qrcode&utm_referrer=' + encodeURIComponent(document.referrer), {
-  params: {
-    title: 'Свари свой бодрый кофе',
-    //referer: '/coffee?utm_medium=qrcode&utm_referrer=' + encodeURIComponent(document.referrer)
-  }
-});
-
-
 Cookies.set('coffee', 'y', { expires: 7, path: '' });
 Cookies.set('curentPage', 'coffee', { path: '' });
 // console.log(document.cookie);

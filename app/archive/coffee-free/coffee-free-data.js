@@ -10,7 +10,7 @@ $(document).ready(function () {
 
   function timerFunction() {
     timer = setTimeout(function () {
-      location = ''
+      window.location = '/'
     }, delay)
   };
   timerFunction();

@@ -1,12 +1,17 @@
+<meta name="referrer" content="no-referrer">
 <script type="text/javascript" src="/assets/js/jquery.js"></script>
 <script type="text/javascript" src="/assets/js/js.cookie.js"></script>
 <script type="text/javascript">
+var search = '';
+
+if (window.location.search) {
+  search = window.location.search;
+}
+
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
     navigator.userAgent)) {
 
   var
-    search = window.location.search,
-    hash = window.location.hash,
     curentPage = Cookies.get('curentPage'),
     picture = Cookies.get('picture'),
     interview = Cookies.get('interview'),
@@ -16,24 +21,22 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
     downloads = Cookies.get('downloads'),
     magic = Cookies.get('magic');
 
-  console.log('search: ' + window.location.search);
-  console.log('hash: ' + hash);
 
   if (curentPage != null && curentPage != '' && curentPage != 'undefinded') {
-    location = window.location.origin + '/' + curentPage + ".php" + window.location.search;
+    window.location = '/' + curentPage + ".php" + search;
   } else {
     //выборка страниц
     if (season != 'y') { //приоритет 1 - сезонка
       //переходим на сезонку
-      location = window.location.origin + "/season.php" + window.location.search;
+      location = window.location.origin + "/season.php" + search;
     } else {
       if (magic != 'y') { //приоритет 2 - magic
         //переходим на magic
-        location = window.location.origin + "/magic.php" + window.location.search;
+        location = window.location.origin + "/magic.php" + search;
       } else {
         if (interview != 'y') { //приоритет 3 - опросник
           //переходим на опросник
-          location = window.location.origin + "/interview.php" + window.location.search;
+          location = window.location.origin + "/interview.php" + search;
         } else {
 
           // var randomPages = ["picture", "loyalty", "quest", "downloads"]; //засовывем остальные страницы в массив
@@ -47,7 +50,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
           var pageView = false;
           while (pageView == false) {
             if (randomPage != 'y') {
-              location = window.location.origin + '/' + randomPages[rand] + ".php" + window.location.search;
+              window.location = '/' + randomPages[rand] + ".php" + search;
               var pageView = true;
               break;
             } else {
@@ -87,7 +90,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
                   path: '/'
                 });
                 //переходим на сезонку
-                location = window.location.origin + "/season.php" + window.location.search;
+                location = window.location.origin + "/season.php" + search;
                 break;
               } else {
 
@@ -103,6 +106,6 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
   }
 
 } else {
-  location = window.location.origin + '/' + window.location.search;
+  window.location = '/oops.php' + search;
 }
 </script>

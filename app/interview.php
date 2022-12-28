@@ -4,13 +4,24 @@ $APPLICATION->SetTitle("Бодрый опрос");
 <link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/rotate-screen.png">
 <link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/interview/cup1.webp">
 <link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/interview/cup2.webp">
-<link rel="stylesheet" href="<?= SITE_DIR ?>assets/css/interview.css?ver=1.6">
+<link rel="stylesheet" href="<?= SITE_DIR ?>assets/css/interview.css?ver=1.7">
 <script type="text/javascript">
+var search = '';
+
+if (window.location.search) {
+  search = window.location.search;
+}
+
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
     navigator.userAgent)) {
-  window.history.replaceState(null, null, window.location.origin + '/' + window.location.search);
+
+  ym(83929834, 'hit', '/interview' + search, {
+    params: {}
+  });
+
+  window.history.replaceState(null, null, window.location.origin + '/');
 } else {
-  location = window.location.origin + '/' + window.location.search;
+  window.location = '/oops.php' + search;
 }
 </script>
 </head>
@@ -200,7 +211,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
 <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/anim.js"></script>
 <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/jquery.js"></script>
 <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/js.cookie.js"></script>
-<script type="text/javascript" src="<?= SITE_DIR ?>assets/js/interview.js?ver=1.6"></script>
+<script type="text/javascript" src="<?= SITE_DIR ?>assets/js/interview.js?ver=1.7"></script>
 
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

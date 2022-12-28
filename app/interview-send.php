@@ -28,14 +28,25 @@ if (CModule::IncludeModule("main")) {
 }
 ?>
 <link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/interview/smile.webp">
-<link rel="stylesheet" href="<?= SITE_DIR ?>assets/css/send.css?ver=1.6">
+<link rel="stylesheet" href="<?= SITE_DIR ?>assets/css/send.css?ver=1.7">
 <script type="text/javascript">
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
-    navigator.userAgent)) {
-  window.history.replaceState(null, null, window.location.origin + '/' + window.location.search);
-} else {
-  location = window.location.origin + '/' + window.location.search;
-}
+  var search = '';
+
+  if (window.location.search) {
+    search = window.location.search;
+  }
+
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+      navigator.userAgent)) {
+
+    ym(83929834, 'hit', '/interview-send' + search, {
+      params: {}
+    });
+
+    window.history.replaceState(null, null, window.location.origin + '/');
+  } else {
+    window.location = '/oops.php' + search;
+  }
 </script>
 </head>
 

@@ -19,12 +19,22 @@ $APPLICATION->SetTitle("Забери кофе бесплатно");
 <link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/coffee-free/ura-black.webp">
 <link rel="preload" as="image" href="<?= SITE_DIR ?>assets/img/coffee-free/ohno.webp">
 
-<link rel="stylesheet" href="<?= SITE_DIR ?>assets/css/coffee-free.css?ver=1.6">
+<link rel="stylesheet" href="<?= SITE_DIR ?>assets/css/coffee-free.css?ver=1.7">
 <script type="text/javascript">
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
-    navigator.userAgent)) {} else {
-  location = window.location.origin + '/' + window.location.search;
-}
+  var search = '';
+
+  if (window.location.search) {
+    search = window.location.search;
+  }
+
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+      navigator.userAgent)) {
+    ym(83929834, 'hit', '/coffee-free' + search, {
+      params: {}
+    });
+  } else {
+    window.location = '/oops.php' + search;
+  }
 </script>
 
 </head>
@@ -127,18 +137,15 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
           </picture>
           <picture>
             <source srcset="<?= SITE_DIR ?>assets/img/coffee-free/ura.webp" type="image/webp">
-            <img class="play-button__img--win-ura play-button__img--win-ura-1"
-              src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
+            <img class="play-button__img--win-ura play-button__img--win-ura-1" src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
           </picture>
           <picture>
             <source srcset="<?= SITE_DIR ?>assets/img/coffee-free/ura.webp" type="image/webp">
-            <img class="play-button__img--win-ura play-button__img--win-ura-2"
-              src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
+            <img class="play-button__img--win-ura play-button__img--win-ura-2" src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
           </picture>
           <picture>
             <source srcset="<?= SITE_DIR ?>assets/img/coffee-free/ura.webp" type="image/webp">
-            <img class="play-button__img--win-ura play-button__img--win-ura-3"
-              src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
+            <img class="play-button__img--win-ura play-button__img--win-ura-3" src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
           </picture>
 
         </button>
@@ -160,18 +167,15 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
           </picture>
           <picture>
             <source srcset="<?= SITE_DIR ?>assets/img/coffee-free/ura.webp" type="image/webp">
-            <img class="play-button__img--win-ura play-button__img--win-ura-1"
-              src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
+            <img class="play-button__img--win-ura play-button__img--win-ura-1" src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
           </picture>
           <picture>
             <source srcset="<?= SITE_DIR ?>assets/img/coffee-free/ura.webp" type="image/webp">
-            <img class="play-button__img--win-ura play-button__img--win-ura-2"
-              src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
+            <img class="play-button__img--win-ura play-button__img--win-ura-2" src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
           </picture>
           <picture>
             <source srcset="<?= SITE_DIR ?>assets/img/coffee-free/ura.webp" type="image/webp">
-            <img class="play-button__img--win-ura play-button__img--win-ura-3"
-              src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
+            <img class="play-button__img--win-ura play-button__img--win-ura-3" src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
           </picture>
 
         </button>
@@ -193,18 +197,15 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
           </picture>
           <picture>
             <source srcset="<?= SITE_DIR ?>assets/img/coffee-free/ura.webp" type="image/webp">
-            <img class="play-button__img--win-ura play-button__img--win-ura-1"
-              src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
+            <img class="play-button__img--win-ura play-button__img--win-ura-1" src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
           </picture>
           <picture>
             <source srcset="<?= SITE_DIR ?>assets/img/coffee-free/ura.webp" type="image/webp">
-            <img class="play-button__img--win-ura play-button__img--win-ura-2"
-              src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
+            <img class="play-button__img--win-ura play-button__img--win-ura-2" src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
           </picture>
           <picture>
             <source srcset="<?= SITE_DIR ?>assets/img/coffee-free/ura.webp" type="image/webp">
-            <img class="play-button__img--win-ura play-button__img--win-ura-3"
-              src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
+            <img class="play-button__img--win-ura play-button__img--win-ura-3" src="<?= SITE_DIR ?>assets/img/coffee-free/ura.png">
           </picture>
 
         </button>
@@ -225,8 +226,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
       <div class="picture-block">
         <picture>
           <source srcset="<?= SITE_DIR ?>assets/img/coffee-free/smile-xx.webp" type="image/webp">
-          <img class="section-result__img section-result__img--lose"
-            src="<?= SITE_DIR ?>assets/img/coffee-free/smile-xx.png">
+          <img class="section-result__img section-result__img--lose" src="<?= SITE_DIR ?>assets/img/coffee-free/smile-xx.png">
         </picture>
       </div>
       <div class="section-result__text">
@@ -243,8 +243,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
           Портал всегда открыт, обновляется<br>
           и доступен по QR-коду на стакане.<br>
         </div>
-        <a class="btn section-result__btn" href="https://portal.bodryi-den.ru"
-          onclick="ym(83929834, 'reachGoal', 'to_main_from_promo'); return true;">перейти на портал</a>
+        <a class="btn section-result__btn" href="https://portal.bodryi-den.ru" onclick="ym(83929834, 'reachGoal', 'to_main_from_promo'); return true;">перейти на портал</a>
       </div>
     </section>
 
@@ -256,18 +255,15 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
         </picture>
         <picture>
           <source srcset="<?= SITE_DIR ?>assets/img/coffee-free/ura-black.webp" type="image/webp">
-          <img class="section-result__img--win-ura section-result__img--win-ura-1"
-            src="<?= SITE_DIR ?>assets/img/coffee-free/ura-black.png">
+          <img class="section-result__img--win-ura section-result__img--win-ura-1" src="<?= SITE_DIR ?>assets/img/coffee-free/ura-black.png">
         </picture>
         <picture>
           <source srcset="<?= SITE_DIR ?>assets/img/coffee-free/ura-black.webp" type="image/webp">
-          <img class="section-result__img--win-ura section-result__img--win-ura-2"
-            src="<?= SITE_DIR ?>assets/img/coffee-free/ura-black.png">
+          <img class="section-result__img--win-ura section-result__img--win-ura-2" src="<?= SITE_DIR ?>assets/img/coffee-free/ura-black.png">
         </picture>
         <picture>
           <source srcset="<?= SITE_DIR ?>assets/img/coffee-free/ura-black.webp" type="image/webp">
-          <img class="section-result__img--win-ura section-result__img--win-ura-3"
-            src="<?= SITE_DIR ?>assets/img/coffee-free/ura-black.png">
+          <img class="section-result__img--win-ura section-result__img--win-ura-3" src="<?= SITE_DIR ?>assets/img/coffee-free/ura-black.png">
         </picture>
       </div>
       <div class="section-result__text">
@@ -364,6 +360,6 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
 <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/jquery.js"></script>
 <!-- <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/touchswipe.js"></script> -->
 <script type="text/javascript" src="<?= SITE_DIR ?>assets/js/js.cookie.js"></script>
-<script type="text/javascript" src="<?= SITE_DIR ?>assets/js/coffee-free.js?ver=1.6"></script>
+<script type="text/javascript" src="<?= SITE_DIR ?>assets/js/coffee-free.js?ver=1.7"></script>
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

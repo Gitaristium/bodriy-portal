@@ -5,18 +5,25 @@ $APPLICATION->SetTitle("Это Апельсин");
 <meta name="theme-color" content="#d8ecfa">
 <link rel="preload" as="image" href="/assets/img/rotate-screen.png">
 <link rel="preload" as="image" href="/assets/img/interview/smile.png">
-<link rel="stylesheet" href="/assets/css/season-2022-winter.css?ver=1.6">
-<link rel="stylesheet" href="/assets/css/season-2022-winter-orange.css?ver=1.6">
+<link rel="stylesheet" href="/assets/css/season-2022-winter.css?ver=1.7">
+<link rel="stylesheet" href="/assets/css/season-2022-winter-orange.css?ver=1.7">
 <script type="text/javascript">
+var search = '';
+
+if (window.location.search) {
+  search = window.location.search;
+} else {
+  search = '?utm_medium=qrcode';
+}
+
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
     navigator.userAgent)) {
-  ym(83929834, 'hit', '/orange?utm_medium=qrcode&utm_referrer=' + encodeURIComponent(document.referrer), {
+
+  ym(83929834, 'hit', '/orange' + search, {
     params: {}
   });
-  window.history.replaceState(null, null, window.location.origin + '/orange?utm_medium=qrcode&utm_referrer=' +
-    encodeURIComponent(document.referrer));
 } else {
-  location = window.location.origin + '/' + window.location.search;
+  window.location = '/oops.php' + search;
 }
 </script>
 </head>
@@ -603,6 +610,6 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
 <script type="text/javascript" src="/assets/js/jquery.js"></script>
 <script type="text/javascript" src="/assets/js/js.cookie.js"></script>
 <!-- <script type="text/javascript" src="/assets/js/touchswipe.js"></script> -->
-<script type="text/javascript" src="/assets/js/season-2022-winter.js?ver=1.6"></script>
+<script type="text/javascript" src="/assets/js/season-2022-winter.js?ver=1.7"></script>
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
