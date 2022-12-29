@@ -579,7 +579,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
       </div>
       <!-- end .section__inner -->
       <a class="section-two__link" href="https://portal.bodryi-den.ru/"
-        onclick="ym(83929834, 'reachGoal', 'to_season_from_orange-hurma'); return true;">перейти на бодрый портал</a>
+        onclick="ym(83929834, 'reachGoal', 'to_main_from_orange-hurma'); return true;">перейти на бодрый портал</a>
     </section>
     <!-- end .section-two -->
 
